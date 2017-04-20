@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "W_Common.h"
 #include "Camera.h"
-#include <Windows.h>
 #include "AABBCollider.h"
 #include "SphereCollider.h"
 #include "CollisionDetector.h"
@@ -107,130 +106,135 @@ FrustumNode Camera::getFrustum()
 	tempFrustum.setVertices(vertices_translated);
 	return tempFrustum;
 }
-
+void Camera::HandleKeyInput(GLFWwindow *window, int key, int scancode, int action, int mods){
+    if (key==GLFW_KEY_W)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        
+        forwDistance += SPEED;
+    }
+    
+    if (key == GLFW_KEY_S)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        
+        forwDistance -= SPEED;
+    }
+    if (key==GLFW_KEY_D)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        
+        leftDistance -= SPEED;
+    }
+    
+    if (key == GLFW_KEY_A)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        
+        leftDistance += SPEED;
+    }
+    
+    if (key == GLFW_KEY_UP)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        turnUpScale += 0.5;
+        if (90 - turnUpScale < 0.01)
+        {
+            turnUpScale = 90 - 0.01;
+        }
+    }
+    
+    if (key == GLFW_KEY_DOWN)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        turnUpScale -= 0.5;
+        if (turnUpScale + 90 < 0.01)
+        {
+            turnUpScale = - 90 + 0.01;
+        }
+    }
+    
+    if (key == GLFW_KEY_LEFT)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        turnLeftScale += 0.5;
+    }
+    
+    if (key == GLFW_KEY_RIGHT)
+    {
+        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
+        turnLeftScale -= 0.5;
+    }
+    if (key == GLFW_KEY_C &(glfwGetTime() -c_lasttime_clicked)>0.5)
+    {
+        collisionSwitch = (collisionSwitch + 1) % 2;
+        c_lasttime_clicked = glfwGetTime();
+    }
+}
+void Camera::setMouseSensitivity(int sensitivity){
+    this->mouseSensitivity  = sensitivity;
+}
+void Camera::HandleCursorPositionChange(GLFWwindow *window, double newXPos, double newYPos){
+    newx = newXPos;
+    newy = newYPos;
+    
+    if (newx > 1200 || newx < 10 || newy < 10 || newy>700)
+    {
+        glfwSetCursorPos(window, 600, 350);
+        newx = lastx = 600;
+        newy = lasty = 350;
+    }
+    if (isfirsttime)
+    {
+        lastx = newx;
+        lasty = newy;
+        isfirsttime = false;
+    }
+    else
+    {
+        turnLeftScale = turnLeftScale - (newx - lastx) / mouseSensitivity;
+        turnUpScale = turnUpScale - (newy - lasty) / mouseSensitivity;
+        
+        
+        if (90 - turnUpScale < 0.01)
+        {
+            turnUpScale = 90 - 0.01;
+        }
+        if (turnUpScale + 90 < 0.01)
+        {
+            turnUpScale = -(90) + 0.01;
+        }
+        
+    }
+}
 void Camera::cameraMove()
 {
-	
-	ShowCursor(false);
-	POINT cursor;
+    this->setRotate(-turnUpScale, vec3(1, 0, 0));
+    this->addRotate( turnLeftScale, vec3(0, 1, 0));
+    
+    float xincreasment = forwDistance*cos(turnUpScale / 180 * PI)*sin(turnLeftScale / 180 * PI) + leftDistance*cos(turnLeftScale / 180 * PI);
+    double a = sin(turnUpScale / 180 * PI);
+    
+    float yincreasment = forwDistance*sin(turnUpScale / 180 * PI);
+    
+    double b = cos(turnUpScale / 180 * PI);
+    double c = cos(turnLeftScale / 180 * PI);
 
-	GetCursorPos(&cursor);
-
-	newx = cursor.x;
-	newy = cursor.y;
-
-	if (newx > 1200 || newx < 10 || newy < 10 || newy>700)
-	{
-		SetCursorPos(600, 350);
-		newx = lastx = 600;
-		newy = lasty = 350;
-	}
-	if (isfirsttime)
-	{
-		lastx = newx;
-		lasty = newy;
-		isfirsttime = false;
-	}
-	else
-	{
-		turnLeftScale = turnLeftScale - (newx - lastx) / 10;
-		turnUpScale = turnUpScale - (newy - lasty) / 10;
-		
-
-		if (90 - turnUpScale < 0.01)
-		{
-			turnUpScale = 90 - 0.01;
-		}
-		if (turnUpScale + 90 < 0.01)
-		{
-			turnUpScale = -(90) + 0.01;
-		}
-
-	}
-
-		if ((glfwGetKey(87) == GLFW_PRESS))
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-
-			forwDistance += SPEED;	
-		}
-
-		if ((glfwGetKey(83) == GLFW_PRESS))
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-
-			forwDistance -= SPEED;
-		}
-		if ((glfwGetKey(68) == GLFW_PRESS))
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-
-			leftDistance -= SPEED;
-		}
-
-		if ((glfwGetKey(65) == GLFW_PRESS))
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-
-			leftDistance += SPEED;	
-		}
-
-		if (glfwGetKey(GLFW_KEY_UP) == GLFW_PRESS)
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-			turnUpScale += 0.5;
-			if (90 - turnUpScale < 0.01)
-			{
-				turnUpScale = 90 - 0.01;
-			}
-		}
-
-		if (glfwGetKey(GLFW_KEY_DOWN) == GLFW_PRESS)
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-			turnUpScale -= 0.5;
-			if (turnUpScale + 90 < 0.01)
-			{
-				turnUpScale = - 90 + 0.01;
-			}	
-		}
-
-		if (glfwGetKey(GLFW_KEY_LEFT) == GLFW_PRESS)
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-			turnLeftScale += 0.5;	
-		}
-
-		if (glfwGetKey(GLFW_KEY_RIGHT) == GLFW_PRESS)
-		{
-			glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-			turnLeftScale -= 0.5;	
-		}
-
-		this->setRotate(-turnUpScale, vec3(1, 0, 0));
-		this->addRotate( turnLeftScale, vec3(0, 1, 0));
-		
-		float xincreasment = forwDistance*cos(turnUpScale / 180 * PI)*sin(turnLeftScale / 180 * PI) + leftDistance*cos(turnLeftScale / 180 * PI);
-		float yincreasment = forwDistance*sin(turnUpScale / 180 * PI);
-		float zincreasment = forwDistance*cos(turnUpScale / 180 * PI)*cos(turnLeftScale / 180 * PI) - leftDistance*sin(turnLeftScale / 180 * PI);
-
-		if (glfwGetKey(67)==GLFW_PRESS&&(glfwGetTime() -c_lasttime_clicked)>0.5)
-		{
-			collisionSwitch = (collisionSwitch + 1) % 2;
-			c_lasttime_clicked = glfwGetTime();
-		}
-		if (collisionSwitch==1)
-		{
-			CollideAndSlide(vec3(xincreasment, yincreasment, zincreasment));
-		}
-		else
-		{
-			myPosition += vec3(xincreasment, yincreasment, zincreasment);
-		}
-		forwDistance = 0;
-		leftDistance = 0;
-		lastx = newx;
-		lasty = newy;
+    float zincreasment = forwDistance*cos(turnUpScale / 180 * PI)*cos(turnLeftScale / 180 * PI) - leftDistance*sin(turnLeftScale / 180 * PI);
+    
+    
+    if (collisionSwitch==1)
+    {
+        CollideAndSlide(vec3(xincreasment, yincreasment, zincreasment));
+    }
+    else
+    {
+        myPosition += vec3(xincreasment, yincreasment, zincreasment);
+    }
+    forwDistance = 0;
+    leftDistance = 0;
+    lastx = newx;
+    lasty = newy;
 }
 
 void Camera::calculateFrustum()

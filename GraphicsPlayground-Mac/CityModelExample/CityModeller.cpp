@@ -2,7 +2,7 @@
 #include <time.h>
 #include <algorithm>
 #include <stdlib.h> 
-#include <stdafx.h>
+#include "stdafx.h"
 
 
 #define BEGININGGRID	 0
@@ -66,15 +66,12 @@ CityModeller::~CityModeller()
 ///<summary>
 ///This function create city data in grids model
 ///</summary>
-void CityModeller::generateCityLayoutData(bool firsttime)
+void CityModeller::generateCityLayoutData()
 {
 #pragma region Initialization
-	if (!firsttime)
-	{
-		//clear store buffer
-		clearBuffer();
-	}
-
+    //clear store buffer
+    clearBuffer();
+	
 	for (int i = 0; i < SIZE; i++)
 	{
 		for (int j = 0; j < SIZE; j++)
@@ -279,7 +276,7 @@ void CityModeller::generateCityLayoutData(bool firsttime)
 						l = rand() % (lMax -MIN_LENGTH_IN_GRID+1)+MIN_LENGTH_IN_GRID;
 						h = rand() % (MAX_HEIGHT_IN_GRID - MIN_HEIGHT_IN_GRID + 1) + MIN_HEIGHT_IN_GRID;
 
-						buildingStore->push_back(new building({ l, w, h, glm::vec2(x, y) }));
+						buildingStore->push_back(new building({ static_cast<GLfloat>(l), static_cast<GLfloat>(w), static_cast<GLfloat>(h), glm::vec2(x, y) }));
 
 						for (int m = 0; m < l; m++)
 						{
@@ -325,83 +322,83 @@ void CityModeller::loadBuffer()
 			//data for top
 			//*************************************************************************************************************************************************
 			//vertex0
- 			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, 1.0 / TEXGRIDSPERROW*rooftopcoordinatex, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
+ 			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*rooftopcoordinatex), 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
 			//vertex1
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x + (buildingStore->at(i)->length*UNITLENGHT) - 2 * SPACE, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i).z, 1.0 / TEXGRIDSPERROW*(rooftopcoordinatex + 1), 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x + (buildingStore->at(i)->length*UNITLENGHT) - 2 * SPACE, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*(rooftopcoordinatex + 1)), 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
 			//vertex2
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i+1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, 1.0 / TEXGRIDSPERROW*(rooftopcoordinatex + 1), 0, 0, 1, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i+1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*(rooftopcoordinatex + 1)), 0, 0, 1, 0 });
 			//vertex0
-			city_vertices_data->push_back ({ (buildingStore->at(i)->gridCoordinate.y*UNITLENGHT) + SPACE, buildingStore->at(i)->height*UNITLENGHT, (buildingStore->at(i)->gridCoordinate.x*UNITLENGHT) + SPACE, 1.0 / TEXGRIDSPERROW*rooftopcoordinatex, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
+			city_vertices_data->push_back ({ (buildingStore->at(i)->gridCoordinate.y*UNITLENGHT) + SPACE, buildingStore->at(i)->height*UNITLENGHT, (buildingStore->at(i)->gridCoordinate.x*UNITLENGHT) + SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*rooftopcoordinatex), 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
 			//vertex2
-			city_vertices_data->push_back ({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, 1.0 / TEXGRIDSPERROW*(rooftopcoordinatex + 1), 0, 0, 1, 0 });
+			city_vertices_data->push_back ({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*(rooftopcoordinatex + 1)), 0, 0, 1, 0 });
 			//vertex3
-			city_vertices_data->push_back ({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW*rooftopcoordinatex, 0, 0, 1, 0 });
+			city_vertices_data->push_back ({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*rooftopcoordinatex), 0, 0, 1, 0 });
 
 			//*************************************************************************************************************************************************
 			//   data for front
 			//*************************************************************************************************************************************************
 
 			//vertex3
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 0, 0, 1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 0, 0, 1 });
 			//vertex 2
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 0, 0, 1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 0, 0, 1 });
 			//vertex7
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 2).x, 0, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 0, 0, 1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 2).x, 0, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 0, 0, 1 });
 			//vertex3
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 0, 0, 1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 0, 0, 1 });
 			//vertex7
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 2).x, 0, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 0, 0, 1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 2).x, 0, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 0, 0, 1 });
 			//vertex 8
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i + 10).z, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 0, 0, 1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i + 10).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 0, 0, 1 });
 
 			//*************************************************************************************************************************************************
 			//data for left side
 			//*************************************************************************************************************************************************
 			//vertex0
-			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, -1, 0, 0 });
+			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), -1, 0, 0 });
 			//vertex3
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, -1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), -1, 0, 0 });
 			//vertex5
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i).z, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, -1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), -1, 0, 0 });
 			//vertex3
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, -1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), -1, 0, 0 });
 			//vertex5		
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i).z, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, -1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), -1, 0, 0 });
 			//vertex8
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i + 10).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, -1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i + 10).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), -1, 0, 0 });
 
 			//*************************************************************************************************************************************************
 			//data for right side
 			//*************************************************************************************************************************************************
 			//vertex1
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x + buildingStore->at(i)->length*UNITLENGHT - 2 * SPACE, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x + buildingStore->at(i)->length*UNITLENGHT - 2 * SPACE, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 1, 0, 0 });
 			//vertex2
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 1, 0, 0 });
 			//vertex6
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 1, 0, 0 });
 			//vertex2
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, city_vertices_data->at(5 * 6 * i + 1).y, city_vertices_data->at(5 * 6 * i + 1).z + (buildingStore->at(i)->width*UNITLENGHT) - 2 * SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 1, 0, 0 });
 			//vertex6
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 1, 0, 0 });
 			//vertex7
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 2).z, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 1, 0, 0 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 2).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 1, 0, 0 });
 
 
 			//*************************************************************************************************************************************************
 			//data for back
 			//*************************************************************************************************************************************************
 			//vertex0
-			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 0, 0, -1 });
+			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 0, 0, -1 });
 			//vertex1
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x + buildingStore->at(i)->length*UNITLENGHT - 2 * SPACE, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 0, 0, -1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x + buildingStore->at(i)->length*UNITLENGHT - 2 * SPACE, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 0, 0, -1 });
 			//vertex6
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 0, 0, -1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 0, 0, -1 });
 			//vertex0
-			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2, 0, 0, -1 });
+			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*windowcoordinatey * 2), 0, 0, -1 });
 			//vertex6
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, 1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1), 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 0, 0, -1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i + 1).x, 0, city_vertices_data->at(5 * 6 * i + 1).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * (windowcoordinatex + 1)), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 0, 0, -1 });
 			//vertex5
-			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i).z, 1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex, 1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2, 0, 0, -1 });
+			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x, 0, city_vertices_data->at(5 * 6 * i).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW * 2 * windowcoordinatex), static_cast<GLfloat>(1 - 1.0 / TEXGRIDSPERCOLUMN*(windowcoordinatey + 1) * 2), 0, 0, -1 });
 		}
 
 #pragma endregion
@@ -413,33 +410,33 @@ void CityModeller::loadBuffer()
 		for (int j = 0; j < roadStore->size() / 2; j++)
 		{
 			//vertex 0
-			city_vertices_data->push_back({ roadStore->at(j)->beginGridColumn*UNITLENGHT, ROADHEIGHT, roadStore->at(j)->beginGridRow*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN * 3, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(roadStore->at(j)->beginGridColumn*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(roadStore->at(j)->beginGridRow*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN * 3, 0, 1, 0 });
 			//vertex 2
-			city_vertices_data->push_back({ (roadStore->at(j)->endGridColumn + 1)*UNITLENGHT, ROADHEIGHT, (roadStore->at(j)->endGridRow + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERCOLUMN * 1, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((roadStore->at(j)->endGridColumn + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((roadStore->at(j)->endGridRow + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERCOLUMN * 1, 0, 1, 0 });
 			//vertex 1
-			city_vertices_data->push_back({ (roadStore->at(j)->endGridColumn + 1)*UNITLENGHT, ROADHEIGHT, roadStore->at(j)->beginGridRow*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN * 1, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((roadStore->at(j)->endGridColumn + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(roadStore->at(j)->beginGridRow*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN * 1, 0, 1, 0 });
 			//vertex 0
-			city_vertices_data->push_back({ roadStore->at(j)->beginGridColumn*UNITLENGHT, ROADHEIGHT, roadStore->at(j)->beginGridRow*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN * 3, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(roadStore->at(j)->beginGridColumn*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(roadStore->at(j)->beginGridRow*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN * 3, 0, 1, 0 });
 			//vertex 2
-			city_vertices_data->push_back({ (roadStore->at(j)->endGridColumn + 1)*UNITLENGHT, ROADHEIGHT, (roadStore->at(j)->endGridRow + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERCOLUMN * 1, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((roadStore->at(j)->endGridColumn + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((roadStore->at(j)->endGridRow + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERCOLUMN * 1, 0, 1, 0 });
 			//vertex 3
-			city_vertices_data->push_back({ roadStore->at(j)->beginGridColumn*UNITLENGHT, ROADHEIGHT, (roadStore->at(j)->endGridRow + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERCOLUMN * 3, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(roadStore->at(j)->beginGridColumn*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((roadStore->at(j)->endGridRow + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERCOLUMN * 3, 0, 1, 0 });
 		}
 
 		for (int j = 0; j < roadStore->size() / 2; j++)
 		{
 			//vertex 0
-			city_vertices_data->push_back({ roadStore->at(j + roadStore->size() / 2)->beginGridColumn*UNITLENGHT, ROADHEIGHT, roadStore->at(j + roadStore->size() / 2)->beginGridRow*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERROW * 2, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(roadStore->at(j + roadStore->size() / 2)->beginGridColumn*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(roadStore->at(j + roadStore->size() / 2)->beginGridRow*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERROW * 2, 0, 1, 0 });
 			//vertex 2
-			city_vertices_data->push_back({ (roadStore->at(j + roadStore->size() / 2)->endGridColumn + 1)*UNITLENGHT, ROADHEIGHT, (roadStore->at(j + roadStore->size() / 2)->endGridRow + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERROW * 4, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((roadStore->at(j + roadStore->size() / 2)->endGridColumn + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((roadStore->at(j + roadStore->size() / 2)->endGridRow + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERROW * 4, 0, 1, 0 });
 			//vertex 1
-			city_vertices_data->push_back({ (roadStore->at(j + roadStore->size() / 2)->endGridColumn + 1)*UNITLENGHT, ROADHEIGHT, roadStore->at(j + roadStore->size() / 2)->beginGridRow*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERROW * 2, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((roadStore->at(j + roadStore->size() / 2)->endGridColumn + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(roadStore->at(j + roadStore->size() / 2)->beginGridRow*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERROW * 2, 0, 1, 0 });
 			//vertex 0
-			city_vertices_data->push_back({ roadStore->at(j + roadStore->size() / 2)->beginGridColumn*UNITLENGHT, ROADHEIGHT, roadStore->at(j + roadStore->size() / 2)->beginGridRow*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERROW * 2, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(roadStore->at(j + roadStore->size() / 2)->beginGridColumn*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(roadStore->at(j + roadStore->size() / 2)->beginGridRow*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERROW * 2, 0, 1, 0 });
 			//vertex 2
-			city_vertices_data->push_back({ (roadStore->at(j + roadStore->size() / 2)->endGridColumn + 1)*UNITLENGHT, ROADHEIGHT, (roadStore->at(j + roadStore->size() / 2)->endGridRow + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERROW * 4, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((roadStore->at(j + roadStore->size() / 2)->endGridColumn + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((roadStore->at(j + roadStore->size() / 2)->endGridRow + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERROW * 4, 0, 1, 0 });
 			//vertex 3
-			city_vertices_data->push_back({ roadStore->at(j + roadStore->size() / 2)->beginGridColumn*UNITLENGHT, ROADHEIGHT, (roadStore->at(j + roadStore->size() / 2)->endGridRow + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERROW * 4, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(roadStore->at(j + roadStore->size() / 2)->beginGridColumn*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((roadStore->at(j + roadStore->size() / 2)->endGridRow + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 4, 1.0 / TEXGRIDSPERROW * 4, 0, 1, 0 });
 		}
 
 #pragma endregion
@@ -449,17 +446,17 @@ void CityModeller::loadBuffer()
 		for (int j = 0; j < space->size(); j++)
 		{
 			//vertex0
-			city_vertices_data->push_back({ space->at(j)->column*UNITLENGHT, ROADHEIGHT, space->at(j)->row*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 5 + TEXSAMPLEGAP, 1.0 / TEXGRIDSPERCOLUMN - TEXSAMPLEGAP, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(space->at(j)->column*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(space->at(j)->row*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 5 + TEXSAMPLEGAP, 1.0 / TEXGRIDSPERCOLUMN - TEXSAMPLEGAP, 0, 1, 0 });
 			//vertex1
-			city_vertices_data->push_back({ (space->at(j)->column + 1)*UNITLENGHT, ROADHEIGHT, space->at(j)->row*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6 - TEXSAMPLEGAP, 1.0 / TEXGRIDSPERCOLUMN - TEXSAMPLEGAP, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((space->at(j)->column + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(space->at(j)->row*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6 - TEXSAMPLEGAP, 1.0 / TEXGRIDSPERCOLUMN - TEXSAMPLEGAP, 0, 1, 0 });
 			//vertex2
-			city_vertices_data->push_back({ (space->at(j)->column + 1)*UNITLENGHT, ROADHEIGHT, (space->at(j)->row + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6 - TEXSAMPLEGAP, TEXSAMPLEGAP, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((space->at(j)->column + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((space->at(j)->row + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6 - TEXSAMPLEGAP, TEXSAMPLEGAP, 0, 1, 0 });
 			//vertex0
-			city_vertices_data->push_back({ space->at(j)->column*UNITLENGHT, ROADHEIGHT, space->at(j)->row*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 5 + TEXSAMPLEGAP, 1.0 / TEXGRIDSPERCOLUMN - TEXSAMPLEGAP, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(space->at(j)->column*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(space->at(j)->row*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 5 + TEXSAMPLEGAP, 1.0 / TEXGRIDSPERCOLUMN - TEXSAMPLEGAP, 0, 1, 0 });
 			//vertex2
-			city_vertices_data->push_back({ (space->at(j)->column + 1)*UNITLENGHT, ROADHEIGHT, (space->at(j)->row + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6 - TEXSAMPLEGAP, TEXSAMPLEGAP, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((space->at(j)->column + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((space->at(j)->row + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6 - TEXSAMPLEGAP, TEXSAMPLEGAP, 0, 1, 0 });
 			//vertex3
-			city_vertices_data->push_back({ space->at(j)->column *UNITLENGHT, ROADHEIGHT, (space->at(j)->row + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 5 + TEXSAMPLEGAP, TEXSAMPLEGAP, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(space->at(j)->column *UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((space->at(j)->row + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 5 + TEXSAMPLEGAP, TEXSAMPLEGAP, 0, 1, 0 });
 		}
 
 		// zebra crossing
@@ -467,17 +464,17 @@ void CityModeller::loadBuffer()
 		for (int j = 0; j < cross->size(); j++)
 		{
 			//vertex0
-			city_vertices_data->push_back({ cross->at(j)->column*UNITLENGHT, ROADHEIGHT, cross->at(j)->row*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(cross->at(j)->column*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(cross->at(j)->row*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
 			//vertex1
-			city_vertices_data->push_back({ (cross->at(j)->column + 1)*UNITLENGHT, ROADHEIGHT, cross->at(j)->row*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 7, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((cross->at(j)->column + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(cross->at(j)->row*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 7, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
 			//vertex2
-			city_vertices_data->push_back({ (cross->at(j)->column + 1)*UNITLENGHT, ROADHEIGHT, (cross->at(j)->row + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 7, 0, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((cross->at(j)->column + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((cross->at(j)->row + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 7, 0, 0, 1, 0 });
 			//vertex0
-			city_vertices_data->push_back({ cross->at(j)->column*UNITLENGHT, ROADHEIGHT, cross->at(j)->row*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(cross->at(j)->column*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>(cross->at(j)->row*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
 			//vertex2
-			city_vertices_data->push_back({ (cross->at(j)->column + 1)*UNITLENGHT, ROADHEIGHT, (cross->at(j)->row + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 7, 0, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>((cross->at(j)->column + 1)*UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((cross->at(j)->row + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 7, 0, 0, 1, 0 });
 			//vertex3
-			city_vertices_data->push_back({ cross->at(j)->column *UNITLENGHT, ROADHEIGHT, (cross->at(j)->row + 1)*UNITLENGHT, 1.0 / TEXGRIDSPERROW * 6, 0, 0, 1, 0 });
+			city_vertices_data->push_back({ static_cast<GLfloat>(cross->at(j)->column *UNITLENGHT), ROADHEIGHT, static_cast<GLfloat>((cross->at(j)->row + 1)*UNITLENGHT), 1.0 / TEXGRIDSPERROW * 6, 0, 0, 1, 0 });
 		}
 
 		//grass
@@ -510,7 +507,7 @@ void CityModeller::loadBuffer()
 #pragma endregion
 
 #pragma region Load Attributes
-		g_pVB1 = wolf::BufferManager::CreateVertexBuffer(&city_vertices_data->at(0), sizeof(Vertex2) *(city_vertices_data->size()));
+		g_pVB1 = wolf::BufferManager::Inst()->CreateVertexBuffer(&city_vertices_data->at(0), sizeof(Vertex2) *(city_vertices_data->size()));
 		g_pDecl = new wolf::VertexDeclaration();
 		g_pDecl->Begin();
 		g_pDecl->AppendAttribute(wolf::AT_Position, 3, wolf::CT_Float);
@@ -528,71 +525,83 @@ void CityModeller::clearBuffer()
 {
 	printf("clear buffer\n");
 
-	vector<building*>::iterator buildingIt = buildingStore->begin();
-	for (; buildingIt != buildingStore->end(); ++buildingIt)
-	{
-		if (*buildingIt != NULL)
-		{
-			delete *buildingIt;
-			*buildingIt = NULL;
-		}
-	}
-	buildingStore->clear();
-
-	vector<road*>::iterator roadIt = roadStore->begin();
-	for (; roadIt != roadStore->end(); ++roadIt)
-	{
-		if (*roadIt != NULL)
-		{
-			delete *roadIt;
-			*roadIt = NULL;
-		}
-	}
-	roadStore->clear();
-
-	vector<singlegrid*>::iterator crossIt = cross->begin();
-	for (; crossIt != cross->end(); ++crossIt)
-	{
-		if (*crossIt != NULL)
-		{
-			delete *crossIt;
-			*crossIt = NULL;
-		}
-	}
-	cross->clear();
-
-	vector<singlegrid*>::iterator spaceIt = space->begin();
-	for (; spaceIt != space->end(); ++spaceIt)
-	{
-		if (*spaceIt != NULL)
-		{
-			delete *spaceIt;
-			*spaceIt = NULL;
-		}
-	}
-	space->clear();
-
-	vector<singlegrid*>::iterator buildingBaseIt = buildingBase->begin();
-	for (; buildingBaseIt != buildingBase->end(); ++buildingBaseIt)
-	{
-		if (*buildingBaseIt != NULL)
-		{
-			delete *buildingBaseIt;
-			*buildingBaseIt = NULL;
-		}
-	}
-	buildingBase->clear();
-
-	vector<Colliders::AABBCollider*>::iterator aabbColliderIt = aabbCollidersCollection->begin();
-	for (; aabbColliderIt != aabbCollidersCollection->end(); ++aabbColliderIt)
-	{
-		if (*aabbColliderIt != NULL)
-		{
-			delete *aabbColliderIt;
-			*aabbColliderIt = NULL;
-		}
-	}
-	aabbCollidersCollection->clear();
+    if (buildingStore->size()>0) {
+        vector<building*>::iterator buildingIt = buildingStore->begin();
+        for (; buildingIt != buildingStore->end(); ++buildingIt)
+        {
+            if (*buildingIt != NULL)
+            {
+                delete *buildingIt;
+                *buildingIt = NULL;
+            }
+        }
+        buildingStore->clear();
+    }
+    if (roadStore->size()>0) {
+        vector<road*>::iterator roadIt = roadStore->begin();
+        for (; roadIt != roadStore->end(); ++roadIt)
+        {
+            if (*roadIt != NULL)
+            {
+                delete *roadIt;
+                *roadIt = NULL;
+            }
+        }
+        roadStore->clear();
+    }
+    
+    if (cross->size()>0) {
+        vector<singlegrid*>::iterator crossIt = cross->begin();
+        for (; crossIt != cross->end(); ++crossIt)
+        {
+            if (*crossIt != NULL)
+            {
+                delete *crossIt;
+                *crossIt = NULL;
+            }
+        }
+        cross->clear();
+    }
+    
+    if (space->size()>0) {
+        vector<singlegrid*>::iterator spaceIt = space->begin();
+        for (; spaceIt != space->end(); ++spaceIt)
+        {
+            if (*spaceIt != NULL)
+            {
+                delete *spaceIt;
+                *spaceIt = NULL;
+            }
+        }
+        space->clear();
+    }
+    
+    if (buildingBase->size()>0) {
+        vector<singlegrid*>::iterator buildingBaseIt = buildingBase->begin();
+        for (; buildingBaseIt != buildingBase->end(); ++buildingBaseIt)
+        {
+            if (*buildingBaseIt != NULL)
+            {
+                delete *buildingBaseIt;
+                *buildingBaseIt = NULL;
+            }
+        }
+        buildingBase->clear();
+    }
+    
+    if (aabbCollidersCollection->size()>0) {
+        vector<Colliders::AABBCollider*>::iterator aabbColliderIt = aabbCollidersCollection->begin();
+        for (; aabbColliderIt != aabbCollidersCollection->end(); ++aabbColliderIt)
+        {
+            if (*aabbColliderIt != NULL)
+            {
+                delete *aabbColliderIt;
+                *aabbColliderIt = NULL;
+            }
+        }
+        aabbCollidersCollection->clear();
+    }
+    
 
 	city_vertices_data->clear();
 }
@@ -609,7 +618,7 @@ std::vector<Colliders::AABBCollider*>* CityModeller::GetAABBColliders()
 
 void CityModeller::SetTexture(const string& tex)
 {
-	tex_map = wolf::TextureManager::CreateTexture(tex);
+	tex_map = wolf::TextureManager::Inst()->CreateTexture(tex);
 	tex_map->SetFilterMode(wolf::Texture::FM_Nearest, wolf::Texture::FM_Nearest);
 	tex_map->SetWrapMode(wolf::Texture::WM_Clamp, wolf::Texture::WM_Clamp);
 	mat->SetTexture("tex", tex_map);
@@ -619,36 +628,38 @@ void CityModeller::SetProgram(const string& vsh, const string& fsh)
 {
 	mat->SetProgram(vsh,fsh);
 }
-
+void CityModeller::HandleKeyInput(GLFWwindow *window, int key, int scancode, int action, int mods){
+    
+}
 void CityModeller::Render()
 {
-	//press 'L' to turn light effect on and off
-	if (glfwGetKey(76) == GLFW_PRESS&&glfwGetKey(GLFW_KEY_LCTRL) != GLFW_PRESS&&glfwGetKey(GLFW_KEY_RCTRL) != GLFW_PRESS&&(glfwGetTime() - last_time_key_l_pressed)> 0.5)
-	{
-		last_time_key_l_pressed = glfwGetTime();
-		key_l_pressed = !key_l_pressed;
+//	//press 'L' to turn light effect on and off
+//	if (glfwGetKey(76) == GLFW_PRESS&&glfwGetKey(GLFW_KEY_LCTRL) != GLFW_PRESS&&glfwGetKey(GLFW_KEY_RCTRL) != GLFW_PRESS&&(glfwGetTime() - last_time_key_l_pressed)> 0.5)
+//	{
+//		last_time_key_l_pressed = glfwGetTime();
+//		key_l_pressed = !key_l_pressed;
+//
+//		if (!key_l_pressed)
+//		{
+//			g_maskSurface->setAmbient(wolf::Color4(1, 1, 1, 1));
+//			g_light->setAmbient(wolf::Color4(1, 1, 1, 1));
+//		}
+//		else
+//		{
+//			g_maskSurface->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
+//			g_light->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
+//		}
+//	}
+//	//Press Ctrl+L to change rotate the light or not
+//	if (glfwGetKey(GLFW_KEY_LCTRL)==GLFW_PRESS||glfwGetKey(GLFW_KEY_RCTRL)==GLFW_PRESS)
+//	{
+//		if (glfwGetKey(76)==GLFW_PRESS && (glfwGetTime() - last_time_key_l_pressed) > 0.5)
+//		{
+//			last_time_key_l_pressed = glfwGetTime();
+//			rotate_light = !rotate_light;
+//		}
+//	}
 
-		if (!key_l_pressed)
-		{
-			g_maskSurface->setAmbient(wolf::Color4(1, 1, 1, 1));
-			g_light->setAmbient(wolf::Color4(1, 1, 1, 1));
-		}
-		else
-		{
-			g_maskSurface->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
-			g_light->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
-		}
-	}
-	//Press Ctrl+L to change rotate the light or not
-	if (glfwGetKey(GLFW_KEY_LCTRL)==GLFW_PRESS||glfwGetKey(GLFW_KEY_RCTRL)==GLFW_PRESS)
-	{
-		if (glfwGetKey(76)==GLFW_PRESS && (glfwGetTime() - last_time_key_l_pressed) > 0.5)
-		{
-			last_time_key_l_pressed = glfwGetTime();
-			rotate_light = !rotate_light;
-		}
-	}
-	//if
 	if (key_l_pressed)
 	{
 		if (rotate_light)

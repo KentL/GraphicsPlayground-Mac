@@ -1,5 +1,5 @@
 #include "Node.h"
-
+#include "glm/gtc/matrix_transform.hpp"
 
 Node::Node(const string& name)
 {
@@ -12,7 +12,7 @@ Node::Node(const string& name)
 	myRotAxis.push_back(vec3(0, 1, 0));
 	dirty = false;
 	boundingRadius = 0;
-	myTransform = glm::translate(myPosition) *glm::rotate(myRotAngles.at(0), myRotAxis.at(0).x, myRotAxis.at(0).y, myRotAxis.at(0).z) *glm::scale(myScale);
+	myTransform = glm::translate(myPosition) *glm::rotate(myRotAngles.at(0),vec3( myRotAxis.at(0).x, myRotAxis.at(0).y, myRotAxis.at(0).z)) *glm::scale(myScale);
 }
 Node::~Node()
 {
@@ -81,11 +81,11 @@ mat4 Node::getTransform()
 		{
 			if (i == 0)
 			{
-				myTransform = glm::rotate(myRotAngles.at(i), myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z);
+                myTransform = glm::rotate(glm::radians(myRotAngles.at(i)) , vec3(myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z));
 			}
 			else
 			{
-				myTransform = glm::rotate(myRotAngles.at(i), myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z)*myTransform;
+				myTransform = glm::rotate(glm::radians(myRotAngles.at(i)) , vec3(myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z))*myTransform;
 			}
 		}
 		myTransform = glm::translate(myPosition)*myTransform*glm::scale(myScale);
@@ -100,11 +100,11 @@ mat4 Node::getRotationMatrix()
 	{
 		if (i == 0)
 		{
-			myRotationMatrix = glm::rotate(myRotAngles.at(i), myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z);
+			myRotationMatrix = glm::rotate(glm::radians(myRotAngles.at(i)),vec3( myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z));
 		}
 		else
 		{
-			myRotationMatrix = glm::rotate(myRotAngles.at(i), myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z) * myRotationMatrix;
+			myRotationMatrix = glm::rotate(glm::radians(myRotAngles.at(i)),vec3( myRotAxis.at(i).x, myRotAxis.at(i).y, myRotAxis.at(i).z)) * myRotationMatrix;
 		}
 	}
 	return myRotationMatrix;
@@ -151,13 +151,13 @@ void Node::update()
 		{
 			children.at(i)->update();
 			float distance = calculateDistance(children.at(i), this);
-			this->boundingRadius = max(this->boundingRadius, distance + children.at(i)->boundingRadius);
+            this->boundingRadius = std::max(this->boundingRadius, distance + children.at(i)->boundingRadius);
 		}
 	}
 	else if (hasParent)
 	{
 		float distance = calculateDistance(parent, this);
-		parent->boundingRadius = max(distance, parent->boundingRadius);
+        parent->boundingRadius = std::max(distance, parent->boundingRadius);
 	}
 
 }

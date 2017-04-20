@@ -1,7 +1,7 @@
 #ifndef SURFACEMATERIAL
 #define SURFACEMATERIAL
 	
-#include <wolf\W_Texture.h>
+#include "W_Texture.h"
 class SurfaceMaterial
 {
 public:

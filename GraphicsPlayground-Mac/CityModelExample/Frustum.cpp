@@ -2,8 +2,7 @@
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
-#include <GL/glew.h>
-#include <GL/glfw.h>
+
 #include "Node.h"
 #include "Frustum.h"
 

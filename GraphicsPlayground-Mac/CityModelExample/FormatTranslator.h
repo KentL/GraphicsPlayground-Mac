@@ -3,14 +3,12 @@
 #define FORMATTRANSLATOR
 
 
-#include <struct.h>
+#include "stdafx.h"
 
-using namespace glm;
-using namespace std;
 class FormatTranslator
 {
 public:
-	static vec2 turnStrToVector_2D(const string& value);
+	static glm::vec2 turnStrToVector_2D(const std::string& value);
 };
 
 #endif

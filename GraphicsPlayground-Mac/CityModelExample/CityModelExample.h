@@ -13,7 +13,7 @@
 #include <vector>
 #include <struct.h>
 #include "SurfaceMaterial.h"
-
+#include "SkyBox.h"
 class CityModelExample:public ExampleBase
 {
     friend class Game;
@@ -35,15 +35,20 @@ private:
     
     Camera* mainCamera;
     CityModeller* cityModeller;
+    SkyBox* skybox;
     
     float s_fRotation = 0;
     bool keypressed = false;
 
-
-    bool firstTimeInit=true;
     
     GLFWwindow* window;
-
+    
+    
+    int key_f_pressed_counter = 0;//record how many times key "F" is pressed to change the fov of maincamera
+    int key_b_pressed_counter = 0;//record how many times key "B" is pressed to turn skybox-rendering on and off
+    float last_time_key_f_pressed = 0;//Record the last time that key 'F' is pressed to change the fov of mainCamera
+    float last_time_key_b_pressed = 0;//Record the last time that key 'B' is pressed to turn skybox-rendering on and off
+    void RebuildCityModel();
 public:
     static CityModelExample*  getInstance()
     {

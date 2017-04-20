@@ -21,13 +21,13 @@ namespace Geometry
 		///<summary>
 		///This function set the point used to determine the position of the ray
 		///</summary>
-		vec3 SetOrigin(vec3 ori){ origin = ori; }
+		void SetOrigin(vec3 ori){ origin = ori; }
 
 
 		///<summary>
 		///This function set the vector used to determine the direciton of the ray
 		///</summary>
-		vec3 SetDirection(vec3 dir){ direction = dir; }
+		void SetDirection(vec3 dir){ direction = dir; }
 
 
 		///<summary>

@@ -1,6 +1,6 @@
 #ifndef LIGHT
 #define LIGHT
-#include <Node.h>
+#include "Node.h"
 
 class Light : public Node
 {

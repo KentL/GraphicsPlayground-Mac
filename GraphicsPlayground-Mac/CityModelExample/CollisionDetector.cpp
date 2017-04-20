@@ -108,8 +108,8 @@ Plane* CollisionDetector::GetAABBRayFirstCollidePlane(Colliders::AABBCollider* a
 	planes[4] = aabb_collider->GetTopPlane();
 	planes[5] = aabb_collider->GetBottomPlane();
 
-	vector<Plane*> intersect_planes;
-	vector<vec3> intersect_points;
+    std::vector<Plane*> intersect_planes;
+    std::vector<vec3> intersect_points;
 	int intersect_count = 0;
 	int closest_index=0;
 	double min_distance;

@@ -15,11 +15,12 @@
 #include "DirectionalLight.h"
 #include "SurfaceMaterial.h"
 #include "W_BufferManager.h"
-
+#include "MouseInputHandler.hpp"
+#include "KeyboardInputHandler.hpp"
 
 using namespace std;
 
-class CityModeller
+class CityModeller:public KeyboardInputHandler
 {
 private:
 	vector<building*>* buildingStore;
@@ -29,7 +30,7 @@ private:
 	vector<singlegrid*>* buildingBase;
 	vector<singlegrid*>* space;
 	vector<Colliders::AABBCollider*>* aabbCollidersCollection;
-	bool key_l_pressed = false;//record how many times key "L" is pressed to turn light effect on and off
+	bool key_l_pressed = true;//record how many times key "L" is pressed to turn light effect on and off
 	bool rotate_light = true;//Flag to determine whether light rotates or not
 	wolf::VertexBuffer* g_pVB1 = 0;
 	wolf::VertexDeclaration* g_pDecl = 0;
@@ -52,7 +53,7 @@ private:
 public:
 	CityModeller();
 	~CityModeller();
-	void generateCityLayoutData(bool firsttime);
+	void generateCityLayoutData();
 	std::vector<Vertex2>* getBuffer();
 	std::vector<Colliders::AABBCollider*>* GetAABBColliders();
 	void clearBuffer();
@@ -66,5 +67,6 @@ public:
 	int wMax, hMax, lMax;
 	int row1, row2, column1, column2;
     float lastT = 0;
+    void HandleKeyInput(GLFWwindow* window, int key, int scancode, int action, int mods);
 };
 #endif

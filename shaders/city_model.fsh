@@ -16,7 +16,7 @@ uniform vec4 MatSpecular;
 uniform vec4 MatDiffuse;
 
 // Texture(s)
-uniform sampler2D texture;
+uniform sampler2D tex;
 
 // Varyings
 in vec3 v_normal;
@@ -41,5 +41,5 @@ void main()
     
 	vec4 light = clamp(ambient + diffuse + specular, 0, 1);
 
-    PixelColor = texture(texture, v_uv1) * vec4( light.rgb, 1.0);
+    PixelColor = texture(tex, v_uv1) * vec4( light.rgb, 1.0);
 }

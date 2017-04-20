@@ -7,8 +7,15 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <math.h>
+#include <glm/glm.hpp>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <FreeImage.h>
+
 
 // TODO: reference additional headers your program requires here

@@ -10,13 +10,27 @@
 		4B130C081E7B915B00BA4F0B /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CF0DC1E7B89A100623C6D /* libGLEW.2.0.0.dylib */; };
 		4B130C091E7B916E00BA4F0B /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B130C051E7B8E0700BA4F0B /* libglfw.3.2.dylib */; };
 		4B130C0B1E7B9C5D00BA4F0B /* libfreeimage.3.17.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B130C0A1E7B9C5D00BA4F0B /* libfreeimage.3.17.0.dylib */; };
+		4B26F1781E88A783009E4728 /* BlendExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1761E88A783009E4728 /* BlendExample.cpp */; };
+		4B26F17C1E88A7BF009E4728 /* RotateCubeExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F17A1E88A7BF009E4728 /* RotateCubeExample.cpp */; };
+		4B26F1801E88A7EB009E4728 /* RotateTextureCubeExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F17E1E88A7EB009E4728 /* RotateTextureCubeExample.cpp */; };
+		4B26F1841E88A868009E4728 /* InterpolationExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1821E88A868009E4728 /* InterpolationExample.cpp */; };
+		4B26F1AD1E88E441009E4728 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1AB1E88E441009E4728 /* Game.cpp */; };
+		4B26F1D91E890049009E4728 /* AABBCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1B21E890049009E4728 /* AABBCollider.cpp */; };
+		4B26F1DA1E890049009E4728 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1B41E890049009E4728 /* Camera.cpp */; };
+		4B26F1DB1E890049009E4728 /* CityModeller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1B61E890049009E4728 /* CityModeller.cpp */; };
+		4B26F1DC1E890049009E4728 /* Collider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1B81E890049009E4728 /* Collider.cpp */; };
+		4B26F1DD1E890049009E4728 /* collidetest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1BA1E890049009E4728 /* collidetest.cpp */; };
+		4B26F1DE1E890049009E4728 /* CollisionDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1BB1E890049009E4728 /* CollisionDetector.cpp */; };
+		4B26F1DF1E890049009E4728 /* CubemapTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1C01E890049009E4728 /* CubemapTexture.cpp */; };
+		4B26F1E01E890049009E4728 /* DirectionalLightcpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1C31E890049009E4728 /* DirectionalLightcpp.cpp */; };
+		4B26F1E11E890049009E4728 /* FormatTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1C41E890049009E4728 /* FormatTranslator.cpp */; };
+		4B26F1E21E890049009E4728 /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1C61E890049009E4728 /* Frustum.cpp */; };
+		4B26F1E31E890049009E4728 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1CA1E890049009E4728 /* Node.cpp */; };
+		4B26F1E41E890049009E4728 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1CD1E890049009E4728 /* Ray.cpp */; };
+		4B26F1E51E890049009E4728 /* SkyBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1CF1E890049009E4728 /* SkyBox.cpp */; };
+		4B26F1E71E890049009E4728 /* SphereCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1D31E890049009E4728 /* SphereCollider.cpp */; };
 		4B5CF0D31E7B86D800623C6D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CF0D21E7B86D800623C6D /* main.cpp */; };
 		4B5CF0DB1E7B894000623C6D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CF0DA1E7B894000623C6D /* OpenGL.framework */; };
-		4B728DA21E7D8AF2005F9142 /* BlendExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728D931E7D8AF2005F9142 /* BlendExample.cpp */; };
-		4B728DA31E7D8AF2005F9142 /* CityModelExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728D951E7D8AF2005F9142 /* CityModelExample.cpp */; };
-		4B728DA41E7D8AF2005F9142 /* InterpolationExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728D991E7D8AF2005F9142 /* InterpolationExample.cpp */; };
-		4B728DA51E7D8AF2005F9142 /* RotateCubeExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728D9C1E7D8AF2005F9142 /* RotateCubeExample.cpp */; };
-		4B728DA61E7D8AF2005F9142 /* RotateTextureCubeExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728D9E1E7D8AF2005F9142 /* RotateTextureCubeExample.cpp */; };
 		4B728DA71E7D8AF2005F9142 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DA01E7D8AF2005F9142 /* stdafx.cpp */; };
 		4B728DCC1E7D8B99005F9142 /* W_Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DB31E7D8B99005F9142 /* W_Buffer.cpp */; };
 		4B728DCD1E7D8B99005F9142 /* W_BufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DB51E7D8B99005F9142 /* W_BufferManager.cpp */; };
@@ -30,6 +44,7 @@
 		4B728DD51E7D8B99005F9142 /* W_TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DC51E7D8B99005F9142 /* W_TextureManager.cpp */; };
 		4B728DD61E7D8B99005F9142 /* W_VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DC81E7D8B99005F9142 /* W_VertexBuffer.cpp */; };
 		4B728DD71E7D8B99005F9142 /* W_VertexDeclaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DCA1E7D8B99005F9142 /* W_VertexDeclaration.cpp */; };
+		4BE928FC1E8AAFCF00C8055B /* CityModelExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928FB1E8AAFCF00C8055B /* CityModelExample.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,22 +63,62 @@
 		4B130C021E7B8A6000BA4F0B /* GraphicsPlayground-Mac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "GraphicsPlayground-Mac.xcodeproj"; sourceTree = "<group>"; };
 		4B130C051E7B8E0700BA4F0B /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
 		4B130C0A1E7B9C5D00BA4F0B /* libfreeimage.3.17.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreeimage.3.17.0.dylib; path = ../../../../../usr/local/Cellar/freeimage/3.17.0/lib/libfreeimage.3.17.0.dylib; sourceTree = "<group>"; };
+		4B26F1761E88A783009E4728 /* BlendExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BlendExample.cpp; path = BlendExample/BlendExample.cpp; sourceTree = "<group>"; };
+		4B26F1771E88A783009E4728 /* BlendExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlendExample.h; path = BlendExample/BlendExample.h; sourceTree = "<group>"; };
+		4B26F17A1E88A7BF009E4728 /* RotateCubeExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RotateCubeExample.cpp; path = RotateCube/RotateCubeExample.cpp; sourceTree = "<group>"; };
+		4B26F17B1E88A7BF009E4728 /* RotateCubeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotateCubeExample.h; path = RotateCube/RotateCubeExample.h; sourceTree = "<group>"; };
+		4B26F17E1E88A7EB009E4728 /* RotateTextureCubeExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RotateTextureCubeExample.cpp; path = RotateTextureCube/RotateTextureCubeExample.cpp; sourceTree = "<group>"; };
+		4B26F17F1E88A7EB009E4728 /* RotateTextureCubeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotateTextureCubeExample.h; path = RotateTextureCube/RotateTextureCubeExample.h; sourceTree = "<group>"; };
+		4B26F1821E88A868009E4728 /* InterpolationExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InterpolationExample.cpp; path = Interpolation/InterpolationExample.cpp; sourceTree = "<group>"; };
+		4B26F1831E88A868009E4728 /* InterpolationExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterpolationExample.h; path = Interpolation/InterpolationExample.h; sourceTree = "<group>"; };
+		4B26F1AB1E88E441009E4728 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../Game.cpp; sourceTree = "<group>"; };
+		4B26F1AC1E88E441009E4728 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Game.hpp; path = ../Game.hpp; sourceTree = "<group>"; };
+		4B26F1AF1E88F80F009E4728 /* city_model.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = city_model.fsh; path = shaders/city_model.fsh; sourceTree = "<group>"; };
+		4B26F1B01E88F80F009E4728 /* city_model.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = city_model.vsh; path = shaders/city_model.vsh; sourceTree = "<group>"; };
+		4B26F1B21E890049009E4728 /* AABBCollider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AABBCollider.cpp; path = CityModelExample/AABBCollider.cpp; sourceTree = "<group>"; };
+		4B26F1B31E890049009E4728 /* AABBCollider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AABBCollider.h; path = CityModelExample/AABBCollider.h; sourceTree = "<group>"; };
+		4B26F1B41E890049009E4728 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = CityModelExample/Camera.cpp; sourceTree = "<group>"; };
+		4B26F1B51E890049009E4728 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = CityModelExample/Camera.h; sourceTree = "<group>"; };
+		4B26F1B61E890049009E4728 /* CityModeller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CityModeller.cpp; path = CityModelExample/CityModeller.cpp; sourceTree = "<group>"; };
+		4B26F1B71E890049009E4728 /* CityModeller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityModeller.h; path = CityModelExample/CityModeller.h; sourceTree = "<group>"; };
+		4B26F1B81E890049009E4728 /* Collider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Collider.cpp; path = CityModelExample/Collider.cpp; sourceTree = "<group>"; };
+		4B26F1B91E890049009E4728 /* Collider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Collider.h; path = CityModelExample/Collider.h; sourceTree = "<group>"; };
+		4B26F1BA1E890049009E4728 /* collidetest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = collidetest.cpp; path = CityModelExample/collidetest.cpp; sourceTree = "<group>"; };
+		4B26F1BB1E890049009E4728 /* CollisionDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollisionDetector.cpp; path = CityModelExample/CollisionDetector.cpp; sourceTree = "<group>"; };
+		4B26F1BC1E890049009E4728 /* CollisionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionDetector.h; path = CityModelExample/CollisionDetector.h; sourceTree = "<group>"; };
+		4B26F1BD1E890049009E4728 /* CollisionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionHelper.h; path = CityModelExample/CollisionHelper.h; sourceTree = "<group>"; };
+		4B26F1BE1E890049009E4728 /* CollisionPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollisionPackage.h; path = CityModelExample/CollisionPackage.h; sourceTree = "<group>"; };
+		4B26F1BF1E890049009E4728 /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cube.h; path = CityModelExample/Cube.h; sourceTree = "<group>"; };
+		4B26F1C01E890049009E4728 /* CubemapTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CubemapTexture.cpp; path = CityModelExample/CubemapTexture.cpp; sourceTree = "<group>"; };
+		4B26F1C11E890049009E4728 /* CubemapTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CubemapTexture.h; path = CityModelExample/CubemapTexture.h; sourceTree = "<group>"; };
+		4B26F1C21E890049009E4728 /* DirectionalLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionalLight.h; path = CityModelExample/DirectionalLight.h; sourceTree = "<group>"; };
+		4B26F1C31E890049009E4728 /* DirectionalLightcpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DirectionalLightcpp.cpp; path = CityModelExample/DirectionalLightcpp.cpp; sourceTree = "<group>"; };
+		4B26F1C41E890049009E4728 /* FormatTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FormatTranslator.cpp; path = CityModelExample/FormatTranslator.cpp; sourceTree = "<group>"; };
+		4B26F1C51E890049009E4728 /* FormatTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FormatTranslator.h; path = CityModelExample/FormatTranslator.h; sourceTree = "<group>"; };
+		4B26F1C61E890049009E4728 /* Frustum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Frustum.cpp; path = CityModelExample/Frustum.cpp; sourceTree = "<group>"; };
+		4B26F1C71E890049009E4728 /* Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Frustum.h; path = CityModelExample/Frustum.h; sourceTree = "<group>"; };
+		4B26F1C81E890049009E4728 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helper.h; path = CityModelExample/Helper.h; sourceTree = "<group>"; };
+		4B26F1C91E890049009E4728 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Light.h; path = CityModelExample/Light.h; sourceTree = "<group>"; };
+		4B26F1CA1E890049009E4728 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Node.cpp; path = CityModelExample/Node.cpp; sourceTree = "<group>"; };
+		4B26F1CB1E890049009E4728 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Node.h; path = CityModelExample/Node.h; sourceTree = "<group>"; };
+		4B26F1CC1E890049009E4728 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Plane.h; path = CityModelExample/Plane.h; sourceTree = "<group>"; };
+		4B26F1CD1E890049009E4728 /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ray.cpp; path = CityModelExample/Ray.cpp; sourceTree = "<group>"; };
+		4B26F1CE1E890049009E4728 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ray.h; path = CityModelExample/Ray.h; sourceTree = "<group>"; };
+		4B26F1CF1E890049009E4728 /* SkyBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SkyBox.cpp; path = CityModelExample/SkyBox.cpp; sourceTree = "<group>"; };
+		4B26F1D01E890049009E4728 /* SkyBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkyBox.h; path = CityModelExample/SkyBox.h; sourceTree = "<group>"; };
+		4B26F1D31E890049009E4728 /* SphereCollider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SphereCollider.cpp; path = CityModelExample/SphereCollider.cpp; sourceTree = "<group>"; };
+		4B26F1D41E890049009E4728 /* SphereCollider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SphereCollider.h; path = CityModelExample/SphereCollider.h; sourceTree = "<group>"; };
+		4B26F1D71E890049009E4728 /* SurfaceMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SurfaceMaterial.h; path = CityModelExample/SurfaceMaterial.h; sourceTree = "<group>"; };
+		4B26F1D81E890049009E4728 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Triangle.h; path = CityModelExample/Triangle.h; sourceTree = "<group>"; };
+		4B362D6D1E8A3FEA00B49268 /* KeyboardInputHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeyboardInputHandler.hpp; sourceTree = "<group>"; };
+		4B362D6E1E8A3FEA00B49268 /* MouseInputHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MouseInputHandler.hpp; sourceTree = "<group>"; };
+		4B362D6F1E8A409F00B49268 /* struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = struct.h; path = CityModelExample/struct.h; sourceTree = "<group>"; };
 		4B5CF0CF1E7B86D800623C6D /* GraphicsPlayground-Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "GraphicsPlayground-Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5CF0D21E7B86D800623C6D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4B5CF0DA1E7B894000623C6D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4B5CF0DC1E7B89A100623C6D /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
 		4B67D7191E8863FB00E4C321 /* ExampleBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExampleBase.hpp; sourceTree = "<group>"; };
-		4B728D931E7D8AF2005F9142 /* BlendExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlendExample.cpp; sourceTree = "<group>"; };
-		4B728D941E7D8AF2005F9142 /* BlendExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendExample.h; sourceTree = "<group>"; };
-		4B728D951E7D8AF2005F9142 /* CityModelExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CityModelExample.cpp; sourceTree = "<group>"; };
-		4B728D961E7D8AF2005F9142 /* CityModelExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModelExample.h; sourceTree = "<group>"; };
-		4B728D991E7D8AF2005F9142 /* InterpolationExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InterpolationExample.cpp; sourceTree = "<group>"; };
-		4B728D9A1E7D8AF2005F9142 /* InterpolationExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterpolationExample.h; sourceTree = "<group>"; };
 		4B728D9B1E7D8AF2005F9142 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
-		4B728D9C1E7D8AF2005F9142 /* RotateCubeExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RotateCubeExample.cpp; sourceTree = "<group>"; };
-		4B728D9D1E7D8AF2005F9142 /* RotateCubeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateCubeExample.h; sourceTree = "<group>"; };
-		4B728D9E1E7D8AF2005F9142 /* RotateTextureCubeExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RotateTextureCubeExample.cpp; sourceTree = "<group>"; };
-		4B728D9F1E7D8AF2005F9142 /* RotateTextureCubeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateTextureCubeExample.h; sourceTree = "<group>"; };
 		4B728DA01E7D8AF2005F9142 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
 		4B728DA11E7D8AF2005F9142 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		4B728DAA1E7D8B66005F9142 /* Blend.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Blend.fsh; path = shaders/Blend.fsh; sourceTree = "<group>"; };
@@ -99,6 +154,10 @@
 		4B728DC91E7D8B99005F9142 /* W_VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_VertexBuffer.h; path = wolf/W_VertexBuffer.h; sourceTree = "<group>"; };
 		4B728DCA1E7D8B99005F9142 /* W_VertexDeclaration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_VertexDeclaration.cpp; path = wolf/W_VertexDeclaration.cpp; sourceTree = "<group>"; };
 		4B728DCB1E7D8B99005F9142 /* W_VertexDeclaration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_VertexDeclaration.h; path = wolf/W_VertexDeclaration.h; sourceTree = "<group>"; };
+		4BCBA72A1EA867B70073E262 /* skybox.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = skybox.fsh; path = shaders/skybox.fsh; sourceTree = "<group>"; };
+		4BCBA72B1EA867B70073E262 /* skybox.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = skybox.vsh; path = shaders/skybox.vsh; sourceTree = "<group>"; };
+		4BE928FB1E8AAFCF00C8055B /* CityModelExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CityModelExample.cpp; path = CityModelExample/CityModelExample.cpp; sourceTree = "<group>"; };
+		4BE928FF1E8B594000C8055B /* CityModelExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityModelExample.h; path = CityModelExample/CityModelExample.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +178,69 @@
 		4B130C031E7B8A6000BA4F0B /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B26F1811E88A85A009E4728 /* Interpolation */ = {
+			isa = PBXGroup;
+			children = (
+				4B26F1821E88A868009E4728 /* InterpolationExample.cpp */,
+				4B26F1831E88A868009E4728 /* InterpolationExample.h */,
+			);
+			name = Interpolation;
+			sourceTree = "<group>";
+		};
+		4B26F1B11E89001E009E4728 /* CityModelExample */ = {
+			isa = PBXGroup;
+			children = (
+				4BE928FF1E8B594000C8055B /* CityModelExample.h */,
+				4BE928FB1E8AAFCF00C8055B /* CityModelExample.cpp */,
+				4B362D6F1E8A409F00B49268 /* struct.h */,
+				4B26F1B21E890049009E4728 /* AABBCollider.cpp */,
+				4B26F1B31E890049009E4728 /* AABBCollider.h */,
+				4B26F1B41E890049009E4728 /* Camera.cpp */,
+				4B26F1B51E890049009E4728 /* Camera.h */,
+				4B26F1B61E890049009E4728 /* CityModeller.cpp */,
+				4B26F1B71E890049009E4728 /* CityModeller.h */,
+				4B26F1B81E890049009E4728 /* Collider.cpp */,
+				4B26F1B91E890049009E4728 /* Collider.h */,
+				4B26F1BA1E890049009E4728 /* collidetest.cpp */,
+				4B26F1BB1E890049009E4728 /* CollisionDetector.cpp */,
+				4B26F1BC1E890049009E4728 /* CollisionDetector.h */,
+				4B26F1BD1E890049009E4728 /* CollisionHelper.h */,
+				4B26F1BE1E890049009E4728 /* CollisionPackage.h */,
+				4B26F1BF1E890049009E4728 /* Cube.h */,
+				4B26F1C01E890049009E4728 /* CubemapTexture.cpp */,
+				4B26F1C11E890049009E4728 /* CubemapTexture.h */,
+				4B26F1C21E890049009E4728 /* DirectionalLight.h */,
+				4B26F1C31E890049009E4728 /* DirectionalLightcpp.cpp */,
+				4B26F1C41E890049009E4728 /* FormatTranslator.cpp */,
+				4B26F1C51E890049009E4728 /* FormatTranslator.h */,
+				4B26F1C61E890049009E4728 /* Frustum.cpp */,
+				4B26F1C71E890049009E4728 /* Frustum.h */,
+				4B26F1C81E890049009E4728 /* Helper.h */,
+				4B26F1C91E890049009E4728 /* Light.h */,
+				4B26F1CA1E890049009E4728 /* Node.cpp */,
+				4B26F1CB1E890049009E4728 /* Node.h */,
+				4B26F1CC1E890049009E4728 /* Plane.h */,
+				4B26F1CD1E890049009E4728 /* Ray.cpp */,
+				4B26F1CE1E890049009E4728 /* Ray.h */,
+				4B26F1CF1E890049009E4728 /* SkyBox.cpp */,
+				4B26F1D01E890049009E4728 /* SkyBox.h */,
+				4B26F1D31E890049009E4728 /* SphereCollider.cpp */,
+				4B26F1D41E890049009E4728 /* SphereCollider.h */,
+				4B26F1D71E890049009E4728 /* SurfaceMaterial.h */,
+				4B26F1D81E890049009E4728 /* Triangle.h */,
+			);
+			name = CityModelExample;
+			sourceTree = "<group>";
+		};
+		4B362D6C1E8A3FD300B49268 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				4B362D6D1E8A3FEA00B49268 /* KeyboardInputHandler.hpp */,
+				4B362D6E1E8A3FEA00B49268 /* MouseInputHandler.hpp */,
+			);
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 		4B5CF0C61E7B86D800623C6D = {
@@ -143,16 +265,19 @@
 		4B5CF0D11E7B86D800623C6D /* GraphicsPlayground-Mac */ = {
 			isa = PBXGroup;
 			children = (
+				4B362D6C1E8A3FD300B49268 /* Interfaces */,
+				4B26F1811E88A85A009E4728 /* Interpolation */,
 				4B67D7171E88633500E4C321 /* RotateTextureCubeExample */,
 				4B67D7161E88631F00E4C321 /* RotateCubeExample */,
-				4B67D7151E88630400E4C321 /* InterpolationExample */,
-				4B67D7141E8862F400E4C321 /* CityModelExample */,
 				4B67D7131E8862E000E4C321 /* BlendExample */,
-				4B728D9B1E7D8AF2005F9142 /* ReadMe.txt */,
+				4B26F1B11E89001E009E4728 /* CityModelExample */,
+				4B26F1AB1E88E441009E4728 /* Game.cpp */,
+				4B26F1AC1E88E441009E4728 /* Game.hpp */,
 				4B728DA01E7D8AF2005F9142 /* stdafx.cpp */,
 				4B728DA11E7D8AF2005F9142 /* stdafx.h */,
 				4B5CF0D21E7B86D800623C6D /* main.cpp */,
 				4B67D7191E8863FB00E4C321 /* ExampleBase.hpp */,
+				4B728D9B1E7D8AF2005F9142 /* ReadMe.txt */,
 			);
 			path = "GraphicsPlayground-Mac";
 			sourceTree = "<group>";
@@ -172,35 +297,17 @@
 		4B67D7131E8862E000E4C321 /* BlendExample */ = {
 			isa = PBXGroup;
 			children = (
-				4B728D931E7D8AF2005F9142 /* BlendExample.cpp */,
-				4B728D941E7D8AF2005F9142 /* BlendExample.h */,
+				4B26F1761E88A783009E4728 /* BlendExample.cpp */,
+				4B26F1771E88A783009E4728 /* BlendExample.h */,
 			);
 			name = BlendExample;
-			sourceTree = "<group>";
-		};
-		4B67D7141E8862F400E4C321 /* CityModelExample */ = {
-			isa = PBXGroup;
-			children = (
-				4B728D951E7D8AF2005F9142 /* CityModelExample.cpp */,
-				4B728D961E7D8AF2005F9142 /* CityModelExample.h */,
-			);
-			name = CityModelExample;
-			sourceTree = "<group>";
-		};
-		4B67D7151E88630400E4C321 /* InterpolationExample */ = {
-			isa = PBXGroup;
-			children = (
-				4B728D991E7D8AF2005F9142 /* InterpolationExample.cpp */,
-				4B728D9A1E7D8AF2005F9142 /* InterpolationExample.h */,
-			);
-			name = InterpolationExample;
 			sourceTree = "<group>";
 		};
 		4B67D7161E88631F00E4C321 /* RotateCubeExample */ = {
 			isa = PBXGroup;
 			children = (
-				4B728D9C1E7D8AF2005F9142 /* RotateCubeExample.cpp */,
-				4B728D9D1E7D8AF2005F9142 /* RotateCubeExample.h */,
+				4B26F17A1E88A7BF009E4728 /* RotateCubeExample.cpp */,
+				4B26F17B1E88A7BF009E4728 /* RotateCubeExample.h */,
 			);
 			name = RotateCubeExample;
 			sourceTree = "<group>";
@@ -208,8 +315,8 @@
 		4B67D7171E88633500E4C321 /* RotateTextureCubeExample */ = {
 			isa = PBXGroup;
 			children = (
-				4B728D9E1E7D8AF2005F9142 /* RotateTextureCubeExample.cpp */,
-				4B728D9F1E7D8AF2005F9142 /* RotateTextureCubeExample.h */,
+				4B26F17E1E88A7EB009E4728 /* RotateTextureCubeExample.cpp */,
+				4B26F17F1E88A7EB009E4728 /* RotateTextureCubeExample.h */,
 			);
 			name = RotateTextureCubeExample;
 			sourceTree = "<group>";
@@ -217,6 +324,10 @@
 		4B728DA81E7D8AFF005F9142 /* Shader */ = {
 			isa = PBXGroup;
 			children = (
+				4BCBA72A1EA867B70073E262 /* skybox.fsh */,
+				4BCBA72B1EA867B70073E262 /* skybox.vsh */,
+				4B26F1AF1E88F80F009E4728 /* city_model.fsh */,
+				4B26F1B01E88F80F009E4728 /* city_model.vsh */,
 				4B728DAA1E7D8B66005F9142 /* Blend.fsh */,
 				4B728DAB1E7D8B66005F9142 /* Blend.vsh */,
 				4B728DAC1E7D8B66005F9142 /* interpolation.fsh */,
@@ -324,25 +435,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B26F1AD1E88E441009E4728 /* Game.cpp in Sources */,
 				4B728DD31E7D8B99005F9142 /* W_ProgramManager.cpp in Sources */,
 				4B728DD51E7D8B99005F9142 /* W_TextureManager.cpp in Sources */,
-				4B728DA21E7D8AF2005F9142 /* BlendExample.cpp in Sources */,
-				4B728DA41E7D8AF2005F9142 /* InterpolationExample.cpp in Sources */,
+				4B26F1E41E890049009E4728 /* Ray.cpp in Sources */,
 				4B728DCE1E7D8B99005F9142 /* W_Common.cpp in Sources */,
 				4B728DCD1E7D8B99005F9142 /* W_BufferManager.cpp in Sources */,
+				4B26F1DC1E890049009E4728 /* Collider.cpp in Sources */,
+				4BE928FC1E8AAFCF00C8055B /* CityModelExample.cpp in Sources */,
+				4B26F1801E88A7EB009E4728 /* RotateTextureCubeExample.cpp in Sources */,
 				4B728DD41E7D8B99005F9142 /* W_Texture.cpp in Sources */,
+				4B26F1DB1E890049009E4728 /* CityModeller.cpp in Sources */,
+				4B26F1DD1E890049009E4728 /* collidetest.cpp in Sources */,
+				4B26F1DE1E890049009E4728 /* CollisionDetector.cpp in Sources */,
+				4B26F1E01E890049009E4728 /* DirectionalLightcpp.cpp in Sources */,
+				4B26F1E21E890049009E4728 /* Frustum.cpp in Sources */,
+				4B26F1D91E890049009E4728 /* AABBCollider.cpp in Sources */,
+				4B26F1E71E890049009E4728 /* SphereCollider.cpp in Sources */,
+				4B26F1E11E890049009E4728 /* FormatTranslator.cpp in Sources */,
 				4B728DD01E7D8B99005F9142 /* W_Material.cpp in Sources */,
-				4B728DA61E7D8AF2005F9142 /* RotateTextureCubeExample.cpp in Sources */,
 				4B728DD11E7D8B99005F9142 /* W_MaterialManager.cpp in Sources */,
-				4B728DA51E7D8AF2005F9142 /* RotateCubeExample.cpp in Sources */,
+				4B26F17C1E88A7BF009E4728 /* RotateCubeExample.cpp in Sources */,
+				4B26F1841E88A868009E4728 /* InterpolationExample.cpp in Sources */,
 				4B728DD21E7D8B99005F9142 /* W_Program.cpp in Sources */,
 				4B728DD71E7D8B99005F9142 /* W_VertexDeclaration.cpp in Sources */,
+				4B26F1DA1E890049009E4728 /* Camera.cpp in Sources */,
 				4B5CF0D31E7B86D800623C6D /* main.cpp in Sources */,
+				4B26F1E51E890049009E4728 /* SkyBox.cpp in Sources */,
+				4B26F1781E88A783009E4728 /* BlendExample.cpp in Sources */,
+				4B26F1DF1E890049009E4728 /* CubemapTexture.cpp in Sources */,
 				4B728DCC1E7D8B99005F9142 /* W_Buffer.cpp in Sources */,
 				4B728DA71E7D8AF2005F9142 /* stdafx.cpp in Sources */,
 				4B728DCF1E7D8B99005F9142 /* W_IndexBuffer.cpp in Sources */,
-				4B728DA31E7D8AF2005F9142 /* CityModelExample.cpp in Sources */,
 				4B728DD61E7D8B99005F9142 /* W_VertexBuffer.cpp in Sources */,
+				4B26F1E31E890049009E4728 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

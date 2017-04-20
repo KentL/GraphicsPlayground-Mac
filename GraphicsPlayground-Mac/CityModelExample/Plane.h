@@ -16,7 +16,7 @@ namespace Geometry
 		float equation[4];
 
 		Plane();
-		Plane::Plane(const vec3& origin, const vec3& normal) {
+		Plane(const vec3& origin, const vec3& normal) {
 			this->normal = normal;
 			this->origin = origin;
 			equation[0] = normal.x;

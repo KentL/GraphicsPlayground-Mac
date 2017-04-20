@@ -1,7 +1,7 @@
 #pragma once
 #include "Node.h"
 #include "struct.h"
-#include "wolf\W_Material.h"
+#include "W_Material.h"
 namespace Geometry
 {
 	class Sphere :public Node
@@ -11,8 +11,8 @@ namespace Geometry
 		float accurity = 1;
 		bool first_time_render = true;
 		vector<Vertex2>* vertex;
-		wolf::VertexBuffer* vertex_buffer = 0;
-		wolf::VertexDeclaration* declaration = 0;
+		VertexBuffer* vertex_buffer = 0;
+		VertexDeclaration* declaration = 0;
 		wolf::Material* mat;
 
 		//-------Private method--------------//

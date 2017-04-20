@@ -13,6 +13,8 @@ struct Vertex
 	GLfloat x, y, z;
 	GLfloat u, v;
 };
+
+
 static const Vertex cubeVertices[] = {
 	// Front
 	{ -0.5f, -0.5f, 0.5f, 0.0f,0.0f },
@@ -69,6 +71,10 @@ static wolf::VertexDeclaration* g_pDecl = 0;
 static wolf::MaterialManager* g_Mat_Manager = 0;
 static wolf::Material* mat = 0;
 static wolf::Texture* tex = 0;
+
+void BlendExample::HandleCursorPositionChange(GLFWwindow* window, double newXPos, double newYPos) {
+    
+}
 
 void BlendExample::Initialize() {
 	wolf::ProgramManager* programManager = wolf::ProgramManager::Inst();

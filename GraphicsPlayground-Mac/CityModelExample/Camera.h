@@ -4,16 +4,18 @@
 #include "W_Common.h"
 #include "Node.h"
 #include "Frustum.h"
-#include <wolf\W_VertexDeclaration.h>
+#include "W_VertexDeclaration.h"
 #include "AABBCollider.h"
 #include "CollisionPackage.h"
+#include "KeyboardInputHandler.hpp"
+#include "MouseInputHandler.hpp"
 
 
 using namespace std;
 using namespace glm;
 using namespace Geometry;
 
-class Camera:public Node
+class Camera:public Node,public KeyboardInputHandler,public MouseInputHandler
 {
 private:
 	FrustumNode* frustum;
@@ -42,6 +44,7 @@ private:
 
 	//Time recorder
 	double c_lasttime_clicked;
+    int mouseSensitivity = 1w;
 
 public:
 	Camera();
@@ -66,7 +69,10 @@ public:
 	vec3 CollideWithWorld(const vec3& pos, const vec3& vel);
 	void CheckCollision(CollisionPackage* collisionPacket);
 	void CollideAndSlide(const vec3& vel);
-
+    void HandleKeyInput(GLFWwindow* window, int key, int scancode, int action, int mods);
+    void HandleCursorPositionChange(GLFWwindow* window, double newXPos, double newYPos);
+    
+    void setMouseSensitivity(int sensitivity);
 };
 
 #endif

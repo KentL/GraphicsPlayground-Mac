@@ -64,6 +64,9 @@ static wolf::VertexBuffer* g_pVB = 0;
 static wolf::VertexDeclaration* g_pDecl = 0;
 static wolf::Program* g_pProgram = 0;
 
+void RotateCubeExample::HandleCursorPositionChange(GLFWwindow* window, double newXPos, double newYPos) {
+    
+}
 
 void RotateCubeExample::Initialize() {
 	glEnable(GL_DEPTH_TEST);

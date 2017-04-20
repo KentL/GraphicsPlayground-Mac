@@ -1,4 +1,4 @@
-#include <DirectionalLight.h>
+#include "DirectionalLight.h"
 
 void DirectionalLight::rotate(float angle)
 {

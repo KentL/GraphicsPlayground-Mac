@@ -24,6 +24,9 @@ static wolf::VertexBuffer* g_pVB = 0;
 static wolf::VertexDeclaration* g_pDecl = 0;
 static wolf::Program* g_pProgram = 0;
 
+void InterpolationExample::HandleCursorPositionChange(GLFWwindow* window, double newXPos, double newYPos) {
+    
+}
 
 void InterpolationExample::Initialize() {
 	wolf::ProgramManager* programManager = wolf::ProgramManager::Inst();

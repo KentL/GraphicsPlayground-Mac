@@ -2,11 +2,11 @@
 #include "FormatTranslator.h"
 
 
-vec2 FormatTranslator::turnStrToVector_2D(const string& value)
+glm::vec2 FormatTranslator::turnStrToVector_2D(const std::string& value)
 {
 	int x, y;
-	string delimiter = ",";
-	string vec = value;
+	std::string delimiter = ",";
+	std::string vec = value;
 	int pos = 0;
 
 	pos = vec.find(delimiter);
@@ -15,6 +15,6 @@ vec2 FormatTranslator::turnStrToVector_2D(const string& value)
 	pos = vec.find(delimiter);
 	y = atoi(vec.substr(0, pos).c_str());
 
-	return vec2(x, y);
+    return glm::vec2(x, y);
 }
 

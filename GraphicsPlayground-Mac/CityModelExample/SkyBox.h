@@ -3,7 +3,7 @@
 
 #include "struct.h"
 #include "CubemapTexture.h"
-#include "wolf\W_MaterialManager.h"
+#include "W_MaterialManager.h"
 #include "Camera.h"
 
 class SkyBox

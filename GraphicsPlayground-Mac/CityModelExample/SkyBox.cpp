@@ -53,7 +53,7 @@ t	| /		   | /		|------->x+
 		vertices[2], vertices[3], vertices[7],
 						};
 
-	g_pVB = wolf::BufferManager::CreateVertexBuffer(m_vertices, sizeof(Vertex1) *36);
+	g_pVB = wolf::BufferManager::Inst()->CreateVertexBuffer(m_vertices, sizeof(Vertex1) *36);
 	g_pDecl = new wolf::VertexDeclaration();
 	g_pDecl->Begin();
 	g_pDecl->AppendAttribute(wolf::AT_Position, 3, wolf::CT_Float);
@@ -76,9 +76,9 @@ void SkyBox::SetTexture(const string* filenames)
 void SkyBox::SetProgram(const string& vsh, const string& fsh)
 {
 	if (g_pProgram)
-		wolf::ProgramManager::DestroyProgram(g_pProgram);
+		wolf::ProgramManager::Inst()->DestroyProgram(g_pProgram);
 
-	this->g_pProgram =  wolf::ProgramManager::CreateProgram(vsh,fsh);
+	this->g_pProgram =  wolf::ProgramManager::Inst()->CreateProgram(vsh,fsh);
 }
 
 void SkyBox::SetPositon(vec3 pos)
@@ -96,8 +96,8 @@ void SkyBox::Render()
 	//glDepthFunc(GL_LEQUAL);
 
 	vec3 cameraPos = mainCamera->getPos();
-	mat4 scaleMatrix = glm::scale(m_scale.x, m_scale.y, m_scale.z);
-	mat4 transMatrix = glm::translate(m_position.x + cameraPos.x, m_position.y + cameraPos.y, m_position.z + cameraPos.z);
+	mat4 scaleMatrix = glm::scale(vec3(m_scale.x, m_scale.y, m_scale.z));
+	mat4 transMatrix = glm::translate(vec3(m_position.x + cameraPos.x, m_position.y + cameraPos.y, m_position.z + cameraPos.z));
 	mat4 mWorld = transMatrix*scaleMatrix;
 	mat4 mView = mainCamera->getViewMatrix();
 	mat4 mProj= mainCamera->getProjectionMatrix();

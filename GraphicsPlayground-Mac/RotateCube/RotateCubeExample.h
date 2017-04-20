@@ -15,7 +15,7 @@ public:
     void Render();
     void Initialize();
     void HandleKeyInput(GLFWwindow* window, int key, int scancode, int action, int mods);
-
+    void HandleCursorPositionChange(GLFWwindow* window, double newXPos, double newYPos);
     
 public:
     RotateCubeExample(RotateCubeExample const&) = delete;

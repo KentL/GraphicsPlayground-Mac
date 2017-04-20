@@ -68,7 +68,9 @@ static wolf::VertexDeclaration* g_pDecl = 0;
 static wolf::MaterialManager* g_Mat_Manager = 0;
 static wolf::Material* mat = 0;
 static wolf::Texture* tex = 0;
-
+void RotateTextureCubeExample::HandleCursorPositionChange(GLFWwindow* window, double newXPos, double newYPos) {
+    
+}
 void RotateTextureCubeExample::Initialize() {
 	wolf::ProgramManager* programManager = wolf::ProgramManager::Inst();
 	wolf::BufferManager* bufferManager = wolf::BufferManager::Inst();
