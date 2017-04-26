@@ -75,7 +75,7 @@ class Texture
 		virtual ~Texture();
 
 		void LoadFromDDS(const std::string& p_strFile);
-		void LoadFromTGA(const std::string& p_strFile);
+		void LoadFromPNG(const std::string& p_strFile);
 		//-------------------------------------------------------------------------
 
 		//-------------------------------------------------------------------------

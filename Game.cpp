@@ -27,7 +27,7 @@ void Game::Init(int argc, char **argv){
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
     // Open a window and create its OpenGL context
-    window = glfwCreateWindow(640, 480, "Graphics Playground", NULL, NULL);
+    window = glfwCreateWindow(1280, 720, "Graphics Playground", NULL, NULL);
     if (!window)
     {
         fprintf(stderr, "Failed to open GLFW window\n");

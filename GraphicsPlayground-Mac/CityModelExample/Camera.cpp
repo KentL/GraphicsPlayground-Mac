@@ -6,7 +6,7 @@
 #include "CollisionDetector.h"
 #include "CollisionHelper.h"
 #include "Triangle.h"
-#define SPEED 16
+#define SPEED 2
 #define COLLIDER_RADIUS 1
 
 using namespace Geometry;
@@ -89,7 +89,7 @@ vec4 Camera::getViewDirection()
 
 mat4 Camera::getProjectionMatrix()
 {
-	projectionMatrix=glm::perspective(fov, aspect, nearPane, farPane);
+    projectionMatrix=glm::perspective(glm::radians(fov), aspect, nearPane, farPane);
 	return projectionMatrix;
 }
 
@@ -109,34 +109,26 @@ FrustumNode Camera::getFrustum()
 void Camera::HandleKeyInput(GLFWwindow *window, int key, int scancode, int action, int mods){
     if (key==GLFW_KEY_W)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-        
         forwDistance += SPEED;
     }
     
     if (key == GLFW_KEY_S)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-        
+       
         forwDistance -= SPEED;
     }
     if (key==GLFW_KEY_D)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-        
         leftDistance -= SPEED;
     }
     
     if (key == GLFW_KEY_A)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
-        
         leftDistance += SPEED;
     }
     
     if (key == GLFW_KEY_UP)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
         turnUpScale += 0.5;
         if (90 - turnUpScale < 0.01)
         {
@@ -146,7 +138,6 @@ void Camera::HandleKeyInput(GLFWwindow *window, int key, int scancode, int actio
     
     if (key == GLFW_KEY_DOWN)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
         turnUpScale -= 0.5;
         if (turnUpScale + 90 < 0.01)
         {
@@ -156,13 +147,11 @@ void Camera::HandleKeyInput(GLFWwindow *window, int key, int scancode, int actio
     
     if (key == GLFW_KEY_LEFT)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
         turnLeftScale += 0.5;
     }
     
     if (key == GLFW_KEY_RIGHT)
     {
-        //glClearColor(0.4f, 0.4f, 0.4f, 0.4f);
         turnLeftScale -= 0.5;
     }
     if (key == GLFW_KEY_C &(glfwGetTime() -c_lasttime_clicked)>0.5)

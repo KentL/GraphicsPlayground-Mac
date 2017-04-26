@@ -8,5 +8,6 @@ uniform samplerCube sky_tex;
 
 void main()
 {
+   // PixelColor = vec4(1,1,1,1);
     PixelColor = texture(sky_tex,TexCoord0.xyz);
 }

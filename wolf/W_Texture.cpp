@@ -45,8 +45,8 @@ Texture::Texture(const std::string& p_strFile)
 {
 	if( p_strFile.find(".dds") != std::string::npos )
 		LoadFromDDS(p_strFile);
-	else if( p_strFile.find(".tga") != std::string::npos )
-		LoadFromTGA(p_strFile);
+	else if( p_strFile.find(".png") != std::string::npos )
+		LoadFromPNG(p_strFile);
 	else
 	{
 		printf("ERROR: No idea how to load this file - %s!", p_strFile.c_str());
@@ -115,46 +115,23 @@ void Texture::LoadFromDDS(const std::string& p_strFile)
 // Builds the texture from the given TGA file. Mipmap levels
 // are automatically generated
 //----------------------------------------------------------
-void Texture::LoadFromTGA(const std::string& p_strFile)
+void Texture::LoadFromPNG(const std::string& p_strFile)
 {
-	//image format
-	FREE_IMAGE_FORMAT fif = FIF_UNKNOWN;
-	//pointer to the image, once loaded
-	FIBITMAP *dib(0);
-	//pointer to the image data
-	BYTE* bits(0);
-	//image width and height
-	GLuint gl_texID;
-
-	//check the file signature and deduce its format
-	fif = FreeImage_GetFileType(p_strFile.c_str(), 0);
-	if (fif == FIF_UNKNOWN)
-		fif = FreeImage_GetFIFFromFilename(p_strFile.c_str());
-
-	dib = FreeImage_Load(fif, p_strFile.c_str());
-	//retrieve the image data
-	bits = FreeImage_GetBits(dib);
-	m_uiWidth = FreeImage_GetWidth(dib);
-	m_uiHeight = FreeImage_GetHeight(dib);
-	long format;
-	switch (FreeImage_GetColorType(dib)) {
-	case FIC_RGB: format = GL_RGB; break;
-	case FIC_RGBALPHA: format = GL_RGBA; break;
-	default: format = GL_RGB; break;
-	}
-	glGenTextures(1, &m_uiTex);
-	glBindTexture(GL_TEXTURE_2D, m_uiTex);
-
-    glTexImage2D(GL_TEXTURE_2D, 0, format, m_uiWidth, m_uiHeight, 0, format, GL_UNSIGNED_BYTE, bits);
+    glGenTextures(1, &m_uiTex);
     
-   
-    
-	//Free FreeImage's copy of the data
-	FreeImage_Unload(dib);
+    glBindTexture(GL_TEXTURE_2D, m_uiTex);
 
+    int width, height;
+    unsigned char* image =
+    SOIL_load_image(p_strFile.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
+    
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1) ;
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 
 	glGenerateMipmap(GL_TEXTURE_2D);
 	SetFilterMode(FM_TrilinearMipmap, FM_Linear);
+    
+    SOIL_free_image_data(image);
 }
 
 //----------------------------------------------------------

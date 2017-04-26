@@ -48,6 +48,7 @@ private:
     int key_b_pressed_counter = 0;//record how many times key "B" is pressed to turn skybox-rendering on and off
     float last_time_key_f_pressed = 0;//Record the last time that key 'F' is pressed to change the fov of mainCamera
     float last_time_key_b_pressed = 0;//Record the last time that key 'B' is pressed to turn skybox-rendering on and off
+    float last_render_time = 0;
     void RebuildCityModel();
 public:
     static CityModelExample*  getInstance()

@@ -15,7 +15,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <FreeImage.h>
+#include "SOIL.h"
 
 
 // TODO: reference additional headers your program requires here

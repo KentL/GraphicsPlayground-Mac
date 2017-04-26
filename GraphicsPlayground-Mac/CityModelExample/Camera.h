@@ -44,7 +44,7 @@ private:
 
 	//Time recorder
 	double c_lasttime_clicked;
-    int mouseSensitivity = 1w;
+    int mouseSensitivity = 1;
 
 public:
 	Camera();

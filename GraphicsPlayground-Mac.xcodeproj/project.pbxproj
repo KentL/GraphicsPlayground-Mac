@@ -45,6 +45,10 @@
 		4B728DD61E7D8B99005F9142 /* W_VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DC81E7D8B99005F9142 /* W_VertexBuffer.cpp */; };
 		4B728DD71E7D8B99005F9142 /* W_VertexDeclaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DCA1E7D8B99005F9142 /* W_VertexDeclaration.cpp */; };
 		4BE928FC1E8AAFCF00C8055B /* CityModelExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928FB1E8AAFCF00C8055B /* CityModelExample.cpp */; };
+		4BFEB4D41EAD15F3001CA243 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEB4C81EAD15F3001CA243 /* image_DXT.c */; };
+		4BFEB4D51EAD15F4001CA243 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEB4CA1EAD15F3001CA243 /* image_helper.c */; };
+		4BFEB4D61EAD15F4001CA243 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEB4CD1EAD15F3001CA243 /* SOIL.c */; };
+		4BFEB4D71EAD15F4001CA243 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEB4CF1EAD15F3001CA243 /* stb_image_aug.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -154,10 +158,22 @@
 		4B728DC91E7D8B99005F9142 /* W_VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_VertexBuffer.h; path = wolf/W_VertexBuffer.h; sourceTree = "<group>"; };
 		4B728DCA1E7D8B99005F9142 /* W_VertexDeclaration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_VertexDeclaration.cpp; path = wolf/W_VertexDeclaration.cpp; sourceTree = "<group>"; };
 		4B728DCB1E7D8B99005F9142 /* W_VertexDeclaration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_VertexDeclaration.h; path = wolf/W_VertexDeclaration.h; sourceTree = "<group>"; };
+		4BBB916A1EAAF8A60019A4E7 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; name = picture; path = resource/picture; sourceTree = "<group>"; };
 		4BCBA72A1EA867B70073E262 /* skybox.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = skybox.fsh; path = shaders/skybox.fsh; sourceTree = "<group>"; };
 		4BCBA72B1EA867B70073E262 /* skybox.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = skybox.vsh; path = shaders/skybox.vsh; sourceTree = "<group>"; };
 		4BE928FB1E8AAFCF00C8055B /* CityModelExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CityModelExample.cpp; path = CityModelExample/CityModelExample.cpp; sourceTree = "<group>"; };
 		4BE928FF1E8B594000C8055B /* CityModelExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityModelExample.h; path = CityModelExample/CityModelExample.h; sourceTree = "<group>"; };
+		4BFEB4C81EAD15F3001CA243 /* image_DXT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = "Simple OpenGL Image Library/src/image_DXT.c"; sourceTree = "<group>"; };
+		4BFEB4C91EAD15F3001CA243 /* image_DXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = image_DXT.h; path = "Simple OpenGL Image Library/src/image_DXT.h"; sourceTree = "<group>"; };
+		4BFEB4CA1EAD15F3001CA243 /* image_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = "Simple OpenGL Image Library/src/image_helper.c"; sourceTree = "<group>"; };
+		4BFEB4CB1EAD15F3001CA243 /* image_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = image_helper.h; path = "Simple OpenGL Image Library/src/image_helper.h"; sourceTree = "<group>"; };
+		4BFEB4CC1EAD15F3001CA243 /* original */ = {isa = PBXFileReference; lastKnownFileType = folder; name = original; path = "Simple OpenGL Image Library/src/original"; sourceTree = "<group>"; };
+		4BFEB4CD1EAD15F3001CA243 /* SOIL.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SOIL.c; path = "Simple OpenGL Image Library/src/SOIL.c"; sourceTree = "<group>"; };
+		4BFEB4CE1EAD15F3001CA243 /* SOIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOIL.h; path = "Simple OpenGL Image Library/src/SOIL.h"; sourceTree = "<group>"; };
+		4BFEB4CF1EAD15F3001CA243 /* stb_image_aug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stb_image_aug.c; path = "Simple OpenGL Image Library/src/stb_image_aug.c"; sourceTree = "<group>"; };
+		4BFEB4D01EAD15F3001CA243 /* stb_image_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image_aug.h; path = "Simple OpenGL Image Library/src/stb_image_aug.h"; sourceTree = "<group>"; };
+		4BFEB4D11EAD15F3001CA243 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stbi_DDS_aug_c.h; path = "Simple OpenGL Image Library/src/stbi_DDS_aug_c.h"; sourceTree = "<group>"; };
+		4BFEB4D21EAD15F3001CA243 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stbi_DDS_aug.h; path = "Simple OpenGL Image Library/src/stbi_DDS_aug.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +262,8 @@
 		4B5CF0C61E7B86D800623C6D = {
 			isa = PBXGroup;
 			children = (
+				4BFEB4C71EAD15DE001CA243 /* SOIL */,
+				4BBB91691EAAF88B0019A4E7 /* resource */,
 				4B728DB21E7D8B7A005F9142 /* wolf */,
 				4B728DA81E7D8AFF005F9142 /* Shader */,
 				4B5CF0D11E7B86D800623C6D /* GraphicsPlayground-Mac */,
@@ -372,6 +390,32 @@
 			name = wolf;
 			sourceTree = "<group>";
 		};
+		4BBB91691EAAF88B0019A4E7 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				4BBB916A1EAAF8A60019A4E7 /* picture */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		4BFEB4C71EAD15DE001CA243 /* SOIL */ = {
+			isa = PBXGroup;
+			children = (
+				4BFEB4C81EAD15F3001CA243 /* image_DXT.c */,
+				4BFEB4C91EAD15F3001CA243 /* image_DXT.h */,
+				4BFEB4CA1EAD15F3001CA243 /* image_helper.c */,
+				4BFEB4CB1EAD15F3001CA243 /* image_helper.h */,
+				4BFEB4CC1EAD15F3001CA243 /* original */,
+				4BFEB4CD1EAD15F3001CA243 /* SOIL.c */,
+				4BFEB4CE1EAD15F3001CA243 /* SOIL.h */,
+				4BFEB4CF1EAD15F3001CA243 /* stb_image_aug.c */,
+				4BFEB4D01EAD15F3001CA243 /* stb_image_aug.h */,
+				4BFEB4D11EAD15F3001CA243 /* stbi_DDS_aug_c.h */,
+				4BFEB4D21EAD15F3001CA243 /* stbi_DDS_aug.h */,
+			);
+			name = SOIL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -439,6 +483,7 @@
 				4B728DD31E7D8B99005F9142 /* W_ProgramManager.cpp in Sources */,
 				4B728DD51E7D8B99005F9142 /* W_TextureManager.cpp in Sources */,
 				4B26F1E41E890049009E4728 /* Ray.cpp in Sources */,
+				4BFEB4D41EAD15F3001CA243 /* image_DXT.c in Sources */,
 				4B728DCE1E7D8B99005F9142 /* W_Common.cpp in Sources */,
 				4B728DCD1E7D8B99005F9142 /* W_BufferManager.cpp in Sources */,
 				4B26F1DC1E890049009E4728 /* Collider.cpp in Sources */,
@@ -451,6 +496,7 @@
 				4B26F1E01E890049009E4728 /* DirectionalLightcpp.cpp in Sources */,
 				4B26F1E21E890049009E4728 /* Frustum.cpp in Sources */,
 				4B26F1D91E890049009E4728 /* AABBCollider.cpp in Sources */,
+				4BFEB4D61EAD15F4001CA243 /* SOIL.c in Sources */,
 				4B26F1E71E890049009E4728 /* SphereCollider.cpp in Sources */,
 				4B26F1E11E890049009E4728 /* FormatTranslator.cpp in Sources */,
 				4B728DD01E7D8B99005F9142 /* W_Material.cpp in Sources */,
@@ -462,11 +508,13 @@
 				4B26F1DA1E890049009E4728 /* Camera.cpp in Sources */,
 				4B5CF0D31E7B86D800623C6D /* main.cpp in Sources */,
 				4B26F1E51E890049009E4728 /* SkyBox.cpp in Sources */,
+				4BFEB4D71EAD15F4001CA243 /* stb_image_aug.c in Sources */,
 				4B26F1781E88A783009E4728 /* BlendExample.cpp in Sources */,
 				4B26F1DF1E890049009E4728 /* CubemapTexture.cpp in Sources */,
 				4B728DCC1E7D8B99005F9142 /* W_Buffer.cpp in Sources */,
 				4B728DA71E7D8AF2005F9142 /* stdafx.cpp in Sources */,
 				4B728DCF1E7D8B99005F9142 /* W_IndexBuffer.cpp in Sources */,
+				4BFEB4D51EAD15F4001CA243 /* image_helper.c in Sources */,
 				4B728DD61E7D8B99005F9142 /* W_VertexBuffer.cpp in Sources */,
 				4B26F1E31E890049009E4728 /* Node.cpp in Sources */,
 			);

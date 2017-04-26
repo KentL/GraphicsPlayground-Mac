@@ -23,7 +23,7 @@ t	| /		   | /		|------->x+
 		front	2    |/_z+
 									
 				*/
-	Vertex1 vertices[] = { { -1.0f, 1.0f, 1.0f },
+	Vertex3 vertices[] = { { -1.0f, 1.0f, 1.0f },
 						{ 1.0f, 1.0f, 1.0f },
 						{ 1.0f, -1.0f, 1.0f },
 						{ -1.0f, -1.0f, 1.0f },
@@ -32,7 +32,7 @@ t	| /		   | /		|------->x+
 						{ 1.0f, -1.0f, -1.0f },
 						{ -1.0f, -1.0f, -1.0f },
 						};
-	Vertex1 m_vertices[] = { 
+	Vertex3 m_vertices[] = {
 		//front
 		vertices[0], vertices[1], vertices[2],
 		vertices[0], vertices[3], vertices[2],
@@ -53,7 +53,7 @@ t	| /		   | /		|------->x+
 		vertices[2], vertices[3], vertices[7],
 						};
 
-	g_pVB = wolf::BufferManager::Inst()->CreateVertexBuffer(m_vertices, sizeof(Vertex1) *36);
+	g_pVB = wolf::BufferManager::Inst()->CreateVertexBuffer(m_vertices, sizeof(Vertex3) *36);
 	g_pDecl = new wolf::VertexDeclaration();
 	g_pDecl->Begin();
 	g_pDecl->AppendAttribute(wolf::AT_Position, 3, wolf::CT_Float);
@@ -93,12 +93,10 @@ void SkyBox::SetScale(vec3 scale)
 
 void SkyBox::Render()
 {
-	//glDepthFunc(GL_LEQUAL);
-
-	vec3 cameraPos = mainCamera->getPos();
-	mat4 scaleMatrix = glm::scale(vec3(m_scale.x, m_scale.y, m_scale.z));
+    vec3 cameraPos = mainCamera->getPos();
+	mat4 scaleMatrix = glm::scale(m_scale);
 	mat4 transMatrix = glm::translate(vec3(m_position.x + cameraPos.x, m_position.y + cameraPos.y, m_position.z + cameraPos.z));
-	mat4 mWorld = transMatrix*scaleMatrix;
+    mat4 mWorld = transMatrix*scaleMatrix;
 	mat4 mView = mainCamera->getViewMatrix();
 	mat4 mProj= mainCamera->getProjectionMatrix();
 	mat4 mWorldViewProj = mProj*mView*mWorld;

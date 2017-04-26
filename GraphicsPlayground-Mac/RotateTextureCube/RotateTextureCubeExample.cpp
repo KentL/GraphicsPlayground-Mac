@@ -77,7 +77,7 @@ void RotateTextureCubeExample::Initialize() {
 	wolf::TextureManager* textureManager = wolf::TextureManager::Inst();
 	g_pVB = bufferManager->CreateVertexBuffer(cubeVertices, sizeof(cubeVertices));
 
-	tex = textureManager->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/common/metal.tga");
+    tex = textureManager->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/common/metal.tga");
 	tex->SetFilterMode(wolf::Texture::FM_Nearest, wolf::Texture::FM_Nearest);
 	tex->SetWrapMode(wolf::Texture::WM_Clamp, wolf::Texture::WM_Clamp);
 	mat = g_Mat_Manager->CreateMaterial("texture_cube_material");
