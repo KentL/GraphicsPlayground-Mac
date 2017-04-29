@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CITYMODELEXAMPLE
+#define CITYMODELEXAMPLE
 #include "stdafx.h"
 #include "ExampleBase.hpp"
 #include "W_Common.h"
@@ -68,3 +69,4 @@ public:
 
 };
 
+#endif

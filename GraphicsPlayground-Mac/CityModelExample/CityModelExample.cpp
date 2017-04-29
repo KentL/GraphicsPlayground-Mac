@@ -37,7 +37,7 @@ void CityModelExample::HandleKeyInput(GLFWwindow *window, int key, int scancode,
     {
         RebuildCityModel();
     }
-
+    
     //Press 'B' to change skybox-rendering flag
     if (key == GLFW_KEY_B && glfwGetTime() - last_time_key_b_pressed > 0.5)
     {
@@ -48,37 +48,39 @@ void CityModelExample::HandleKeyInput(GLFWwindow *window, int key, int scancode,
 }
 void CityModelExample::Initialize()
 {
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+    string pictureDir = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/citymodel/";
+    string shaderDir = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/";
+    //Setup Camera
+    mainCamera = new Camera();
+    mainCamera->setPos(vec3(0, 0, 0));
+    mainCamera->setFOV(45.0f);
+    mainCamera->setNear(0.1f);
+    mainCamera->setFar(10000.0f);
+    mainCamera->setAspect(640.0f / 480.0f);
+    mainCamera->setWindow(window);
     
-        string pictureDir = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/citymodel/";
-        string shaderDir = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/";
-		//Setup Camera
-		mainCamera = new Camera();
-		mainCamera->setPos(vec3(0, 0, 0));
-		mainCamera->setFOV(45.0f);
-		mainCamera->setNear(0.1f);
-		mainCamera->setFar(10000.0f);
-		mainCamera->setAspect(640.0f / 480.0f);
-
-		cityModeller = new CityModeller();
-		cityModeller->SetTexture(pictureDir+"CityModelTextureMap2.png");
-		cityModeller->SetProgram(shaderDir+"city_model.vsh", shaderDir+"city_model.fsh");
-		cityModeller->SetCamera(mainCamera);
-
-		//Initialize SkyBox properties
-		string textureNames[] = { pictureDir+"skybox-png/skybox_texture_posX.png", pictureDir+"skybox-png/skybox_texture_negX.png",
+    cityModeller = new CityModeller();
+    cityModeller->SetTexture(pictureDir+"CityModelTextureMap2.png");
+    cityModeller->SetProgram(shaderDir+"city_model.vsh", shaderDir+"city_model.fsh");
+    cityModeller->SetCamera(mainCamera);
+    cityModeller->SetWindow(window);
+    
+    //Initialize SkyBox properties
+    string textureNames[] = { pictureDir+"skybox-png/skybox_texture_posX.png", pictureDir+"skybox-png/skybox_texture_negX.png",
 								pictureDir+"skybox-png/skybox_texture_posY.png", pictureDir+"skybox-png/skybox_texture_negY.png",
 								pictureDir+"skybox-png/skybox_texture_posZ.png", pictureDir+"skybox-png/skybox_texture_negZ.png" };
     
-		skybox = new SkyBox();
-		skybox->SetCamera(mainCamera);
-		skybox->SetPositon(vec3(0, 5, 0));
-		skybox->SetProgram(shaderDir+"skybox.vsh", shaderDir+"skybox.fsh");
-		skybox->SetScale(vec3(20, 20, 20));
-		skybox->SetTexture(textureNames);
-		skybox->PrepareData();
+    skybox = new SkyBox();
+    skybox->SetCamera(mainCamera);
+    skybox->SetPositon(vec3(0, 5, 0));
+    skybox->SetProgram(shaderDir+"skybox.vsh", shaderDir+"skybox.fsh");
+    skybox->SetScale(vec3(20, 20, 20));
+    skybox->SetTexture(textureNames);
+    skybox->PrepareData();
     
     RebuildCityModel();
-
+    
 }
 void CityModelExample::RebuildCityModel(){
     cityModeller->generateCityLayoutData();
@@ -86,19 +88,14 @@ void CityModelExample::RebuildCityModel(){
 }
 void CityModelExample::Render()
 {
-//    float currentTime = glfwGetTime();
-//    float frameRate = 1/( currentTime - last_render_time);
-//    printf("frame rate:%f\n",frameRate);
-//    last_render_time=currentTime;
-    
     mainCamera->cameraMove();
-
-	if (key_b_pressed_counter==1)
-	{
-		skybox->Render();
-	}
-
-	cityModeller->Render();
+    
+    if (key_b_pressed_counter==1)
+    {
+        skybox->Render();
+    }
+    
+    cityModeller->Render();
 }
 
 

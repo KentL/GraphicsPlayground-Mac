@@ -1,4 +1,5 @@
-#pragma once
+#ifndef AABBCOLLIDER
+#define AABBCOLLIDER
 #include "Collider.h"
 #include "Plane.h"
 
@@ -81,3 +82,4 @@ namespace Colliders
 		void CalculatePlanes();
 	};
 }
+#endif

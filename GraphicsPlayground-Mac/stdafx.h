@@ -3,7 +3,8 @@
 // are changed infrequently
 //
 
-#pragma once
+#ifndef STDAFX
+#define STDAFX
 
 
 #include <stdio.h>
@@ -17,5 +18,6 @@
 #include <iostream>
 #include "SOIL.h"
 
+#endif
 
 // TODO: reference additional headers your program requires here

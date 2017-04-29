@@ -107,53 +107,6 @@ FrustumNode Camera::getFrustum()
 	return tempFrustum;
 }
 void Camera::HandleKeyInput(GLFWwindow *window, int key, int scancode, int action, int mods){
-    if (key==GLFW_KEY_W)
-    {
-        forwDistance += SPEED;
-    }
-    
-    if (key == GLFW_KEY_S)
-    {
-       
-        forwDistance -= SPEED;
-    }
-    if (key==GLFW_KEY_D)
-    {
-        leftDistance -= SPEED;
-    }
-    
-    if (key == GLFW_KEY_A)
-    {
-        leftDistance += SPEED;
-    }
-    
-    if (key == GLFW_KEY_UP)
-    {
-        turnUpScale += 0.5;
-        if (90 - turnUpScale < 0.01)
-        {
-            turnUpScale = 90 - 0.01;
-        }
-    }
-    
-    if (key == GLFW_KEY_DOWN)
-    {
-        turnUpScale -= 0.5;
-        if (turnUpScale + 90 < 0.01)
-        {
-            turnUpScale = - 90 + 0.01;
-        }
-    }
-    
-    if (key == GLFW_KEY_LEFT)
-    {
-        turnLeftScale += 0.5;
-    }
-    
-    if (key == GLFW_KEY_RIGHT)
-    {
-        turnLeftScale -= 0.5;
-    }
     if (key == GLFW_KEY_C &(glfwGetTime() -c_lasttime_clicked)>0.5)
     {
         collisionSwitch = (collisionSwitch + 1) % 2;
@@ -164,9 +117,60 @@ void Camera::setMouseSensitivity(int sensitivity){
     this->mouseSensitivity  = sensitivity;
 }
 void Camera::HandleCursorPositionChange(GLFWwindow *window, double newXPos, double newYPos){
-    newx = newXPos;
-    newy = newYPos;
     
+}
+
+void Camera::detectInput(){
+    if (glfwGetKey(window, GLFW_KEY_W)==GLFW_PRESS)
+    {
+        forwDistance += SPEED;
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_S)==GLFW_PRESS)
+    {
+        
+        forwDistance -= SPEED;
+    }
+    if (glfwGetKey(window, GLFW_KEY_D)==GLFW_PRESS)
+    {
+        leftDistance -= SPEED;
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_A)==GLFW_PRESS)
+    {
+        leftDistance += SPEED;
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_UP)==GLFW_PRESS)
+    {
+        turnUpScale += 0.5;
+        if (90 - turnUpScale < 0.01)
+        {
+            turnUpScale = 90 - 0.01;
+        }
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_DOWN)==GLFW_PRESS)
+    {
+        turnUpScale -= 0.5;
+        if (turnUpScale + 90 < 0.01)
+        {
+            turnUpScale = - 90 + 0.01;
+        }
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_LEFT)==GLFW_PRESS)
+    {
+        turnLeftScale += 0.5;
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_RIGHT)==GLFW_PRESS)
+    {
+        turnLeftScale -= 0.5;
+    }
+    
+    
+    glfwGetCursorPos(window, &newx, &newy);
     if (newx > 1200 || newx < 10 || newy < 10 || newy>700)
     {
         glfwSetCursorPos(window, 600, 350);
@@ -198,6 +202,7 @@ void Camera::HandleCursorPositionChange(GLFWwindow *window, double newXPos, doub
 }
 void Camera::cameraMove()
 {
+    detectInput();
     this->setRotate(-turnUpScale, vec3(1, 0, 0));
     this->addRotate( turnLeftScale, vec3(0, 1, 0));
     
@@ -337,7 +342,9 @@ vec3 Camera::CollideWithWorld(const vec3& pos, const vec3& vel)
 	delete collisionPackage;
 	return CollideWithWorld(newBasePoint, newVelocityVector);
 }
-
+void Camera::setWindow(GLFWwindow *window){
+    this->window=window;
+}
 void Camera::CollideAndSlide(const vec3& vel)
 {
 	CollisionPackage* collisionPackage = new CollisionPackage();

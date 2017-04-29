@@ -1,3 +1,5 @@
+#ifndef HELPER
+#define HELPER
 #include "stdafx.h"
 #include "CollisionPackage.h"
 #include "Plane.h"
@@ -47,3 +49,5 @@ void SetLength(vec3& v, double length)
 	v = glm::normalize(v);
 	v = v*vec3(length, length, length);
 }
+
+#endif

@@ -631,34 +631,37 @@ void CityModeller::SetProgram(const string& vsh, const string& fsh)
 void CityModeller::HandleKeyInput(GLFWwindow *window, int key, int scancode, int action, int mods){
     
 }
+void CityModeller::SetWindow(GLFWwindow *window){
+    this->window=window;
+}
 void CityModeller::Render()
 {
-//	//press 'L' to turn light effect on and off
-//	if (glfwGetKey(76) == GLFW_PRESS&&glfwGetKey(GLFW_KEY_LCTRL) != GLFW_PRESS&&glfwGetKey(GLFW_KEY_RCTRL) != GLFW_PRESS&&(glfwGetTime() - last_time_key_l_pressed)> 0.5)
-//	{
-//		last_time_key_l_pressed = glfwGetTime();
-//		key_l_pressed = !key_l_pressed;
-//
-//		if (!key_l_pressed)
-//		{
-//			g_maskSurface->setAmbient(wolf::Color4(1, 1, 1, 1));
-//			g_light->setAmbient(wolf::Color4(1, 1, 1, 1));
-//		}
-//		else
-//		{
-//			g_maskSurface->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
-//			g_light->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
-//		}
-//	}
-//	//Press Ctrl+L to change rotate the light or not
-//	if (glfwGetKey(GLFW_KEY_LCTRL)==GLFW_PRESS||glfwGetKey(GLFW_KEY_RCTRL)==GLFW_PRESS)
-//	{
-//		if (glfwGetKey(76)==GLFW_PRESS && (glfwGetTime() - last_time_key_l_pressed) > 0.5)
-//		{
-//			last_time_key_l_pressed = glfwGetTime();
-//			rotate_light = !rotate_light;
-//		}
-//	}
+	//press 'L' to turn light effect on and off
+	if (glfwGetKey(window,GLFW_KEY_L) == GLFW_PRESS&&glfwGetKey(window,GLFW_KEY_LEFT_CONTROL) != GLFW_PRESS&&glfwGetKey(window,GLFW_KEY_RIGHT_CONTROL) != GLFW_PRESS&&(glfwGetTime() - last_time_key_l_pressed)> 0.5)
+	{
+		last_time_key_l_pressed = glfwGetTime();
+		key_l_pressed = !key_l_pressed;
+
+		if (!key_l_pressed)
+		{
+			g_maskSurface->setAmbient(wolf::Color4(1, 1, 1, 1));
+			g_light->setAmbient(wolf::Color4(1, 1, 1, 1));
+		}
+		else
+		{
+			g_maskSurface->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
+			g_light->setAmbient(wolf::Color4(0.5, 0.5, 0.5, 1));
+		}
+	}
+	//Press Ctrl+L to change rotate the light or not
+	if (glfwGetKey(window,GLFW_KEY_RIGHT_CONTROL)==GLFW_PRESS||glfwGetKey(window,GLFW_KEY_LEFT_CONTROL)==GLFW_PRESS)
+	{
+		if (glfwGetKey(window,GLFW_KEY_L)==GLFW_PRESS && (glfwGetTime() - last_time_key_l_pressed) > 0.5)
+		{
+			last_time_key_l_pressed = glfwGetTime();
+			rotate_light = !rotate_light;
+		}
+	}
 
 	if (key_l_pressed)
 	{

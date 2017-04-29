@@ -1,3 +1,5 @@
+#ifndef COLLISIONHELPER
+#define COLLISIONHELPER
 #include "stdafx.h"
 #include "CollisionPackage.h"
 #include "Plane.h"
@@ -318,3 +320,5 @@ void LoadColliderVertexBuffer(vector<AABBCollider*>* aabbs, Vertex1* a, int &cou
 		count += 8;
 	}
 }
+
+#endif

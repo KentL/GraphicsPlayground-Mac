@@ -33,7 +33,7 @@ private:
 
 	float turnLeftScale, turnUpScale;
 	float leftDistance, forwDistance;
-	float newx, newy, lastx, lasty;
+	double newx, newy, lastx, lasty;
 	bool isfirsttime;
 
 	//Collision Detection Part:
@@ -45,7 +45,8 @@ private:
 	//Time recorder
 	double c_lasttime_clicked;
     int mouseSensitivity = 1;
-
+    GLFWwindow* window;
+    void detectInput();
 public:
 	Camera();
 	~Camera();
@@ -64,7 +65,7 @@ public:
 	FrustumNode getFrustum();
 	void calculateFrustum();
 	vec4 getViewDirection();
-
+    void setWindow(GLFWwindow* window);
 	void cameraMove();
 	vec3 CollideWithWorld(const vec3& pos, const vec3& vel);
 	void CheckCollision(CollisionPackage* collisionPacket);

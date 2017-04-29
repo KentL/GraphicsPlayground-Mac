@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CUBE
+#define CUBE
 #define GLFW_INCLUDE_GL3
 #define GLFW_NO_GLU
 #include <stdio.h>
@@ -48,3 +49,4 @@ public:
 	~Cube();
 };
 
+#endif

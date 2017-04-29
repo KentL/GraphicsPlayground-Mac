@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GraphicsPlayground-Mac/CityModelExample/Camera.cpp"
-            timestampString = "514440122.40378"
+            timestampString = "514874809.112655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "Camera::cameraMove()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GraphicsPlayground-Mac/CityModelExample/CityModelExample.cpp"
-            timestampString = "514703031.352425"
+            timestampString = "514873751.99764"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "CityModelExample::Render()"
             landmarkType = "7">
          </BreakpointContent>

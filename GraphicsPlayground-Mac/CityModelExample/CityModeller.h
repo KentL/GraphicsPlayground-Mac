@@ -30,7 +30,7 @@ private:
 	vector<singlegrid*>* buildingBase;
 	vector<singlegrid*>* space;
 	vector<Colliders::AABBCollider*>* aabbCollidersCollection;
-	bool key_l_pressed = true;//record how many times key "L" is pressed to turn light effect on and off
+	bool key_l_pressed = false;//record how many times key "L" is pressed to turn light effect on and off
 	bool rotate_light = true;//Flag to determine whether light rotates or not
 	wolf::VertexBuffer* g_pVB1 = 0;
 	wolf::VertexDeclaration* g_pDecl = 0;
@@ -41,6 +41,7 @@ private:
 	SurfaceMaterial* g_maskSurface;
 	DirectionalLight* g_light;
 	Camera* mainCamera;
+    GLFWwindow* window;
 	float last_time_key_l_pressed;//The last time that key 'L' is pressed to turn light on and off
 	float lightAngle;
 
@@ -61,6 +62,7 @@ public:
 	void SetProgram(const string& vsh, const string& fsh);
 	void Render();
 	void SetCamera(Camera* mainCamera);
+    void SetWindow(GLFWwindow* window);
 public:
 	bool grids[SIZE][SIZE];
 	int w, h, l; //width length height of a building
