@@ -26,9 +26,11 @@ void WaterQuad::Init(){
     };
     program=wolf::ProgramManager::Inst()->CreateProgram(vShader, fShader);
     
-    normalMap=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap.png");
+    normalMap1=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap.png");
+    normalMap2=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
+    normalMap3=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap3.png");
     
-    
+
     
     g_pVB = wolf::BufferManager::Inst()->CreateVertexBuffer(m_vertices, sizeof(Vertex) *6);
     g_pDecl = new wolf::VertexDeclaration();
@@ -69,10 +71,23 @@ void WaterQuad::Render(){
     program->SetUniform("ReflectionTex",1);
     
     glActiveTexture(GL_TEXTURE2);
-    normalMap->Bind();
-    normalMap->SetWrapMode(wolf::Texture::WM_Repeat,wolf::Texture::WM_Repeat);
-    normalMap->SetFilterMode(wolf::Texture::FM_Linear,wolf::Texture::FM_Linear);
+    normalMap1->Bind();
+    normalMap1->SetWrapMode(wolf::Texture::WM_Repeat,wolf::Texture::WM_Repeat);
+    normalMap1->SetFilterMode(wolf::Texture::FM_Linear,wolf::Texture::FM_Linear);
     program->SetUniform("NormalMap", 2);
+    
+    glActiveTexture(GL_TEXTURE3);
+    normalMap2->Bind();
+    normalMap2->SetWrapMode(wolf::Texture::WM_Repeat,wolf::Texture::WM_Repeat);
+    normalMap2->SetFilterMode(wolf::Texture::FM_Linear,wolf::Texture::FM_Linear);
+    program->SetUniform("NormalMap2", 3);
+    
+    glActiveTexture(GL_TEXTURE4);
+    normalMap3->Bind();
+    normalMap3->SetWrapMode(wolf::Texture::WM_Repeat,wolf::Texture::WM_Repeat);
+    normalMap3->SetFilterMode(wolf::Texture::FM_Linear,wolf::Texture::FM_Linear);
+    program->SetUniform("NormalMap3", 4);
+    
     
     program->SetUniform("WorldViewProj", CalculateWVP());
     program->SetUniform("World", CalculateWorld());

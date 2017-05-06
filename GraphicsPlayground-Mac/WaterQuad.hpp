@@ -38,7 +38,10 @@ private:
     GLFWwindow* window;
     vec3 normal = vec3(0,1,0);
     vector<Renderable*> renderObjects;
-    wolf::Texture* normalMap;
+    wolf::Texture* normalMap1;
+    wolf::Texture* normalMap2;
+    wolf::Texture* normalMap3;
+    
     float speed=10;
     float round=0;
 private:

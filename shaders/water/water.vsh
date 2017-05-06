@@ -13,7 +13,10 @@ in vec3 a_tangent;
 
 out vec2 reflection_uv;
 out vec2 refraction_uv;
-out vec2 normalmap_uv;
+out vec2 normalmap_uv1;
+out vec2 normalmap_uv2;
+out vec2 normalmap_uv3;
+
 
 out vec3 v_normal;
 out vec3 v_tangent;
@@ -35,8 +38,14 @@ void main()
     reflection_uv.x = reflectionVertexPos.x/reflectionVertexPos.w/2.0+0.5;
     reflection_uv.y = reflectionVertexPos.y/reflectionVertexPos.w/2.0+0.5;
     
-    normalmap_uv.x = a_uv1.x+time;
-    normalmap_uv.y = a_uv1.y+time;
+    normalmap_uv1.x = a_uv1.x+time;
+    normalmap_uv1.y = a_uv1.y+time;
+    
+    normalmap_uv2.x = a_uv1.x-time/2;
+    normalmap_uv2.y = a_uv1.y-time/2;
+    
+    normalmap_uv3.x = a_uv1.x+time/4;
+    normalmap_uv3.y = a_uv1.y-time/4;
     
     
     
