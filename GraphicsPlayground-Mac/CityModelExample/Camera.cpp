@@ -75,13 +75,13 @@ float Camera::getFOV()
 
 mat4 Camera::getViewMatrix()
 {
-	lookatPoint = this->getRotationMatrix()*vec4(0, 0, 1, 1);
-
-	viewMatrix = glm::lookAt(this->getPos(), this->getPos() + vec3(lookatPoint), glm::vec3(0.0f, 1.0f, 0.0f));
+	viewMatrix = glm::lookAt(this->getPos(), this->getPos() + vec3(lookatPoint), vec3(up.x,up.y,up.z));
 	
 	return viewMatrix;
 }
-
+void Camera::setUpDirection(vec4 up){
+    this->up=up;
+}
 vec4 Camera::getViewDirection()
 {
 	return lookatPoint;
@@ -119,7 +119,12 @@ void Camera::setMouseSensitivity(int sensitivity){
 void Camera::HandleCursorPositionChange(GLFWwindow *window, double newXPos, double newYPos){
     
 }
-
+void Camera::setViewDirection(vec3 viewDirection){
+    this->lookatPoint.x = viewDirection.x;
+    this->lookatPoint.y = viewDirection.y;
+    this->lookatPoint.z = viewDirection.z;
+    this->lookatPoint.w = 1;
+}
 void Camera::detectInput(){
     if (glfwGetKey(window, GLFW_KEY_W)==GLFW_PRESS)
     {
@@ -225,6 +230,7 @@ void Camera::cameraMove()
     {
         myPosition += vec3(xincreasment, yincreasment, zincreasment);
     }
+    lookatPoint = this->getRotationMatrix()*vec4(0, 0, 1, 1);
     forwDistance = 0;
     leftDistance = 0;
     lastx = newx;

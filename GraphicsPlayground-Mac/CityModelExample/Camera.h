@@ -22,10 +22,11 @@ private:
 	float fov;
 	float farPane, nearPane;
 	float aspect;
+    vec4 up=glm::vec4(0.0f, 1.0f, 0.0f,1.0f);
 	mat4 viewMatrix;
 	mat4 projectionMatrix;
 	vec4* vertices;
-	vec4 lookatPoint;
+	vec4 lookatPoint=vec4(0, 0, 1, 1);
 	bool frustumCalculated;
 	vector<Colliders::AABBCollider*>* aabbColliders;
 
@@ -65,7 +66,9 @@ public:
 	FrustumNode getFrustum();
 	void calculateFrustum();
 	vec4 getViewDirection();
+    void setViewDirection(vec3 viewDirection);
     void setWindow(GLFWwindow* window);
+    void setUpDirection(vec4 up);
 	void cameraMove();
 	vec3 CollideWithWorld(const vec3& pos, const vec3& vel);
 	void CheckCollision(CollisionPackage* collisionPacket);

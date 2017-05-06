@@ -44,6 +44,7 @@ class Material
 
 		const std::string& GetName() const { return m_strName; }
 		void SetProgram(const std::string& p_strVS, const std::string& p_strPS);
+        Program* GetProgram(){return m_pProgram;}
 		//-------------------------------------------------------------------------
 
 	private:

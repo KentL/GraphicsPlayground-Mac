@@ -10,5 +10,19 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "WaterQuad::Render():WaterQuad.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "reflectionTarget-&gt;GetColorBuffer()">
+            </PersistentString>
+            <PersistentString
+               value = " mainCamera-&gt;getViewDirection()">
+            </PersistentString>
+            <PersistentString
+               value = "refractionTarget-&gt;GetColorBuffer()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

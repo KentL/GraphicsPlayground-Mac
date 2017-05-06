@@ -39,7 +39,7 @@ CityModeller::CityModeller()
 	//random seed
 	srand((unsigned)time(NULL));
 
-	mat = g_Mat_Manager->CreateMaterial("city_model_material");	
+    mat = wolf::MaterialManager::Inst()->CreateMaterial("city_model_material");
 	mat->SetDepthTest(true);
 	mat->SetBlend(false);
 	//Initialize material surface property
@@ -634,6 +634,10 @@ void CityModeller::HandleKeyInput(GLFWwindow *window, int key, int scancode, int
 void CityModeller::SetWindow(GLFWwindow *window){
     this->window=window;
 }
+void CityModeller::Render(RenderTarget *target){
+    target->Bind();
+    Render();
+}
 void CityModeller::Render()
 {
 	//press 'L' to turn light effect on and off
@@ -708,6 +712,10 @@ void CityModeller::Render()
 
 	g_pDecl->Bind();
 	mat->Apply();
+    
+    int width, height;
+    glfwGetFramebufferSize(window, &width, &height);
+    glViewport(0, 0, width, height);
 
 	glDrawArrays(GL_TRIANGLES, 0, city_vertices_data->size());
 }

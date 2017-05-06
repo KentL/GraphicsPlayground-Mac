@@ -5,8 +5,10 @@
 #include "CubemapTexture.h"
 #include "W_MaterialManager.h"
 #include "Camera.h"
+#include "RenderTarget.h"
+#include "Renderable.hpp"
 
-class SkyBox
+class SkyBox:public Renderable
 {
 private:
 	CubemapTexture* m_cube_texture;
@@ -17,13 +19,15 @@ private:
 	wolf::VertexDeclaration* g_pDecl = 0;
 	wolf::Program* g_pProgram = 0;
 	Camera* mainCamera;
-
+    GLFWwindow* window;
 public:
 	SkyBox();
 	~SkyBox();
 	void Render();
+    void Render(RenderTarget* renderTarget);
 	void SetPositon(vec3 pos);
 	void SetScale(vec3 scale);
+    void SetWindow(GLFWwindow* window);
 	void SetCamera(Camera* mainCamera);
 	void SetTexture(const string* filename);
 	void SetProgram(const string& vsh, const string& fsh);

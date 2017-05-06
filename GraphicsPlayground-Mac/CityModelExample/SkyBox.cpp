@@ -90,7 +90,9 @@ void SkyBox::SetScale(vec3 scale)
 {
 	this->m_scale = scale;
 }
-
+void SkyBox::SetWindow(GLFWwindow *window){
+    this->window=window;
+}
 void SkyBox::Render()
 {
     vec3 cameraPos = mainCamera->getPos();
@@ -108,6 +110,15 @@ void SkyBox::Render()
 
 	this->m_cube_texture->Bind(GL_TEXTURE0);
 	g_pDecl->Bind();
+    
+    int width, height;
+    glfwGetFramebufferSize(window, &width, &height);
+    glViewport(0, 0, width, height);
 
-	glDrawArrays(GL_TRIANGLES, 0, 36);
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+}
+
+void SkyBox::Render(RenderTarget *renderTarget){
+    renderTarget->Bind();
+    Render();
 }

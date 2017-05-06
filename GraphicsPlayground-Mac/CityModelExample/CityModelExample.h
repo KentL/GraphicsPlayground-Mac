@@ -15,6 +15,8 @@
 #include <struct.h>
 #include "SurfaceMaterial.h"
 #include "SkyBox.h"
+#include "WaterQuad.hpp"
+
 class CityModelExample:public ExampleBase
 {
     friend class Game;
@@ -37,6 +39,7 @@ private:
     Camera* mainCamera;
     CityModeller* cityModeller;
     SkyBox* skybox;
+    WaterQuad* waterQuad;
     
     float s_fRotation = 0;
     bool keypressed = false;

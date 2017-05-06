@@ -31,7 +31,10 @@ struct Vertex3
 {
 	GLfloat x, y, z;
 };
-
+struct Vertex4{
+    GLfloat x,y,z;
+    GLfloat u,v;
+};
 struct building
 {
 	GLfloat length,width, height ;

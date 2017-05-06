@@ -29,6 +29,7 @@
 		4B26F1E41E890049009E4728 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1CD1E890049009E4728 /* Ray.cpp */; };
 		4B26F1E51E890049009E4728 /* SkyBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1CF1E890049009E4728 /* SkyBox.cpp */; };
 		4B26F1E71E890049009E4728 /* SphereCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1D31E890049009E4728 /* SphereCollider.cpp */; };
+		4B43F0951EB5538F005C01FD /* WaterRenderingExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F0931EB5538F005C01FD /* WaterRenderingExample.cpp */; };
 		4B5CF0D31E7B86D800623C6D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CF0D21E7B86D800623C6D /* main.cpp */; };
 		4B5CF0DB1E7B894000623C6D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CF0DA1E7B894000623C6D /* OpenGL.framework */; };
 		4B728DA71E7D8AF2005F9142 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DA01E7D8AF2005F9142 /* stdafx.cpp */; };
@@ -44,6 +45,9 @@
 		4B728DD51E7D8B99005F9142 /* W_TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DC51E7D8B99005F9142 /* W_TextureManager.cpp */; };
 		4B728DD61E7D8B99005F9142 /* W_VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DC81E7D8B99005F9142 /* W_VertexBuffer.cpp */; };
 		4B728DD71E7D8B99005F9142 /* W_VertexDeclaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DCA1E7D8B99005F9142 /* W_VertexDeclaration.cpp */; };
+		4BD8B5591EB6707C00AC9B0F /* WaterQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8B5571EB6707C00AC9B0F /* WaterQuad.cpp */; };
+		4BD8B55C1EB6718200AC9B0F /* Quad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8B55A1EB6718200AC9B0F /* Quad.cpp */; };
+		4BD8B5621EB6DE0F00AC9B0F /* RenderTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8B5601EB6DE0F00AC9B0F /* RenderTarget.cpp */; };
 		4BE928FC1E8AAFCF00C8055B /* CityModelExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BE928FB1E8AAFCF00C8055B /* CityModelExample.cpp */; };
 		4BFEB4D41EAD15F3001CA243 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEB4C81EAD15F3001CA243 /* image_DXT.c */; };
 		4BFEB4D51EAD15F4001CA243 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEB4CA1EAD15F3001CA243 /* image_helper.c */; };
@@ -117,10 +121,13 @@
 		4B362D6D1E8A3FEA00B49268 /* KeyboardInputHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeyboardInputHandler.hpp; sourceTree = "<group>"; };
 		4B362D6E1E8A3FEA00B49268 /* MouseInputHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MouseInputHandler.hpp; sourceTree = "<group>"; };
 		4B362D6F1E8A409F00B49268 /* struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = struct.h; path = CityModelExample/struct.h; sourceTree = "<group>"; };
+		4B43F0931EB5538F005C01FD /* WaterRenderingExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WaterRenderingExample.cpp; path = WaterRendering/WaterRenderingExample.cpp; sourceTree = "<group>"; };
+		4B43F0941EB5538F005C01FD /* WaterRenderingExample.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = WaterRenderingExample.hpp; path = WaterRendering/WaterRenderingExample.hpp; sourceTree = "<group>"; };
 		4B5CF0CF1E7B86D800623C6D /* GraphicsPlayground-Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "GraphicsPlayground-Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5CF0D21E7B86D800623C6D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4B5CF0DA1E7B894000623C6D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4B5CF0DC1E7B89A100623C6D /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		4B6455F91EBAC14A009D8B1B /* Renderable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderable.hpp; sourceTree = "<group>"; };
 		4B67D7191E8863FB00E4C321 /* ExampleBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExampleBase.hpp; sourceTree = "<group>"; };
 		4B728D9B1E7D8AF2005F9142 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		4B728DA01E7D8AF2005F9142 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
@@ -161,6 +168,14 @@
 		4BBB916A1EAAF8A60019A4E7 /* picture */ = {isa = PBXFileReference; lastKnownFileType = folder; name = picture; path = resource/picture; sourceTree = "<group>"; };
 		4BCBA72A1EA867B70073E262 /* skybox.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = skybox.fsh; path = shaders/skybox.fsh; sourceTree = "<group>"; };
 		4BCBA72B1EA867B70073E262 /* skybox.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = skybox.vsh; path = shaders/skybox.vsh; sourceTree = "<group>"; };
+		4BD8B5571EB6707C00AC9B0F /* WaterQuad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WaterQuad.cpp; sourceTree = "<group>"; };
+		4BD8B5581EB6707C00AC9B0F /* WaterQuad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WaterQuad.hpp; sourceTree = "<group>"; };
+		4BD8B55A1EB6718200AC9B0F /* Quad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad.cpp; sourceTree = "<group>"; };
+		4BD8B55B1EB6718200AC9B0F /* Quad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Quad.hpp; sourceTree = "<group>"; };
+		4BD8B55D1EB676F400AC9B0F /* water.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = water.fsh; path = shaders/water/water.fsh; sourceTree = "<group>"; };
+		4BD8B55E1EB676F400AC9B0F /* water.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = water.vsh; path = shaders/water/water.vsh; sourceTree = "<group>"; };
+		4BD8B5601EB6DE0F00AC9B0F /* RenderTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderTarget.cpp; path = common/RenderTarget.cpp; sourceTree = "<group>"; };
+		4BD8B5611EB6DE0F00AC9B0F /* RenderTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderTarget.h; path = common/RenderTarget.h; sourceTree = "<group>"; };
 		4BE928FB1E8AAFCF00C8055B /* CityModelExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CityModelExample.cpp; path = CityModelExample/CityModelExample.cpp; sourceTree = "<group>"; };
 		4BE928FF1E8B594000C8055B /* CityModelExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityModelExample.h; path = CityModelExample/CityModelExample.h; sourceTree = "<group>"; };
 		4BFEB4C81EAD15F3001CA243 /* image_DXT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = "Simple OpenGL Image Library/src/image_DXT.c"; sourceTree = "<group>"; };
@@ -213,39 +228,22 @@
 				4B362D6F1E8A409F00B49268 /* struct.h */,
 				4B26F1B21E890049009E4728 /* AABBCollider.cpp */,
 				4B26F1B31E890049009E4728 /* AABBCollider.h */,
-				4B26F1B41E890049009E4728 /* Camera.cpp */,
-				4B26F1B51E890049009E4728 /* Camera.h */,
 				4B26F1B61E890049009E4728 /* CityModeller.cpp */,
 				4B26F1B71E890049009E4728 /* CityModeller.h */,
-				4B26F1B81E890049009E4728 /* Collider.cpp */,
-				4B26F1B91E890049009E4728 /* Collider.h */,
 				4B26F1BA1E890049009E4728 /* collidetest.cpp */,
 				4B26F1BB1E890049009E4728 /* CollisionDetector.cpp */,
 				4B26F1BC1E890049009E4728 /* CollisionDetector.h */,
 				4B26F1BD1E890049009E4728 /* CollisionHelper.h */,
 				4B26F1BE1E890049009E4728 /* CollisionPackage.h */,
-				4B26F1BF1E890049009E4728 /* Cube.h */,
-				4B26F1C01E890049009E4728 /* CubemapTexture.cpp */,
-				4B26F1C11E890049009E4728 /* CubemapTexture.h */,
 				4B26F1C21E890049009E4728 /* DirectionalLight.h */,
 				4B26F1C31E890049009E4728 /* DirectionalLightcpp.cpp */,
 				4B26F1C41E890049009E4728 /* FormatTranslator.cpp */,
 				4B26F1C51E890049009E4728 /* FormatTranslator.h */,
-				4B26F1C61E890049009E4728 /* Frustum.cpp */,
-				4B26F1C71E890049009E4728 /* Frustum.h */,
 				4B26F1C81E890049009E4728 /* Helper.h */,
 				4B26F1C91E890049009E4728 /* Light.h */,
-				4B26F1CA1E890049009E4728 /* Node.cpp */,
-				4B26F1CB1E890049009E4728 /* Node.h */,
-				4B26F1CC1E890049009E4728 /* Plane.h */,
-				4B26F1CD1E890049009E4728 /* Ray.cpp */,
-				4B26F1CE1E890049009E4728 /* Ray.h */,
-				4B26F1CF1E890049009E4728 /* SkyBox.cpp */,
-				4B26F1D01E890049009E4728 /* SkyBox.h */,
 				4B26F1D31E890049009E4728 /* SphereCollider.cpp */,
 				4B26F1D41E890049009E4728 /* SphereCollider.h */,
 				4B26F1D71E890049009E4728 /* SurfaceMaterial.h */,
-				4B26F1D81E890049009E4728 /* Triangle.h */,
 			);
 			name = CityModelExample;
 			sourceTree = "<group>";
@@ -253,10 +251,50 @@
 		4B362D6C1E8A3FD300B49268 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				4B6455F91EBAC14A009D8B1B /* Renderable.hpp */,
 				4B362D6D1E8A3FEA00B49268 /* KeyboardInputHandler.hpp */,
 				4B362D6E1E8A3FEA00B49268 /* MouseInputHandler.hpp */,
 			);
 			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		4B43F08E1EB54EEB005C01FD /* WaterRendering */ = {
+			isa = PBXGroup;
+			children = (
+				4B43F0931EB5538F005C01FD /* WaterRenderingExample.cpp */,
+				4B43F0941EB5538F005C01FD /* WaterRenderingExample.hpp */,
+				4BD8B5571EB6707C00AC9B0F /* WaterQuad.cpp */,
+				4BD8B5581EB6707C00AC9B0F /* WaterQuad.hpp */,
+			);
+			name = WaterRendering;
+			sourceTree = "<group>";
+		};
+		4B43F08F1EB54F1A005C01FD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4BD8B5601EB6DE0F00AC9B0F /* RenderTarget.cpp */,
+				4BD8B5611EB6DE0F00AC9B0F /* RenderTarget.h */,
+				4B26F1CF1E890049009E4728 /* SkyBox.cpp */,
+				4B26F1D01E890049009E4728 /* SkyBox.h */,
+				4B26F1B41E890049009E4728 /* Camera.cpp */,
+				4B26F1B51E890049009E4728 /* Camera.h */,
+				4B26F1B81E890049009E4728 /* Collider.cpp */,
+				4B26F1B91E890049009E4728 /* Collider.h */,
+				4B26F1BF1E890049009E4728 /* Cube.h */,
+				4B26F1C01E890049009E4728 /* CubemapTexture.cpp */,
+				4B26F1C11E890049009E4728 /* CubemapTexture.h */,
+				4B26F1C61E890049009E4728 /* Frustum.cpp */,
+				4B26F1C71E890049009E4728 /* Frustum.h */,
+				4B26F1CA1E890049009E4728 /* Node.cpp */,
+				4B26F1CB1E890049009E4728 /* Node.h */,
+				4B26F1CC1E890049009E4728 /* Plane.h */,
+				4B26F1CD1E890049009E4728 /* Ray.cpp */,
+				4B26F1CE1E890049009E4728 /* Ray.h */,
+				4B26F1D81E890049009E4728 /* Triangle.h */,
+				4BD8B55A1EB6718200AC9B0F /* Quad.cpp */,
+				4BD8B55B1EB6718200AC9B0F /* Quad.hpp */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		4B5CF0C61E7B86D800623C6D = {
@@ -283,6 +321,8 @@
 		4B5CF0D11E7B86D800623C6D /* GraphicsPlayground-Mac */ = {
 			isa = PBXGroup;
 			children = (
+				4B43F08F1EB54F1A005C01FD /* Common */,
+				4B43F08E1EB54EEB005C01FD /* WaterRendering */,
 				4B362D6C1E8A3FD300B49268 /* Interfaces */,
 				4B26F1811E88A85A009E4728 /* Interpolation */,
 				4B67D7171E88633500E4C321 /* RotateTextureCubeExample */,
@@ -342,6 +382,7 @@
 		4B728DA81E7D8AFF005F9142 /* Shader */ = {
 			isa = PBXGroup;
 			children = (
+				4BD8B55F1EB676F800AC9B0F /* water */,
 				4BCBA72A1EA867B70073E262 /* skybox.fsh */,
 				4BCBA72B1EA867B70073E262 /* skybox.vsh */,
 				4B26F1AF1E88F80F009E4728 /* city_model.fsh */,
@@ -396,6 +437,15 @@
 				4BBB916A1EAAF8A60019A4E7 /* picture */,
 			);
 			name = resource;
+			sourceTree = "<group>";
+		};
+		4BD8B55F1EB676F800AC9B0F /* water */ = {
+			isa = PBXGroup;
+			children = (
+				4BD8B55E1EB676F400AC9B0F /* water.vsh */,
+				4BD8B55D1EB676F400AC9B0F /* water.fsh */,
+			);
+			name = water;
 			sourceTree = "<group>";
 		};
 		4BFEB4C71EAD15DE001CA243 /* SOIL */ = {
@@ -487,7 +537,9 @@
 				4B728DCE1E7D8B99005F9142 /* W_Common.cpp in Sources */,
 				4B728DCD1E7D8B99005F9142 /* W_BufferManager.cpp in Sources */,
 				4B26F1DC1E890049009E4728 /* Collider.cpp in Sources */,
+				4B43F0951EB5538F005C01FD /* WaterRenderingExample.cpp in Sources */,
 				4BE928FC1E8AAFCF00C8055B /* CityModelExample.cpp in Sources */,
+				4BD8B5621EB6DE0F00AC9B0F /* RenderTarget.cpp in Sources */,
 				4B26F1801E88A7EB009E4728 /* RotateTextureCubeExample.cpp in Sources */,
 				4B728DD41E7D8B99005F9142 /* W_Texture.cpp in Sources */,
 				4B26F1DB1E890049009E4728 /* CityModeller.cpp in Sources */,
@@ -506,6 +558,8 @@
 				4B728DD21E7D8B99005F9142 /* W_Program.cpp in Sources */,
 				4B728DD71E7D8B99005F9142 /* W_VertexDeclaration.cpp in Sources */,
 				4B26F1DA1E890049009E4728 /* Camera.cpp in Sources */,
+				4BD8B55C1EB6718200AC9B0F /* Quad.cpp in Sources */,
+				4BD8B5591EB6707C00AC9B0F /* WaterQuad.cpp in Sources */,
 				4B5CF0D31E7B86D800623C6D /* main.cpp in Sources */,
 				4B26F1E51E890049009E4728 /* SkyBox.cpp in Sources */,
 				4BFEB4D71EAD15F4001CA243 /* stb_image_aug.c in Sources */,

@@ -17,10 +17,11 @@
 #include "W_BufferManager.h"
 #include "MouseInputHandler.hpp"
 #include "KeyboardInputHandler.hpp"
+#include "Renderable.hpp"
 
 using namespace std;
 
-class CityModeller:public KeyboardInputHandler
+class CityModeller:public KeyboardInputHandler, public Renderable
 {
 private:
 	vector<building*>* buildingStore;
@@ -34,8 +35,6 @@ private:
 	bool rotate_light = true;//Flag to determine whether light rotates or not
 	wolf::VertexBuffer* g_pVB1 = 0;
 	wolf::VertexDeclaration* g_pDecl = 0;
-	wolf::Program* g_pProgram1 = 0;
-	wolf::MaterialManager* g_Mat_Manager = 0;
 	wolf::Material* mat = 0;
 	wolf::Texture* tex_map = 0;
 	SurfaceMaterial* g_maskSurface;
@@ -60,7 +59,8 @@ public:
 	void clearBuffer();
 	void SetTexture(const string& tex);
 	void SetProgram(const string& vsh, const string& fsh);
-	void Render();
+    void Render();
+	void Render(RenderTarget* target);
 	void SetCamera(Camera* mainCamera);
     void SetWindow(GLFWwindow* window);
 public:

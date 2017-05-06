@@ -69,6 +69,12 @@ void Game::Init(int argc, char **argv){
             example=cityModelExample;
             break;
         }
+        case 5: {
+            WaterRenderingExample* waterRenderingExample = WaterRenderingExample::getInstance();
+            waterRenderingExample->window = window;
+            example=waterRenderingExample;
+            break;
+        }
         default:
             break;
     }

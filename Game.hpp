@@ -20,6 +20,7 @@
 #include "RotateTextureCubeExample.h"
 #include "BlendExample.h"
 #include "CityModelExample.h"
+#include "WaterRenderingExample.hpp"
 
 class Game
 {

@@ -10,6 +10,7 @@
 #define ExampleBase_hpp
 
 #include <stdio.h>
+#include "stdafx.h"
 
 class ExampleBase{
 public:
