@@ -30,6 +30,19 @@
 		4B26F1E51E890049009E4728 /* SkyBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1CF1E890049009E4728 /* SkyBox.cpp */; };
 		4B26F1E71E890049009E4728 /* SphereCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B26F1D31E890049009E4728 /* SphereCollider.cpp */; };
 		4B43F0951EB5538F005C01FD /* WaterRenderingExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B43F0931EB5538F005C01FD /* WaterRenderingExample.cpp */; };
+		4B5702D21EBEB6B1007DDF82 /* AddVelAffector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702BF1EBEB6B1007DDF82 /* AddVelAffector.cpp */; };
+		4B5702D41EBEB6B1007DDF82 /* ColorAffector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702C31EBEB6B1007DDF82 /* ColorAffector.cpp */; };
+		4B5702D51EBEB6B1007DDF82 /* ColorBlendingAffector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702C51EBEB6B1007DDF82 /* ColorBlendingAffector.cpp */; };
+		4B5702D61EBEB6B1007DDF82 /* Effect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702C71EBEB6B1007DDF82 /* Effect.cpp */; };
+		4B5702D71EBEB6B1007DDF82 /* Emitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702C91EBEB6B1007DDF82 /* Emitter.cpp */; };
+		4B5702D81EBEB6B1007DDF82 /* FadeAffector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702CB1EBEB6B1007DDF82 /* FadeAffector.cpp */; };
+		4B5702D91EBEB6B1007DDF82 /* HelperFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702CD1EBEB6B1007DDF82 /* HelperFunction.cpp */; };
+		4B5702DA1EBEB6B1007DDF82 /* ScaleAffector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702CF1EBEB6B1007DDF82 /* ScaleAffector.cpp */; };
+		4B5702E21EBEB6D4007DDF82 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702DC1EBEB6D4007DDF82 /* tinystr.cpp */; };
+		4B5702E31EBEB6D4007DDF82 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702DE1EBEB6D4007DDF82 /* tinyxml.cpp */; };
+		4B5702E41EBEB6D4007DDF82 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702E01EBEB6D4007DDF82 /* tinyxmlerror.cpp */; };
+		4B5702E51EBEB6D4007DDF82 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702E11EBEB6D4007DDF82 /* tinyxmlparser.cpp */; };
+		4B5702EC1EBEBDA6007DDF82 /* ParticleSystemExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5702EA1EBEBDA6007DDF82 /* ParticleSystemExample.cpp */; };
 		4B5CF0D31E7B86D800623C6D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CF0D21E7B86D800623C6D /* main.cpp */; };
 		4B5CF0DB1E7B894000623C6D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CF0DA1E7B894000623C6D /* OpenGL.framework */; };
 		4B728DA71E7D8AF2005F9142 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B728DA01E7D8AF2005F9142 /* stdafx.cpp */; };
@@ -123,6 +136,34 @@
 		4B362D6F1E8A409F00B49268 /* struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = struct.h; path = CityModelExample/struct.h; sourceTree = "<group>"; };
 		4B43F0931EB5538F005C01FD /* WaterRenderingExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WaterRenderingExample.cpp; path = WaterRendering/WaterRenderingExample.cpp; sourceTree = "<group>"; };
 		4B43F0941EB5538F005C01FD /* WaterRenderingExample.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = WaterRenderingExample.hpp; path = WaterRendering/WaterRenderingExample.hpp; sourceTree = "<group>"; };
+		4B5702BF1EBEB6B1007DDF82 /* AddVelAffector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AddVelAffector.cpp; path = "Particle System/AddVelAffector.cpp"; sourceTree = "<group>"; };
+		4B5702C01EBEB6B1007DDF82 /* AddVelAffector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddVelAffector.h; path = "Particle System/AddVelAffector.h"; sourceTree = "<group>"; };
+		4B5702C21EBEB6B1007DDF82 /* Affector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Affector.h; path = "Particle System/Affector.h"; sourceTree = "<group>"; };
+		4B5702C31EBEB6B1007DDF82 /* ColorAffector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorAffector.cpp; path = "Particle System/ColorAffector.cpp"; sourceTree = "<group>"; };
+		4B5702C41EBEB6B1007DDF82 /* ColorAffector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorAffector.h; path = "Particle System/ColorAffector.h"; sourceTree = "<group>"; };
+		4B5702C51EBEB6B1007DDF82 /* ColorBlendingAffector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorBlendingAffector.cpp; path = "Particle System/ColorBlendingAffector.cpp"; sourceTree = "<group>"; };
+		4B5702C61EBEB6B1007DDF82 /* ColorBlendingAffector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorBlendingAffector.h; path = "Particle System/ColorBlendingAffector.h"; sourceTree = "<group>"; };
+		4B5702C71EBEB6B1007DDF82 /* Effect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Effect.cpp; path = "Particle System/Effect.cpp"; sourceTree = "<group>"; };
+		4B5702C81EBEB6B1007DDF82 /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Effect.h; path = "Particle System/Effect.h"; sourceTree = "<group>"; };
+		4B5702C91EBEB6B1007DDF82 /* Emitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Emitter.cpp; path = "Particle System/Emitter.cpp"; sourceTree = "<group>"; };
+		4B5702CA1EBEB6B1007DDF82 /* Emitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Emitter.h; path = "Particle System/Emitter.h"; sourceTree = "<group>"; };
+		4B5702CB1EBEB6B1007DDF82 /* FadeAffector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FadeAffector.cpp; path = "Particle System/FadeAffector.cpp"; sourceTree = "<group>"; };
+		4B5702CC1EBEB6B1007DDF82 /* FadeAffector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FadeAffector.h; path = "Particle System/FadeAffector.h"; sourceTree = "<group>"; };
+		4B5702CD1EBEB6B1007DDF82 /* HelperFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelperFunction.cpp; path = "Particle System/HelperFunction.cpp"; sourceTree = "<group>"; };
+		4B5702CE1EBEB6B1007DDF82 /* HelperFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperFunction.h; path = "Particle System/HelperFunction.h"; sourceTree = "<group>"; };
+		4B5702CF1EBEB6B1007DDF82 /* ScaleAffector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScaleAffector.cpp; path = "Particle System/ScaleAffector.cpp"; sourceTree = "<group>"; };
+		4B5702D01EBEB6B1007DDF82 /* ScaleAffector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScaleAffector.h; path = "Particle System/ScaleAffector.h"; sourceTree = "<group>"; };
+		4B5702DC1EBEB6D4007DDF82 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinystr.cpp; path = Tiny/tinystr.cpp; sourceTree = "<group>"; };
+		4B5702DD1EBEB6D4007DDF82 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinystr.h; path = Tiny/tinystr.h; sourceTree = "<group>"; };
+		4B5702DE1EBEB6D4007DDF82 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml.cpp; path = Tiny/tinyxml.cpp; sourceTree = "<group>"; };
+		4B5702DF1EBEB6D4007DDF82 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml.h; path = Tiny/tinyxml.h; sourceTree = "<group>"; };
+		4B5702E01EBEB6D4007DDF82 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlerror.cpp; path = Tiny/tinyxmlerror.cpp; sourceTree = "<group>"; };
+		4B5702E11EBEB6D4007DDF82 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxmlparser.cpp; path = Tiny/tinyxmlparser.cpp; sourceTree = "<group>"; };
+		4B5702E61EBEB86A007DDF82 /* ParticleStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParticleStruct.h; path = "Particle System/ParticleStruct.h"; sourceTree = "<group>"; };
+		4B5702EA1EBEBDA6007DDF82 /* ParticleSystemExample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParticleSystemExample.cpp; path = "Particle System/ParticleSystemExample.cpp"; sourceTree = "<group>"; };
+		4B5702EB1EBEBDA6007DDF82 /* ParticleSystemExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParticleSystemExample.h; path = "Particle System/ParticleSystemExample.h"; sourceTree = "<group>"; };
+		4B5702F11EBED72B007DDF82 /* particle.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = particle.fsh; path = shaders/particle/particle.fsh; sourceTree = "<group>"; };
+		4B5702F21EBED72B007DDF82 /* particle.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = particle.vsh; path = shaders/particle/particle.vsh; sourceTree = "<group>"; };
 		4B5CF0CF1E7B86D800623C6D /* GraphicsPlayground-Mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "GraphicsPlayground-Mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5CF0D21E7B86D800623C6D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4B5CF0DA1E7B894000623C6D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -297,9 +338,92 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		4B5702BE1EBEB3D2007DDF82 /* ParticleSystem */ = {
+			isa = PBXGroup;
+			children = (
+				4B5702EA1EBEBDA6007DDF82 /* ParticleSystemExample.cpp */,
+				4B5702EB1EBEBDA6007DDF82 /* ParticleSystemExample.h */,
+				4B5702E61EBEB86A007DDF82 /* ParticleStruct.h */,
+				4B5702BF1EBEB6B1007DDF82 /* AddVelAffector.cpp */,
+				4B5702C01EBEB6B1007DDF82 /* AddVelAffector.h */,
+				4B5702C21EBEB6B1007DDF82 /* Affector.h */,
+				4B5702C31EBEB6B1007DDF82 /* ColorAffector.cpp */,
+				4B5702C41EBEB6B1007DDF82 /* ColorAffector.h */,
+				4B5702C51EBEB6B1007DDF82 /* ColorBlendingAffector.cpp */,
+				4B5702C61EBEB6B1007DDF82 /* ColorBlendingAffector.h */,
+				4B5702C71EBEB6B1007DDF82 /* Effect.cpp */,
+				4B5702C81EBEB6B1007DDF82 /* Effect.h */,
+				4B5702C91EBEB6B1007DDF82 /* Emitter.cpp */,
+				4B5702CA1EBEB6B1007DDF82 /* Emitter.h */,
+				4B5702CB1EBEB6B1007DDF82 /* FadeAffector.cpp */,
+				4B5702CC1EBEB6B1007DDF82 /* FadeAffector.h */,
+				4B5702CD1EBEB6B1007DDF82 /* HelperFunction.cpp */,
+				4B5702CE1EBEB6B1007DDF82 /* HelperFunction.h */,
+				4B5702CF1EBEB6B1007DDF82 /* ScaleAffector.cpp */,
+				4B5702D01EBEB6B1007DDF82 /* ScaleAffector.h */,
+			);
+			name = ParticleSystem;
+			sourceTree = "<group>";
+		};
+		4B5702DB1EBEB6C9007DDF82 /* Tiny */ = {
+			isa = PBXGroup;
+			children = (
+				4B5702DC1EBEB6D4007DDF82 /* tinystr.cpp */,
+				4B5702DD1EBEB6D4007DDF82 /* tinystr.h */,
+				4B5702DE1EBEB6D4007DDF82 /* tinyxml.cpp */,
+				4B5702DF1EBEB6D4007DDF82 /* tinyxml.h */,
+				4B5702E01EBEB6D4007DDF82 /* tinyxmlerror.cpp */,
+				4B5702E11EBEB6D4007DDF82 /* tinyxmlparser.cpp */,
+			);
+			name = Tiny;
+			sourceTree = "<group>";
+		};
+		4B5702ED1EBED6D4007DDF82 /* particle */ = {
+			isa = PBXGroup;
+			children = (
+				4B5702F11EBED72B007DDF82 /* particle.fsh */,
+				4B5702F21EBED72B007DDF82 /* particle.vsh */,
+			);
+			name = particle;
+			sourceTree = "<group>";
+		};
+		4B5702EE1EBED6E6007DDF82 /* skybox */ = {
+			isa = PBXGroup;
+			children = (
+				4BCBA72A1EA867B70073E262 /* skybox.fsh */,
+				4BCBA72B1EA867B70073E262 /* skybox.vsh */,
+			);
+			name = skybox;
+			sourceTree = "<group>";
+		};
+		4B5702EF1EBED6F6007DDF82 /* CityModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B26F1AF1E88F80F009E4728 /* city_model.fsh */,
+				4B26F1B01E88F80F009E4728 /* city_model.vsh */,
+			);
+			name = CityModel;
+			sourceTree = "<group>";
+		};
+		4B5702F01EBED706007DDF82 /* BasicDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4B728DAA1E7D8B66005F9142 /* Blend.fsh */,
+				4B728DAB1E7D8B66005F9142 /* Blend.vsh */,
+				4B728DAC1E7D8B66005F9142 /* interpolation.fsh */,
+				4B728DAD1E7D8B66005F9142 /* interpolation.vsh */,
+				4B728DAE1E7D8B66005F9142 /* RotateCube.fsh */,
+				4B728DAF1E7D8B66005F9142 /* RotateCube.vsh */,
+				4B728DB01E7D8B66005F9142 /* RotateTextureCube.fsh */,
+				4B728DB11E7D8B66005F9142 /* RotateTextureCube.vsh */,
+			);
+			name = BasicDemo;
+			sourceTree = "<group>";
+		};
 		4B5CF0C61E7B86D800623C6D = {
 			isa = PBXGroup;
 			children = (
+				4B5702DB1EBEB6C9007DDF82 /* Tiny */,
 				4BFEB4C71EAD15DE001CA243 /* SOIL */,
 				4BBB91691EAAF88B0019A4E7 /* resource */,
 				4B728DB21E7D8B7A005F9142 /* wolf */,
@@ -321,6 +445,7 @@
 		4B5CF0D11E7B86D800623C6D /* GraphicsPlayground-Mac */ = {
 			isa = PBXGroup;
 			children = (
+				4B5702BE1EBEB3D2007DDF82 /* ParticleSystem */,
 				4B43F08F1EB54F1A005C01FD /* Common */,
 				4B43F08E1EB54EEB005C01FD /* WaterRendering */,
 				4B362D6C1E8A3FD300B49268 /* Interfaces */,
@@ -382,19 +507,11 @@
 		4B728DA81E7D8AFF005F9142 /* Shader */ = {
 			isa = PBXGroup;
 			children = (
+				4B5702F01EBED706007DDF82 /* BasicDemo */,
+				4B5702EF1EBED6F6007DDF82 /* CityModel */,
+				4B5702EE1EBED6E6007DDF82 /* skybox */,
+				4B5702ED1EBED6D4007DDF82 /* particle */,
 				4BD8B55F1EB676F800AC9B0F /* water */,
-				4BCBA72A1EA867B70073E262 /* skybox.fsh */,
-				4BCBA72B1EA867B70073E262 /* skybox.vsh */,
-				4B26F1AF1E88F80F009E4728 /* city_model.fsh */,
-				4B26F1B01E88F80F009E4728 /* city_model.vsh */,
-				4B728DAA1E7D8B66005F9142 /* Blend.fsh */,
-				4B728DAB1E7D8B66005F9142 /* Blend.vsh */,
-				4B728DAC1E7D8B66005F9142 /* interpolation.fsh */,
-				4B728DAD1E7D8B66005F9142 /* interpolation.vsh */,
-				4B728DAE1E7D8B66005F9142 /* RotateCube.fsh */,
-				4B728DAF1E7D8B66005F9142 /* RotateCube.vsh */,
-				4B728DB01E7D8B66005F9142 /* RotateTextureCube.fsh */,
-				4B728DB11E7D8B66005F9142 /* RotateTextureCube.vsh */,
 			);
 			name = Shader;
 			sourceTree = "<group>";
@@ -531,37 +648,49 @@
 			files = (
 				4B26F1AD1E88E441009E4728 /* Game.cpp in Sources */,
 				4B728DD31E7D8B99005F9142 /* W_ProgramManager.cpp in Sources */,
+				4B5702D21EBEB6B1007DDF82 /* AddVelAffector.cpp in Sources */,
 				4B728DD51E7D8B99005F9142 /* W_TextureManager.cpp in Sources */,
 				4B26F1E41E890049009E4728 /* Ray.cpp in Sources */,
 				4BFEB4D41EAD15F3001CA243 /* image_DXT.c in Sources */,
+				4B5702D71EBEB6B1007DDF82 /* Emitter.cpp in Sources */,
 				4B728DCE1E7D8B99005F9142 /* W_Common.cpp in Sources */,
 				4B728DCD1E7D8B99005F9142 /* W_BufferManager.cpp in Sources */,
+				4B5702E21EBEB6D4007DDF82 /* tinystr.cpp in Sources */,
 				4B26F1DC1E890049009E4728 /* Collider.cpp in Sources */,
 				4B43F0951EB5538F005C01FD /* WaterRenderingExample.cpp in Sources */,
 				4BE928FC1E8AAFCF00C8055B /* CityModelExample.cpp in Sources */,
+				4B5702D81EBEB6B1007DDF82 /* FadeAffector.cpp in Sources */,
 				4BD8B5621EB6DE0F00AC9B0F /* RenderTarget.cpp in Sources */,
 				4B26F1801E88A7EB009E4728 /* RotateTextureCubeExample.cpp in Sources */,
 				4B728DD41E7D8B99005F9142 /* W_Texture.cpp in Sources */,
+				4B5702D41EBEB6B1007DDF82 /* ColorAffector.cpp in Sources */,
 				4B26F1DB1E890049009E4728 /* CityModeller.cpp in Sources */,
 				4B26F1DD1E890049009E4728 /* collidetest.cpp in Sources */,
 				4B26F1DE1E890049009E4728 /* CollisionDetector.cpp in Sources */,
 				4B26F1E01E890049009E4728 /* DirectionalLightcpp.cpp in Sources */,
+				4B5702D61EBEB6B1007DDF82 /* Effect.cpp in Sources */,
+				4B5702E51EBEB6D4007DDF82 /* tinyxmlparser.cpp in Sources */,
 				4B26F1E21E890049009E4728 /* Frustum.cpp in Sources */,
 				4B26F1D91E890049009E4728 /* AABBCollider.cpp in Sources */,
 				4BFEB4D61EAD15F4001CA243 /* SOIL.c in Sources */,
+				4B5702D51EBEB6B1007DDF82 /* ColorBlendingAffector.cpp in Sources */,
 				4B26F1E71E890049009E4728 /* SphereCollider.cpp in Sources */,
 				4B26F1E11E890049009E4728 /* FormatTranslator.cpp in Sources */,
 				4B728DD01E7D8B99005F9142 /* W_Material.cpp in Sources */,
+				4B5702E41EBEB6D4007DDF82 /* tinyxmlerror.cpp in Sources */,
 				4B728DD11E7D8B99005F9142 /* W_MaterialManager.cpp in Sources */,
 				4B26F17C1E88A7BF009E4728 /* RotateCubeExample.cpp in Sources */,
 				4B26F1841E88A868009E4728 /* InterpolationExample.cpp in Sources */,
 				4B728DD21E7D8B99005F9142 /* W_Program.cpp in Sources */,
 				4B728DD71E7D8B99005F9142 /* W_VertexDeclaration.cpp in Sources */,
 				4B26F1DA1E890049009E4728 /* Camera.cpp in Sources */,
+				4B5702DA1EBEB6B1007DDF82 /* ScaleAffector.cpp in Sources */,
+				4B5702EC1EBEBDA6007DDF82 /* ParticleSystemExample.cpp in Sources */,
 				4BD8B55C1EB6718200AC9B0F /* Quad.cpp in Sources */,
 				4BD8B5591EB6707C00AC9B0F /* WaterQuad.cpp in Sources */,
 				4B5CF0D31E7B86D800623C6D /* main.cpp in Sources */,
 				4B26F1E51E890049009E4728 /* SkyBox.cpp in Sources */,
+				4B5702D91EBEB6B1007DDF82 /* HelperFunction.cpp in Sources */,
 				4BFEB4D71EAD15F4001CA243 /* stb_image_aug.c in Sources */,
 				4B26F1781E88A783009E4728 /* BlendExample.cpp in Sources */,
 				4B26F1DF1E890049009E4728 /* CubemapTexture.cpp in Sources */,
@@ -571,6 +700,7 @@
 				4BFEB4D51EAD15F4001CA243 /* image_helper.c in Sources */,
 				4B728DD61E7D8B99005F9142 /* W_VertexBuffer.cpp in Sources */,
 				4B26F1E31E890049009E4728 /* Node.cpp in Sources */,
+				4B5702E31EBEB6D4007DDF82 /* tinyxml.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

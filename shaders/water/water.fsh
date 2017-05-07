@@ -69,10 +69,9 @@ void main()
 
     vec4 color = texture(RefractionTex,refraction_uv+perturbation)*0.3+texture(ReflectionTex,reflection_uv+perturbation)*0.7;
     
-    vec4 light = clamp(specular+diffuse,0.9,8);
-    //vec4 light = specular+diffuse;
+    vec4 light = clamp(specular+diffuse,0.9,5);
+
     PixelColor = color * vec4(light.rgb, 1.0);
-   // PixelColor = texture(NormalMap,normalmap_uv);
 }
 
 

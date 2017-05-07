@@ -39,7 +39,6 @@ private:
     Camera* mainCamera;
     CityModeller* cityModeller;
     SkyBox* skybox;
-    WaterQuad* waterQuad;
     
     float s_fRotation = 0;
     bool keypressed = false;

@@ -12,7 +12,7 @@ SkyBox::~SkyBox()
 {
 }
 
-void SkyBox::PrepareData()
+void SkyBox::Init()
 {/*	 4	__________5
       /|		 /|
 l    / |	    / |	   /|\y+
@@ -61,7 +61,8 @@ t	| /		   | /		|------->x+
 	g_pDecl->End();
 
 	this->m_cube_texture->Load();
-}
+    
+    }
 
 void SkyBox::SetCamera(Camera* mainCamera)
 {
@@ -92,6 +93,7 @@ void SkyBox::SetScale(vec3 scale)
 }
 void SkyBox::SetWindow(GLFWwindow *window){
     this->window=window;
+    glfwGetFramebufferSize(window, &m_width, &m_height);
 }
 void SkyBox::Render()
 {
@@ -111,9 +113,10 @@ void SkyBox::Render()
 	this->m_cube_texture->Bind(GL_TEXTURE0);
 	g_pDecl->Bind();
     
-    int width, height;
-    glfwGetFramebufferSize(window, &width, &height);
-    glViewport(0, 0, width, height);
+    glViewport(0, 0, m_width, m_height);
+    glDisable(GL_DEPTH_TEST);
+    glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+
 
     glDrawArrays(GL_TRIANGLES, 0, 36);
 }

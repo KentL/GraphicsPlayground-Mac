@@ -39,7 +39,7 @@ void WaterRenderingExample::Initialize() {
     skybox->SetProgram(shaderDir+"skybox.vsh", shaderDir+"skybox.fsh");
     skybox->SetScale(vec3(20, 20, 20));
     skybox->SetTexture(textureNames);
-    skybox->PrepareData();
+    skybox->Init();
     skybox->SetWindow(window);
     
 

@@ -78,18 +78,8 @@ void CityModelExample::Initialize()
     skybox->SetProgram(shaderDir+"skybox.vsh", shaderDir+"skybox.fsh");
     skybox->SetScale(vec3(20, 20, 20));
     skybox->SetTexture(textureNames);
-    skybox->PrepareData();
+    skybox->Init();
     
-    waterQuad=new WaterQuad();
-    waterQuad->SetCamera(mainCamera);
-    waterQuad->setPos(vec3(0,100,0));
-    waterQuad->setScale(vec3(10000,10000,10000));
-    waterQuad->SetEnv(skybox);
-    waterQuad->SetWindow(window);
-    waterQuad->AddRenderable(skybox);
-    waterQuad->AddRenderable(cityModeller);
-    waterQuad->Init();
-
     RebuildCityModel();
     
 }
@@ -107,7 +97,6 @@ void CityModelExample::Render()
     }
     
     cityModeller->Render();
-    waterQuad->Render();
 }
 
 

@@ -20,6 +20,7 @@ private:
 	wolf::Program* g_pProgram = 0;
 	Camera* mainCamera;
     GLFWwindow* window;
+    int m_width,m_height;
 public:
 	SkyBox();
 	~SkyBox();
@@ -31,7 +32,7 @@ public:
 	void SetCamera(Camera* mainCamera);
 	void SetTexture(const string* filename);
 	void SetProgram(const string& vsh, const string& fsh);
-	void PrepareData();
+	void Init();
 
 
 };

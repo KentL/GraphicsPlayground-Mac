@@ -1,0 +1,31 @@
+ <?xml version="1.0" standalone="no" ?>
+<!-- effect data -->
+<emitter name="fire" num_particles="1000" duration="100" start_time="0" spawn_type="continuous" emitter_type="box_emitter" birthrate="20">
+	
+	<spawn_property name="velocity" type="random" min="-5, 5,-5" max="5,6,5"/>
+	<spawn_property name="color" type="constant" value="1,1,1,1"/>
+	<spawn_property name="size" type="random" min="90" max="120"/>
+	<spawn_property name="lifetime" type="constant" value="3"/>
+	<spawn_property name="box_min" type="constant" value="-8,-1,-8"/>
+	<spawn_property name="box_max" type="constant" value="8,1,8"/>
+	
+	<texture file="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/particle/fire.tga"/>
+
+	<shader vertex_shader="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/particle/particle.vsh" fragment_shader="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/particle/particle.fsh"/>
+
+	<blending value="true" src="GL_ONE" dst="GL_ONE"/>
+	
+	
+	<affector type="fade">
+		<property name="mode" value="over_life"/>
+		<property name="start" value="1"/>
+		<property name="end" value="0"/>
+	</affector>
+
+	<affector type="scale">
+		<property name="mode" value="over_life"/>
+		<property name="start" value="15"/>
+		<property name="end" value="1"/>
+	</affector>
+
+</emitter>

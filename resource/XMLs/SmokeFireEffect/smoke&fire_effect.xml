@@ -1,0 +1,6 @@
+<?xml version="1.0" standalone="no" ?>
+<!-- effect data -->
+<effect name="smoke&fire" pos="0,0,0">
+	<emitter file="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/XMLs/SmokeFireEffect/smoke.emitter" offset="0,0,0"/>
+	<emitter file="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/XMLs/SmokeFireEffect/fire.emitter"  offset="0,-7,0"/>
+</effect>

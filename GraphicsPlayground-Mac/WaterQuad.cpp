@@ -49,11 +49,10 @@ void WaterQuad::Init(){
     reflectionCamera->setAspect(1280.0f / 720.0f);
     reflectionCamera->setWindow(window);
     
-    int width, height;
-    glfwGetFramebufferSize(window, &width, &height);
-    refractionTarget=new RenderTarget(width,height);
-    reflectionTarget=new RenderTarget(width,height);
-    screenTarget=new RenderTarget(width,height,true);
+    
+    refractionTarget=new RenderTarget(m_width,m_height);
+    reflectionTarget=new RenderTarget(m_width,m_height);
+    screenTarget=new RenderTarget(m_width,m_height,true);
 }
 
 void WaterQuad::Render(){
@@ -106,11 +105,8 @@ void WaterQuad::Render(){
     round++;
     g_pDecl->Bind();
     screenTarget->Bind();
-    
-    
-    int width, height;
-    glfwGetFramebufferSize(window, &width, &height);
-    glViewport(0, 0, width, height);
+
+    glViewport(0, 0, m_width, m_height);
     
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
@@ -163,6 +159,7 @@ void WaterQuad::SetEnv(SkyBox *skyBox){
 }
 void WaterQuad::SetWindow(GLFWwindow *window){
     this->window=window;
+    glfwGetFramebufferSize(window, &m_width, &m_height);
 }
 glm::mat4 WaterQuad::CalculateReflectionWVP(){
     mat4 scaleMatrix = glm::scale(myScale);

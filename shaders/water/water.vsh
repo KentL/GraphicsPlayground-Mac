@@ -25,10 +25,9 @@ void main()
 {
 	gl_Position = WorldViewProj * a_position;
     vec4 reflectionVertexPos =ReflectionWorldViewProj*a_position;
-    vec4 refractionVertexPos =WorldViewProj*a_position;
-    vec3 n = WorldIT * a_normal;
+    vec4 refractionVertexPos =gl_Position;
+    v_normal = WorldIT * a_normal;
     
-    v_normal = n;
     
     vec4 t = World * vec4(a_tangent.xyz,1.0);
     v_tangent = t.xyz;

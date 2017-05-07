@@ -21,6 +21,7 @@
 #include "BlendExample.h"
 #include "CityModelExample.h"
 #include "WaterRenderingExample.hpp"
+#include "ParticleSystemExample.h"
 
 class Game
 {

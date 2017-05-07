@@ -75,6 +75,13 @@ void Game::Init(int argc, char **argv){
             example=waterRenderingExample;
             break;
         }
+        case 6: {
+            ParticleSystemExample* particleSystemExample = ParticleSystemExample::getInstance();
+            particleSystemExample->window = window;
+            example=particleSystemExample;
+            break;
+        }
+
         default:
             break;
     }
@@ -83,8 +90,21 @@ void Game::Init(int argc, char **argv){
 }
 
 void Game::Run(){
+    double lastTime = glfwGetTime();
+    int nbFrames = 0;
+    
     do
     {
+        // Measure speed
+        double currentTime = glfwGetTime();
+        nbFrames++;
+        if ( currentTime - lastTime >= 1.0 ){ // If last prinf() was more than 1 sec ago
+            // printf and reset timer
+            printf("%d FPS\n", nbFrames);
+            nbFrames = 0;
+            lastTime += 1.0;
+        }
+        
         // Clear color buffer to black
         glClearColor(0.4f, 0.4f, 0.4f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

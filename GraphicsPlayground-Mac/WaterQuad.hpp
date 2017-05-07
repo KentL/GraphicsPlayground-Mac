@@ -44,6 +44,7 @@ private:
     
     float speed=10;
     float round=0;
+    int m_width,m_height;
 private:
     glm::mat3 CalculateWorldIT();
     glm::mat4 CalculateWVP();
