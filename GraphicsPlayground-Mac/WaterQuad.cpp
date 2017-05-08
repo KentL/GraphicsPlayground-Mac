@@ -98,8 +98,10 @@ void WaterQuad::Render(){
     program->SetUniform("MatDiffuse",  vec4(1,1,1,1));
     program->SetUniform("LightDiffuse",  vec4(2,2,2,2));
     program->SetUniform("ViewDir", mainCamera->getViewDirection());
-    program->SetUniform("time", (float)speed*round/10000);
-    
+    program->SetUniform("CameraPos", mainCamera->getPos());
+    program->SetUniform("WaveHeight", waveHeight);
+    program->SetUniform("UseNormal", useNormal);
+    program->SetUniform("Time", (float)speed*round/5000);
     
     
     round++;
@@ -110,7 +112,30 @@ void WaterQuad::Render(){
     
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
+void WaterQuad::HandleKeyBoardInput(GLFWwindow* window, int key, int scancode, int action, int mods){
+    if(action==GLFW_PRESS){
+        switch (key) {
+            case GLFW_KEY_H:
+                waveHeight+=0.1;
+                if (waveHeight>2) {
+                    waveHeight=2;
+                }
+                break;
+            case GLFW_KEY_G:
+                waveHeight-=0.1;
+                if (waveHeight<-1) {
+                    waveHeight=-1;
+                }
+                break;
+            case GLFW_KEY_N:
+                useNormal = !useNormal;
+                break;
+            default:
+                break;
+        }
 
+    }
+}
 void WaterQuad::SetCamera(Camera *camera){
     this->mainCamera=camera;
 }

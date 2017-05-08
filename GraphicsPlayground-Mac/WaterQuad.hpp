@@ -45,6 +45,9 @@ private:
     float speed=10;
     float round=0;
     int m_width,m_height;
+    float waveHeight = 0;
+    bool useNormal = false;
+    
 private:
     glm::mat3 CalculateWorldIT();
     glm::mat4 CalculateWVP();
@@ -53,6 +56,7 @@ private:
     void RenderRefraction();
     void RenderReflection();
     
+    
 public:
     void Init();
     void Render();
@@ -60,5 +64,6 @@ public:
     void SetEnv(SkyBox* skyBox);
     void SetWindow(GLFWwindow* window);
     void AddRenderable(Renderable* renderObject);
+    void HandleKeyBoardInput(GLFWwindow* window, int key, int scancode, int action, int mods);
 };
 #endif /* WaterQuad_hpp */

@@ -13,6 +13,7 @@ void WaterRenderingExample::HandleCursorPositionChange(GLFWwindow* window, doubl
 }
 
 void WaterRenderingExample::HandleKeyInput(GLFWwindow *window, int key, int scancode, int action, int mods){
+    waterQuad->HandleKeyBoardInput(window, key, scancode, action, mods);
 }
 
 void WaterRenderingExample::Initialize() {

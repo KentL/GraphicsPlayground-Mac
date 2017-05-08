@@ -3,8 +3,7 @@ uniform mat4 WorldViewProj;
 uniform mat4 ReflectionWorldViewProj;
 uniform mat4 World;
 uniform mat3 WorldIT;
-
-uniform float time;
+uniform float Time;
 
 in vec4 a_position;
 in vec3 a_normal;
@@ -20,13 +19,16 @@ out vec2 normalmap_uv3;
 
 out vec3 v_normal;
 out vec3 v_tangent;
+out vec4 v_pos;
 
 void main()
 {
 	gl_Position = WorldViewProj * a_position;
+    v_pos = World*a_position;
     vec4 reflectionVertexPos =ReflectionWorldViewProj*a_position;
     vec4 refractionVertexPos =gl_Position;
     v_normal = WorldIT * a_normal;
+    
     
     
     vec4 t = World * vec4(a_tangent.xyz,1.0);
@@ -37,14 +39,14 @@ void main()
     reflection_uv.x = reflectionVertexPos.x/reflectionVertexPos.w/2.0+0.5;
     reflection_uv.y = reflectionVertexPos.y/reflectionVertexPos.w/2.0+0.5;
     
-    normalmap_uv1.x = a_uv1.x+time;
-    normalmap_uv1.y = a_uv1.y+time;
+    normalmap_uv1.x = a_uv1.x+Time;
+    normalmap_uv1.y = a_uv1.y+Time;
     
-    normalmap_uv2.x = a_uv1.x-time/2;
-    normalmap_uv2.y = a_uv1.y-time/2;
+    normalmap_uv2.x = a_uv1.x-Time/2;
+    normalmap_uv2.y = a_uv1.y-Time/2;
     
-    normalmap_uv3.x = a_uv1.x+time/4;
-    normalmap_uv3.y = a_uv1.y-time/4;
+    normalmap_uv3.x = a_uv1.x+Time/3;
+    normalmap_uv3.y = a_uv1.y-Time/3;
     
     
     

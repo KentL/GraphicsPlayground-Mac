@@ -716,6 +716,8 @@ void CityModeller::Render()
     int width, height;
     glfwGetFramebufferSize(window, &width, &height);
     glViewport(0, 0, width, height);
+    
+    glEnable(GL_DEPTH_TEST);
 
 	glDrawArrays(GL_TRIANGLES, 0, city_vertices_data->size());
 }
