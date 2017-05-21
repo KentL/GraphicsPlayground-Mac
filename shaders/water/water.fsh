@@ -11,7 +11,9 @@ uniform vec4 MatSpecular;
 uniform vec4 LightSpecular;
 uniform vec4 MatDiffuse;
 uniform vec4 LightDiffuse;
-uniform float WaveHeight;
+uniform float WaveHeight1;
+uniform float WaveHeight2;
+uniform float WaveHeight3;
 uniform bool UseNormal;
 uniform vec3 CameraPos;
 
@@ -67,9 +69,9 @@ void main()
         vec4 specular = specFactor * MatSpecular * LightSpecular;
         
         //perturbation
-        vec2 perturbation1 = WaveHeight*(nMapColor1.xy-0.5);
-        vec2 perturbation2 = WaveHeight*(nMapColor2.xy-0.5);
-        vec2 perturbation3 = WaveHeight*(nMapColor3.xy-0.5);
+        vec2 perturbation1 = WaveHeight1*2*(nMapColor1.xy-0.5);
+        vec2 perturbation2 = WaveHeight2*2*(nMapColor2.xy-0.5);
+        vec2 perturbation3 = WaveHeight3*2*(nMapColor3.xy-0.5);
         vec2 perturbation = perturbation1+perturbation2+perturbation3;
         
         //Fresnel

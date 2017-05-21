@@ -295,8 +295,8 @@ vec3 Camera::CollideWithWorld(const vec3& pos, const vec3& vel)
 	// do we need to worry?
 	if (collisionRecursionDepth>5)
 		return pos;
+    // Ok, we need to worry:
 	CollisionPackage* collisionPackage = new CollisionPackage();
-	// Ok, we need to worry:
 	collisionPackage->velocity = vel;
 	collisionPackage->normalizedVelocity = glm::normalize(vel);
 	collisionPackage->basePoint = pos;
@@ -332,7 +332,7 @@ vec3 Camera::CollideWithWorld(const vec3& pos, const vec3& vel)
 	vec3 slidePlaneNormal = newBasePoint - collisionPackage->intersectionPoint;
 	slidePlaneNormal=normalize(slidePlaneNormal);
 	Plane slidingPlane(slidePlaneOrigin, slidePlaneNormal);
-	// Again, sorry about formatting.. but look carefully ;)
+	
 	double sdis = slidingPlane.signedDistanceTo(destinationPoint);
 	vec3 newDestinationPoint = destinationPoint - vec3(sdis,sdis,sdis)*slidePlaneNormal;
 	// Generate the slide vector, which will become our new

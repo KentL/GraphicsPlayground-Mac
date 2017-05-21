@@ -99,7 +99,9 @@ void WaterQuad::Render(){
     program->SetUniform("LightDiffuse",  vec4(2,2,2,2));
     program->SetUniform("ViewDir", mainCamera->getViewDirection());
     program->SetUniform("CameraPos", mainCamera->getPos());
-    program->SetUniform("WaveHeight", waveHeight);
+    program->SetUniform("WaveHeight1", waveHeight/4);
+    program->SetUniform("WaveHeight2", waveHeight/2);
+    program->SetUniform("WaveHeight3", waveHeight);
     program->SetUniform("UseNormal", useNormal);
     program->SetUniform("Time", (float)speed*round/5000);
     
