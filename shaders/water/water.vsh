@@ -34,10 +34,10 @@ void main()
     vec4 t = World * vec4(a_tangent.xyz,1.0);
     v_tangent = t.xyz;
     
-    refraction_uv.x = refractionVertexPos.x/refractionVertexPos.w/2.0+0.5;
-    refraction_uv.y = refractionVertexPos.y/refractionVertexPos.w/2.0+0.5;
-    reflection_uv.x = reflectionVertexPos.x/reflectionVertexPos.w/2.0+0.5;
-    reflection_uv.y = reflectionVertexPos.y/reflectionVertexPos.w/2.0+0.5;
+    refraction_uv.x = refractionVertexPos.x/2.0/refractionVertexPos.w+0.5;
+    refraction_uv.y = refractionVertexPos.y/2.0/refractionVertexPos.w+0.5;
+    reflection_uv.x = reflectionVertexPos.x/2.0/reflectionVertexPos.w+0.5;
+    reflection_uv.y = reflectionVertexPos.y/2.0/reflectionVertexPos.w+0.5;
     
     normalmap_uv1.x = a_uv1.x+Time;
     normalmap_uv1.y = a_uv1.y+Time;
