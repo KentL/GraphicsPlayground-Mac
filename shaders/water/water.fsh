@@ -26,7 +26,8 @@ in vec2 reflection_uv;
 in vec2 normalmap_uv1;
 in vec2 normalmap_uv2;
 in vec2 normalmap_uv3;
-
+in vec4 reflectionVertexPos;
+in vec4 refractionVertexPos;
 
 out vec4 PixelColor;
 
@@ -46,6 +47,14 @@ vec3 TangentToWorldSpace(vec3 normalMapSample, vec3 normal_world, vec3 tangent_w
 
 void main()
 {
+    vec2 reflection_uv;
+    vec2 refraction_uv;
+    
+    refraction_uv.x = refractionVertexPos.x/2.0f/refractionVertexPos.w+0.5f;
+    refraction_uv.y = refractionVertexPos.y/2.0f/refractionVertexPos.w+0.5f;
+    reflection_uv.x = reflectionVertexPos.x/2.0f/reflectionVertexPos.w+0.5f;
+    reflection_uv.y = reflectionVertexPos.y/2.0f/reflectionVertexPos.w+0.5f;
+
     if(UseNormal){
         //Normal
         vec3 nMapColor1 = texture(NormalMap, normalmap_uv1).rgb;
@@ -81,11 +90,16 @@ void main()
         float fresnelTerm = 1/fangle;
         fresnelTerm = clamp(fresnelTerm,0.0f,1.0f);
         
-        vec4 color = texture(RefractionTex,refraction_uv+perturbation)*(1-fresnelTerm)+texture(ReflectionTex,reflection_uv+perturbation)*fresnelTerm;
+        vec2 co1 = refraction_uv+perturbation;
+        vec2 co2 = reflection_uv+perturbation;
+               
+        vec4 color = texture(RefractionTex,co1)*(1-fresnelTerm)+texture(ReflectionTex,co2)*fresnelTerm;
         
-        vec4 light = clamp(specular+diffuse,0.9,5);
+        
+        vec4 light = clamp(specular+diffuse,0.9,3);
         
         PixelColor = color * vec4(light.rgb, 1.0);
+    
     }else{
         PixelColor = texture(RefractionTex,refraction_uv)*0.3+texture(ReflectionTex,reflection_uv)*0.7;
     }

@@ -14,13 +14,16 @@
          contextName = "WaterQuad::Render():WaterQuad.cpp">
          <PersistentStrings>
             <PersistentString
+               value = "myScale.y">
+            </PersistentString>
+            <PersistentString
+               value = "refractionTarget-&gt;GetColorBuffer()">
+            </PersistentString>
+            <PersistentString
                value = "reflectionTarget-&gt;GetColorBuffer()">
             </PersistentString>
             <PersistentString
                value = " mainCamera-&gt;getViewDirection()">
-            </PersistentString>
-            <PersistentString
-               value = "refractionTarget-&gt;GetColorBuffer()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

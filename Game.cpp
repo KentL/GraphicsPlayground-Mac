@@ -43,8 +43,6 @@ void Game::Init(int argc, char **argv){
     glewExperimental = GL_TRUE;
     glewInit();
     
-    // Leave this here! On windows machines in Lab, glewInit is generating some mysterious, but apparently
-    // harmless, error - and we need it gone.
     glGetError();
     
     // Enable vertical sync (on cards that support it)

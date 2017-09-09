@@ -46,7 +46,7 @@ void WaterQuad::Init(){
     reflectionCamera->setFOV(45.0f);
     reflectionCamera->setNear(0.1f);
     reflectionCamera->setFar(1000.0f);
-    reflectionCamera->setAspect(1280.0f / 720.0f);
+    reflectionCamera->setAspect(m_width / m_height);
     reflectionCamera->setWindow(window);
     
     
@@ -95,8 +95,8 @@ void WaterQuad::Render(){
     program->SetUniform("LightDir", vec3(-1,-1,-1));
     program->SetUniform("MatSpecular",  vec4(.1,.1,.1,.1));
     program->SetUniform("LightSpecular", vec4(.1,.1,.1,.1));
-    program->SetUniform("MatDiffuse",  vec4(1,1,1,1));
-    program->SetUniform("LightDiffuse",  vec4(2,2,2,2));
+    program->SetUniform("MatDiffuse",  vec4(0.6,0.6,0.6,0.6));
+    program->SetUniform("LightDiffuse",  vec4(1,1,1,1));
     program->SetUniform("ViewDir", mainCamera->getViewDirection());
     program->SetUniform("CameraPos", mainCamera->getPos());
     program->SetUniform("WaveHeight1", waveHeight/4);
@@ -104,7 +104,8 @@ void WaterQuad::Render(){
     program->SetUniform("WaveHeight3", waveHeight);
     program->SetUniform("UseNormal", useNormal);
     program->SetUniform("Time", (float)speed*round/5000);
-    
+    program->SetUniform("QuadWidth", myScale.x);
+    program->SetUniform("QuadHeight", myScale.y);
     
     round++;
     g_pDecl->Bind();

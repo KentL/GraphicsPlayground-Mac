@@ -45,6 +45,8 @@ void CityModelExample::HandleKeyInput(GLFWwindow *window, int key, int scancode,
         last_time_key_b_pressed = glfwGetTime();
     }
     mainCamera->HandleKeyInput(window, key, scancode, action, mods);
+    waterQuad->HandleKeyBoardInput(window, key, scancode, action, mods);
+
 }
 void CityModelExample::Initialize()
 {
@@ -52,12 +54,14 @@ void CityModelExample::Initialize()
     string pictureDir = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/citymodel/";
     string shaderDir = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/";
     //Setup Camera
+    int width,height;
+    glfwGetFramebufferSize(window, &width, &height);
     mainCamera = new Camera();
     mainCamera->setPos(vec3(0, 0, 0));
     mainCamera->setFOV(45.0f);
     mainCamera->setNear(0.1f);
     mainCamera->setFar(10000.0f);
-    mainCamera->setAspect(640.0f / 480.0f);
+    mainCamera->setAspect(width/height);
     mainCamera->setWindow(window);
     
     cityModeller = new CityModeller();
@@ -80,6 +84,16 @@ void CityModelExample::Initialize()
     skybox->SetTexture(textureNames);
     skybox->Init();
     
+    waterQuad=new WaterQuad();
+    waterQuad->SetCamera(mainCamera);
+    waterQuad->setPos(mainCamera->getPos()+vec3(0,80,0));
+    waterQuad->setScale(vec3(8000,8000,8000));
+    waterQuad->SetEnv(skybox);
+    waterQuad->SetWindow(window);
+    waterQuad->AddRenderable(skybox);
+    waterQuad->AddRenderable(cityModeller);
+    waterQuad->Init();
+
     RebuildCityModel();
     
 }
@@ -97,6 +111,7 @@ void CityModelExample::Render()
     }
     
     cityModeller->Render();
+    waterQuad->Render();
 }
 
 

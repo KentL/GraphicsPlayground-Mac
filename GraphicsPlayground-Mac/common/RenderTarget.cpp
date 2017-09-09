@@ -31,9 +31,6 @@ void RenderTarget::ClearBuffer(){
 RenderTarget::RenderTarget(unsigned int p_uiWidth, unsigned int p_uiHeight, bool p_bIsScreen)
 	: m_uiFBO(0), m_uiColorBuffer(0), m_uiDepthBuffer(0), m_fWidth(p_uiWidth), m_fHeight(p_uiHeight), m_bIsScreen(p_bIsScreen)
 {
-	float fPadW = (float) nextPow2(p_uiWidth);
-	float fPadH = (float) nextPow2(p_uiHeight);
-
 	if( !p_bIsScreen )
 	{
 		glGenFramebuffers(1,&m_uiFBO);
@@ -45,7 +42,7 @@ RenderTarget::RenderTarget(unsigned int p_uiWidth, unsigned int p_uiHeight, bool
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-		glTexImage2D( GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT24, (unsigned int)fPadW, (unsigned int)fPadH, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_INT, NULL );
+		glTexImage2D( GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT24, (unsigned int)p_uiWidth, (unsigned int)p_uiHeight, 0, GL_DEPTH_COMPONENT, GL_UNSIGNED_INT, NULL );
 		glFramebufferTexture2D(GL_FRAMEBUFFER,GL_DEPTH_ATTACHMENT,GL_TEXTURE_2D, m_uiDepthBuffer, 0);
 
 		glGenTextures(1,&m_uiColorBuffer);
