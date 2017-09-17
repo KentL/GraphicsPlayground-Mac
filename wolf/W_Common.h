@@ -26,7 +26,6 @@ void* LoadWholeFile(const std::string& p_strFile);
 // Loads in a vertex and pixel shader and combines them into a program
 GLuint LoadShaders(const std::string& p_strVSFile, const std::string& p_strPSFile);
 
-bool LoadTGA(const std::string& p_strFile, unsigned int* p_pWidth, unsigned int* p_pHeight, unsigned char** p_ppData);
 GLuint CreateTextureFromDDS(const std::string& p_strFile, unsigned int* p_pWidth = 0, unsigned int* p_pHeight = 0, bool* p_pHasMips = 0);
 }
 

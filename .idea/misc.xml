@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/GraphicsPlayground-Mac" />
+    </sourceRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/glew" />
+      <file path="$PROJECT_DIR$/glfw" />
+      <file path="$PROJECT_DIR$/glm" />
+    </excludeRoots>
+  </component>
+</project>

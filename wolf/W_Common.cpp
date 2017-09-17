@@ -6,7 +6,6 @@
 //-----------------------------------------------------------------------------
 #include "W_Common.h"
 #include "W_Types.h"
-#include "FreeImage.h"
 
 namespace wolf
 {
@@ -171,20 +170,7 @@ GLuint LoadShaders(const std::string& p_strVSFile, const std::string& p_strPSFil
     return uiProgram;
 }
 
-bool LoadTGA(const std::string& p_strFile, unsigned int* p_pWidth, unsigned int* p_pHeight, unsigned char** p_ppData)
-{
-	FREE_IMAGE_FORMAT fif = FIF_UNKNOWN;
-	fif = FreeImage_GetFileType(p_strFile.c_str(), 0);
-	FIBITMAP *dib(0); 
-	dib = FreeImage_Load(fif, p_strFile.c_str());
-	if (!dib)
-		return false;
 
-	*p_pWidth = FreeImage_GetWidth(dib);
-	*p_pHeight = FreeImage_GetHeight(dib);
-	*p_ppData = FreeImage_GetBits(dib);
-	return true;
-}
 
 enum
 {

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GraphicsPlayground_Mac"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GraphicsPlayground_Mac">
+				<Option output="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/GraphicsPlayground_Mac" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Interpolation"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateCube"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateTextureCube"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/WaterRendering"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/."/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.2.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphicsPlayground_Mac"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GraphicsPlayground_Mac/fast">
+				<Option output="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/GraphicsPlayground_Mac" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Interpolation"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateCube"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateTextureCube"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/WaterRendering"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf"/>
+					<Add directory="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/."/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/Cellar/glfw/3.2.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 GraphicsPlayground_Mac/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kli/Documents/Graphics\ Programming/GraphicsPlayground-Mac/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Game.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Game.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/BlendExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/BlendExample.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/AABBCollider.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/AABBCollider.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Camera.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Camera.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CityModelExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CityModelExample.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CityModeller.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CityModeller.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Collider.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Collider.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CollisionDetector.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CollisionDetector.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CollisionHelper.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CollisionPackage.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Cube.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CubemapTexture.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/CubemapTexture.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/DirectionalLight.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/DirectionalLightcpp.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/FormatTranslator.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/FormatTranslator.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Frustum.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Frustum.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Helper.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Light.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Node.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Node.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Plane.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Ray.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Ray.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/SkyBox.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/SkyBox.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Sphere.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Sphere.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/SphereCollider.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/SphereCollider.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/SurfaceMaterial.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/Triangle.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/collidetest.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/struct.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ExampleBase.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ExampleBase.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Interpolation/InterpolationExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Interpolation/InterpolationExample.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/KeyboardInputHandler.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/MouseInputHandler.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/AddVelAffector.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/AddVelAffector.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/Affector.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ColorAffector.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ColorAffector.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ColorBlendingAffector.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ColorBlendingAffector.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/Effect.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/Effect.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/Emitter.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/Emitter.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/FadeAffector.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/FadeAffector.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/HelperFunction.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/HelperFunction.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ParticleStruct.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ParticleSystemExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ParticleSystemExample.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ScaleAffector.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/ParticleSystem/ScaleAffector.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Quad.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Quad.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Renderable.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateCube/RotateCubeExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateCube/RotateCubeExample.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateTextureCube/RotateTextureCubeExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateTextureCube/RotateTextureCubeExample.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/WaterQuad.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/WaterQuad.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/WaterRendering/WaterRenderingExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/WaterRendering/WaterRenderingExample.hpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/RenderTarget.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/RenderTarget.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/main.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/stdafx.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/stdafx.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/SOIL.c">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/SOIL.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/image_DXT.c">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/image_DXT.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/image_helper.c">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/image_helper.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/stb_image_aug.c">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/stb_image_aug.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/stbi_DDS_aug.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/SimpleOpenGLImageLibrary/src/stbi_DDS_aug_c.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny/tinystr.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny/tinystr.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny/tinyxml.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny/tinyxml.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny/tinyxmlerror.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Tiny/tinyxmlparser.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Buffer.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Buffer.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_BufferManager.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_BufferManager.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Common.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Common.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_IndexBuffer.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_IndexBuffer.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Material.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Material.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_MaterialManager.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_MaterialManager.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Program.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Program.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_ProgramManager.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_ProgramManager.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Texture.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Texture.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_TextureManager.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_TextureManager.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_Types.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_VertexBuffer.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_VertexBuffer.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_VertexDeclaration.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/wolf/W_VertexDeclaration.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

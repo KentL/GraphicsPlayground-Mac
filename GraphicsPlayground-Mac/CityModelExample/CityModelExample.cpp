@@ -86,7 +86,7 @@ void CityModelExample::Initialize()
     
     waterQuad=new WaterQuad();
     waterQuad->SetCamera(mainCamera);
-    waterQuad->setPos(mainCamera->getPos()+vec3(0,80,0));
+    waterQuad->setPos(vec3(0,80,0));
     waterQuad->setScale(vec3(8000,8000,8000));
     waterQuad->SetEnv(skybox);
     waterQuad->SetWindow(window);

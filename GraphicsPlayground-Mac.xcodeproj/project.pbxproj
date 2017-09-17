@@ -252,6 +252,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4B1EA2A41F646E0A00243CE8 /* Cube */ = {
+			isa = PBXGroup;
+			children = (
+				4B26F1BF1E890049009E4728 /* Cube.h */,
+			);
+			name = Cube;
+			sourceTree = "<group>";
+		};
+		4B1EA2A51F64747000243CE8 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				4B1EA2A41F646E0A00243CE8 /* Cube */,
+				4B26F1C61E890049009E4728 /* Frustum.cpp */,
+				4BD8B55A1EB6718200AC9B0F /* Quad.cpp */,
+				4BD8B55B1EB6718200AC9B0F /* Quad.hpp */,
+				4B26F1C71E890049009E4728 /* Frustum.h */,
+				4B26F1CC1E890049009E4728 /* Plane.h */,
+				4B26F1D81E890049009E4728 /* Triangle.h */,
+				4B26F1CD1E890049009E4728 /* Ray.cpp */,
+				4B26F1CE1E890049009E4728 /* Ray.h */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
 		4B26F1811E88A85A009E4728 /* Interpolation */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +337,7 @@
 		4B43F08F1EB54F1A005C01FD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4B1EA2A51F64747000243CE8 /* Geometry */,
 				4BD8B5601EB6DE0F00AC9B0F /* RenderTarget.cpp */,
 				4BD8B5611EB6DE0F00AC9B0F /* RenderTarget.h */,
 				4B26F1CF1E890049009E4728 /* SkyBox.cpp */,
@@ -321,19 +346,10 @@
 				4B26F1B51E890049009E4728 /* Camera.h */,
 				4B26F1B81E890049009E4728 /* Collider.cpp */,
 				4B26F1B91E890049009E4728 /* Collider.h */,
-				4B26F1BF1E890049009E4728 /* Cube.h */,
 				4B26F1C01E890049009E4728 /* CubemapTexture.cpp */,
 				4B26F1C11E890049009E4728 /* CubemapTexture.h */,
-				4B26F1C61E890049009E4728 /* Frustum.cpp */,
-				4B26F1C71E890049009E4728 /* Frustum.h */,
 				4B26F1CA1E890049009E4728 /* Node.cpp */,
 				4B26F1CB1E890049009E4728 /* Node.h */,
-				4B26F1CC1E890049009E4728 /* Plane.h */,
-				4B26F1CD1E890049009E4728 /* Ray.cpp */,
-				4B26F1CE1E890049009E4728 /* Ray.h */,
-				4B26F1D81E890049009E4728 /* Triangle.h */,
-				4BD8B55A1EB6718200AC9B0F /* Quad.cpp */,
-				4BD8B55B1EB6718200AC9B0F /* Quad.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";

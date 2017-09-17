@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Node.h"
 #include "struct.h"
 #include "W_Material.h"
@@ -11,8 +12,8 @@ namespace Geometry
 		float accurity = 1;
 		bool first_time_render = true;
 		vector<Vertex2>* vertex;
-		VertexBuffer* vertex_buffer = 0;
-		VertexDeclaration* declaration = 0;
+		wolf::VertexBuffer* vertex_buffer = 0;
+		wolf::VertexDeclaration* declaration = 0;
 		wolf::Material* mat;
 
 		//-------Private method--------------//

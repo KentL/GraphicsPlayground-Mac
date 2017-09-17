@@ -9,7 +9,6 @@
 
 #include "W_Types.h"
 #include <string>
-#include "FreeImage.h"
 
 namespace wolf
 {
