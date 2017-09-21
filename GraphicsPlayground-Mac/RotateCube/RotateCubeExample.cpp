@@ -101,8 +101,10 @@ void RotateCubeExample::Render() {
 
 	// Set up source data
 	g_pDecl->Bind();
+    glEnable(GL_CLIP_DISTANCE0);
+    glm::vec4 PlaneEquation = glm::vec4(1, -1, 1, 0);
 
-	glDrawArrays(GL_TRIANGLES, 0, sizeof(cubeVertices)/sizeof(cubeVertices[0]));
+    glDrawArrays(GL_TRIANGLES, 0, sizeof(cubeVertices)/sizeof(cubeVertices[0]));
 }
 
 void RotateCubeExample::HandleKeyInput(GLFWwindow *window, int key, int scancode, int action, int mods){}

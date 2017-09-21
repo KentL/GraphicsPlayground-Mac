@@ -8,7 +8,6 @@
     <excludeRoots>
       <file path="$PROJECT_DIR$/glew" />
       <file path="$PROJECT_DIR$/glfw" />
-      <file path="$PROJECT_DIR$/glm" />
     </excludeRoots>
   </component>
 </project>

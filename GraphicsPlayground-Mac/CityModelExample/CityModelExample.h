@@ -23,26 +23,12 @@ class CityModelExample:public ExampleBase
 private:
     CityModelExample() {}
     
-    wolf::VertexBuffer* g_pVB1 = 0;
-    wolf::VertexDeclaration* g_pDecl = 0;
-    wolf::Program* g_pProgram1 = 0;
-    
-    wolf::MaterialManager* g_Mat_Manager = 0;
-    wolf::Material* mat = 0;
-    wolf::Texture* tex_map = 0;
-    
-    SurfaceMaterial* g_maskSurface;
-    DirectionalLight* g_light;
-    
-    float angle = 0;
-    
+
     Camera* mainCamera;
     CityModeller* cityModeller;
     SkyBox* skybox;
     WaterQuad* waterQuad;
 
-    float s_fRotation = 0;
-    bool keypressed = false;
 
     
     GLFWwindow* window;
@@ -52,7 +38,6 @@ private:
     int key_b_pressed_counter = 0;//record how many times key "B" is pressed to turn skybox-rendering on and off
     float last_time_key_f_pressed = 0;//Record the last time that key 'F' is pressed to change the fov of mainCamera
     float last_time_key_b_pressed = 0;//Record the last time that key 'B' is pressed to turn skybox-rendering on and off
-    float last_render_time = 0;
     void RebuildCityModel();
 public:
     static CityModelExample*  getInstance()

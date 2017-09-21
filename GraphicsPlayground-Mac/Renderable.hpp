@@ -16,6 +16,6 @@ class Renderable{
 public:
     virtual void Render(RenderTarget* target) = 0;
     virtual void SetCamera(Camera* camera) = 0;
-
+    virtual void SetClipPanel(vec4 clipPanel){};
 };
 #endif /* Renderable_hpp */

@@ -7,12 +7,6 @@
 #include "RenderTarget.h" 
 #include "W_BufferManager.h"
 
-struct QuadVertex
-{
-	GLfloat x,y;
-	GLfloat u,v;
-};
-
 static unsigned int nextPow2(unsigned int p_ui)
 {
 	p_ui--;
@@ -57,31 +51,7 @@ RenderTarget::RenderTarget(unsigned int p_uiWidth, unsigned int p_uiHeight, bool
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	}
 
-//	QuadVertex quadVertices[] = 
-//	{
-//		{ -1.0f, -1.0f, 0.0f, 0.0f },
-//		{ 1.0f, -1.0f, 1.0f, 0.0f },
-//		{ -1.0f, 1.0f, 0.0f, 1.0f },
-//
-//		{ -1.0f, 1.0f, 0.0f, 1.0f },
-//		{ 1.0f, -1.0f, 1.0f, 0.0f },
-//		{ 1.0f, 1.0f, 1.0f, 1.0f }
-//	};
-//
-//	for( int i = 0; i < 6; i++ )
-//	{
-//		quadVertices[i].u *= m_fWidth / fPadW;
-//		quadVertices[i].v *= m_fHeight / fPadH;
-//	}
-//
-//    m_pVB = wolf::BufferManager::Inst()->CreateVertexBuffer(quadVertices, sizeof(QuadVertex) * 6);
-//
-//	m_pDecl = new wolf::VertexDeclaration();
-//	m_pDecl->Begin();
-//	m_pDecl->AppendAttribute(wolf::AT_Position, 2, wolf::CT_Float);
-//	m_pDecl->AppendAttribute(wolf::AT_TexCoord1, 2, wolf::CT_Float);
-//	m_pDecl->SetVertexBuffer(m_pVB);
-//	m_pDecl->End();
+
 }
 
 RenderTarget::~RenderTarget()

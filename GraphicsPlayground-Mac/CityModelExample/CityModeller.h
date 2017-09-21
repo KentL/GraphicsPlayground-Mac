@@ -43,6 +43,7 @@ private:
     GLFWwindow* window;
 	float last_time_key_l_pressed;//The last time that key 'L' is pressed to turn light on and off
 	float lightAngle;
+	vec4 waterPanel;
 
 public:	vector<Vertex1>* collider_vertex;//For debug
 		
@@ -63,6 +64,7 @@ public:
 	void Render(RenderTarget* target);
 	void SetCamera(Camera* mainCamera);
     void SetWindow(GLFWwindow* window);
+	void SetClipPanel(vec4 clipPanel);
 public:
 	bool grids[SIZE][SIZE];
 	int w, h, l; //width length height of a building

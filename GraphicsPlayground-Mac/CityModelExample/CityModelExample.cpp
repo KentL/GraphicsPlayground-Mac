@@ -56,6 +56,8 @@ void CityModelExample::Initialize()
     //Setup Camera
     int width,height;
     glfwGetFramebufferSize(window, &width, &height);
+    int waterLevel = 80;
+
     mainCamera = new Camera();
     mainCamera->setPos(vec3(0, 0, 0));
     mainCamera->setFOV(45.0f);
@@ -69,7 +71,7 @@ void CityModelExample::Initialize()
     cityModeller->SetProgram(shaderDir+"city_model.vsh", shaderDir+"city_model.fsh");
     cityModeller->SetCamera(mainCamera);
     cityModeller->SetWindow(window);
-    
+
     //Initialize SkyBox properties
     string textureNames[] = { pictureDir+"skybox-png/skybox_texture_posX.png", pictureDir+"skybox-png/skybox_texture_negX.png",
 								pictureDir+"skybox-png/skybox_texture_posY.png", pictureDir+"skybox-png/skybox_texture_negY.png",
@@ -86,7 +88,7 @@ void CityModelExample::Initialize()
     
     waterQuad=new WaterQuad();
     waterQuad->SetCamera(mainCamera);
-    waterQuad->setPos(vec3(0,80,0));
+    waterQuad->setPos(vec3(0,waterLevel,0));
     waterQuad->setScale(vec3(8000,8000,8000));
     waterQuad->SetEnv(skybox);
     waterQuad->SetWindow(window);
@@ -103,13 +105,11 @@ void CityModelExample::RebuildCityModel(){
 }
 void CityModelExample::Render()
 {
+
     mainCamera->cameraMove();
-    
-    if (key_b_pressed_counter==1)
-    {
-        skybox->Render();
-    }
-    
+
+    skybox->Render();
+
     cityModeller->Render();
     waterQuad->Render();
 }

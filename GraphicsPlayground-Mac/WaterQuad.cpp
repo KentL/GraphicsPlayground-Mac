@@ -27,9 +27,9 @@ void WaterQuad::Init(){
     program=wolf::ProgramManager::Inst()->CreateProgram(vShader, fShader);
     
     normalMap1=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap.png");
-    normalMap2=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
     normalMap3=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap3.png");
-    
+    normalMap2=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
+
 
     
     g_pVB = wolf::BufferManager::Inst()->CreateVertexBuffer(m_vertices, sizeof(Vertex) *6);
@@ -45,7 +45,7 @@ void WaterQuad::Init(){
     reflectionCamera = new Camera();
     reflectionCamera->setFOV(45.0f);
     reflectionCamera->setNear(0.1f);
-    reflectionCamera->setFar(1000.0f);
+    reflectionCamera->setFar(10000.0f);
     reflectionCamera->setAspect(m_width / m_height);
     reflectionCamera->setWindow(window);
     
@@ -58,7 +58,7 @@ void WaterQuad::Init(){
 void WaterQuad::Render(){
     RenderReflection();
     RenderRefraction();
-    
+
     program->Bind();
     
     glActiveTexture(GL_TEXTURE0);
@@ -103,7 +103,7 @@ void WaterQuad::Render(){
     program->SetUniform("WaveHeight2", waveHeight/2);
     program->SetUniform("WaveHeight3", waveHeight);
     program->SetUniform("UseNormal", useNormal);
-    program->SetUniform("Time", (float)speed*round/5000);
+    program->SetUniform("Time", speed*round/5000);
     program->SetUniform("QuadWidth", myScale.x);
     program->SetUniform("QuadHeight", myScale.y);
     
@@ -156,31 +156,35 @@ void WaterQuad::RenderReflection(){
     reflectionViewDirection.y=mainCameraViewDirection.y*-1;
     reflectionViewDirection=glm::normalize(reflectionViewDirection);
     reflectionCamera->setViewDirection(reflectionViewDirection);
-    
-    double panel[4] = {0.0,1.0,0.0,-waterLevel};//Todo: Calculate Normal Dynamically
-    glEnable(GL_CLIP_PLANE0);
-    glClipPlane(GL_CLIP_PLANE0, panel);
+
+
     reflectionTarget->ClearBuffer();
+
+    glEnable(GL_CLIP_DISTANCE0);
+    vec4 clipPanel = vec4(0,1,0,-waterLevel);
     for (int i =0; i<renderObjects.size(); i++) {
         renderObjects.at(i)->SetCamera(reflectionCamera);
+        renderObjects.at(i)->SetClipPanel(clipPanel);
         renderObjects.at(i)->Render(reflectionTarget);
         renderObjects.at(i)->SetCamera(mainCamera);
     }
-    glDisable(GL_CLIP_PLANE0);
-    
+    glDisable(GL_CLIP_DISTANCE0);
+
+
 }
 void WaterQuad::RenderRefraction(){
     double waterLevel = this->getPos().y;
-    double panel[4] = {0.0,-1.0,0.0,-waterLevel};//Todo: Calculate Normal Dynamically
-    glEnable(GL_CLIP_PLANE0);
-    glClipPlane(GL_CLIP_PLANE0, panel);
     refractionTarget->ClearBuffer();
+    glEnable(GL_CLIP_DISTANCE0);
+    vec4 clipPanel = vec4(0,-1,0,waterLevel);
     for (int i =0; i<renderObjects.size(); i++)
     {
         renderObjects.at(i)->SetCamera(mainCamera);
+        renderObjects.at(i)->SetClipPanel(clipPanel);
         renderObjects.at(i)->Render(refractionTarget);
     }
-    glDisable(GL_CLIP_PLANE0);
+    glDisable(GL_CLIP_DISTANCE0);
+
 }
 void WaterQuad::SetEnv(SkyBox *skyBox){
     this->skyBox=skyBox;

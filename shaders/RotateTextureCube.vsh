@@ -2,9 +2,11 @@
 uniform mat4 projection;
 uniform mat4 view;
 uniform mat4 world;
+uniform vec4 ClipPlane;
 in vec4 a_position;
 in vec2 a_uv1;
 out vec2 v_uv1;
+
 uniform float time;
 
 void main()

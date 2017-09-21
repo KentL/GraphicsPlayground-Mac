@@ -25,6 +25,8 @@
 #define MIN_LENGTH_IN_GRID 3
 #define MIN_WIDTH_IN_GRID 3
 
+using namespace glm;
+
 CityModeller::CityModeller()
 {
 	//Create storage vector
@@ -180,10 +182,10 @@ void CityModeller::generateCityLayoutData()
 				{	//city_vertices_data'length and width are counted from the selected grid to right(column+1) and to down(row+1)
 					/***********************************************
 					Diagram of city grid model:
-				  £¨0£¬0£©->->->x++		  |<--width-->|_____
-					 ¡ý   [][][][][][][][][][][][][][][]¡ü
-					 ¡ý   [][][][][][][][][][][][][][][]length
-					 ¡ý   [][][][][][][][][][][][][][][]¡ý
+				  ??0??0??->->->x++		  |<--width-->|_____
+					 ??   [][][][][][][][][][][][][][][]??
+					 ??   [][][][][][][][][][][][][][][]length
+					 ??   [][][][][][][][][][][][][][][]??
 					y++	 [][][][][][][][][][][][][][][]-----
 
 					*****************************************************/
@@ -255,19 +257,6 @@ void CityModeller::generateCityLayoutData()
 						lMax = 0;
 					}
 
-#pragma region "maybenoneed"
-					/*for (int xoffset = 0; xoffset < wMax; xoffset++)
-					{
-						for (int yoffset = 0; yoffset < lMax; yoffset++)
-						{
-							if (!grids[x + xoffset][y + yoffset])
-							{
-								lMax = yoffset;
-								break;
-							}
-						}
-					}*/
-#pragma endregion
 
 					//If the calculated max width and height is larger than the specified min value,store the building data
 					if (wMax>=MIN_WIDTH_IN_GRID&&lMax>=MIN_LENGTH_IN_GRID)
@@ -634,6 +623,10 @@ void CityModeller::HandleKeyInput(GLFWwindow *window, int key, int scancode, int
 void CityModeller::SetWindow(GLFWwindow *window){
     this->window=window;
 }
+void CityModeller::SetClipPanel(vec4 panel){
+    this->waterPanel=panel;
+}
+
 void CityModeller::Render(RenderTarget *target){
     target->Bind();
     Render();
@@ -697,6 +690,7 @@ void CityModeller::Render()
 
 	// Bind Uniforms
 	mat->SetUniform("WorldViewProj", mWorld);
+	mat->SetUniform("View", mView);
 	mat->SetUniform("ViewDir", glm::vec3(mainCamera->getViewDirection()));
 
 	// Set the light parameters
@@ -710,6 +704,7 @@ void CityModeller::Render()
 	mat->SetUniform("MatDiffuse", g_maskSurface->getDiffuse());
 	mat->SetUniform("MatSpecular", g_maskSurface->getSpecular());
 
+    mat->SetUniform("ClipPanel",waterPanel);
 	g_pDecl->Bind();
 	mat->Apply();
     

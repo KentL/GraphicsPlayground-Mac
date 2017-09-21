@@ -41,7 +41,8 @@ vec3 TangentToWorldSpace(vec3 normalMapSample, vec3 normal_world, vec3 tangent_w
     
     mat3 TBN = mat3(T,B,N);
     
-    vec3 bumpNormal = TBN * nT;
+    vec3 bumpNormal = normalize(TBN * nT);
+
     return bumpNormal;
 }
 
@@ -62,7 +63,7 @@ void main()
         vec3 nMapColor3 = texture(NormalMap3, normalmap_uv3).rgb;
         
         vec3 face_normal = normalize( v_normal );
-        vec3 normalMapSample = nMapColor1*0.8+nMapColor2*0.3+nMapColor3*0.5;
+        vec3 normalMapSample = nMapColor1*0.8+nMapColor2*0.3;//+nMapColor3*0.5;
         vec3 n = TangentToWorldSpace( normalMapSample, face_normal, v_tangent );
         
         vec3 lightDir = normalize(LightDir);
@@ -81,15 +82,20 @@ void main()
         vec2 perturbation1 = WaveHeight1*2*(nMapColor1.xy-0.5);
         vec2 perturbation2 = WaveHeight2*2*(nMapColor2.xy-0.5);
         vec2 perturbation3 = WaveHeight3*2*(nMapColor3.xy-0.5);
-        vec2 perturbation = perturbation1+perturbation2+perturbation3;
+        vec2 perturbation = perturbation1+perturbation2;//+perturbation3;
         
         //Fresnel
-        vec3 eyeDir = normalize(v_pos.xyz - CameraPos);
-        float fangle = 1+dot(eyeDir, n);
+        vec3 eyeDir = normalize(CameraPos - v_pos.xyz);
+        float fangle = 1 - dot(eyeDir, n);
         fangle = pow(fangle ,5);
         float fresnelTerm = 1/fangle;
         fresnelTerm = clamp(fresnelTerm,0.0f,1.0f);
-        
+
+        fresnelTerm = 1 - dot(eyeDir, n);
+        fresnelTerm = clamp(fresnelTerm,0.0f,1.0f);
+
+
+
         vec2 co1 = refraction_uv+perturbation;
         vec2 co2 = reflection_uv+perturbation;
                
