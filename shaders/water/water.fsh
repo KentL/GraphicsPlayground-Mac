@@ -16,6 +16,7 @@ uniform float WaveHeight2;
 uniform float WaveHeight3;
 uniform bool UseNormal;
 uniform vec3 CameraPos;
+uniform bool UnderWater;
 
 in vec3 v_normal;
 in vec3 v_tangent;
@@ -98,9 +99,14 @@ void main()
 
         vec2 co1 = refraction_uv+perturbation;
         vec2 co2 = reflection_uv+perturbation;
-               
-        vec4 color = texture(RefractionTex,co1)*(1-fresnelTerm)+texture(ReflectionTex,co2)*fresnelTerm;
-        
+
+        vec4 color;
+        if(UnderWater){
+                color = texture(RefractionTex,co1)*fresnelTerm + texture(ReflectionTex,co2)*(1-fresnelTerm);
+        }else{
+                color = texture(RefractionTex,co1)*(1-fresnelTerm)+texture(ReflectionTex,co2)*fresnelTerm;
+        }
+
         
         vec4 light = clamp(specular+diffuse,0.9,3);
         

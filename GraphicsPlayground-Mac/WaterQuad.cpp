@@ -106,7 +106,8 @@ void WaterQuad::Render(){
     program->SetUniform("Time", speed*round/5000);
     program->SetUniform("QuadWidth", myScale.x);
     program->SetUniform("QuadHeight", myScale.y);
-    
+
+    program->SetUniform("UnderWater", mainCamera->getPos().y < this->getPos().y);
     round++;
     g_pDecl->Bind();
     screenTarget->Bind();
@@ -161,7 +162,13 @@ void WaterQuad::RenderReflection(){
     reflectionTarget->ClearBuffer();
 
     glEnable(GL_CLIP_DISTANCE0);
-    vec4 clipPanel = vec4(0,1,0,-waterLevel);
+    vec4 clipPanel;
+    //If reflection camera is above water, that means actual camera is under water, we need to flip the panel
+    if(reflectionCamera->getPos().y > waterLevel){
+        clipPanel  =  vec4(0,-1,0,waterLevel);
+    }else{
+        clipPanel =  vec4(0,1,0,-waterLevel);
+    }
     for (int i =0; i<renderObjects.size(); i++) {
         renderObjects.at(i)->SetCamera(reflectionCamera);
         renderObjects.at(i)->SetClipPanel(clipPanel);
@@ -176,7 +183,12 @@ void WaterQuad::RenderRefraction(){
     double waterLevel = this->getPos().y;
     refractionTarget->ClearBuffer();
     glEnable(GL_CLIP_DISTANCE0);
-    vec4 clipPanel = vec4(0,-1,0,waterLevel);
+    vec4 clipPanel;
+    if(mainCamera->getPos().y < waterLevel){
+        clipPanel  =  vec4(0,1,0,-waterLevel);
+    } else{
+        clipPanel = vec4(0,-1,0,waterLevel);
+    }
     for (int i =0; i<renderObjects.size(); i++)
     {
         renderObjects.at(i)->SetCamera(mainCamera);
