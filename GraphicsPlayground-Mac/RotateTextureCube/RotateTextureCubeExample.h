@@ -2,8 +2,7 @@
 #include "ExampleBase.hpp"
 class RotateTextureCubeExample: public ExampleBase{
 private:
-    RotateTextureCubeExample() {}
-    ;
+    RotateTextureCubeExample() {};
     
 public:
     static RotateTextureCubeExample* getInstance()

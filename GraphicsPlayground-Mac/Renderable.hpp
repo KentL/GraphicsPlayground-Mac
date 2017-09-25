@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "stdafx.h"
 #include "RenderTarget.h"
+#include "Camera.h"
 class Renderable{
 public:
     virtual void Render(RenderTarget* target) = 0;

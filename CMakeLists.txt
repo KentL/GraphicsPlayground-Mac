@@ -159,7 +159,7 @@ set(SOURCE_FILES
         wolf/W_VertexDeclaration.cpp
         wolf/W_VertexDeclaration.h
         Game.cpp
-        Game.hpp)
+        Game.hpp GraphicsPlayground-Mac/common/TexturedPanel.cpp GraphicsPlayground-Mac/common/TexturedPanel.h GraphicsPlayground-Mac/CausticExample/CausticExample.cpp GraphicsPlayground-Mac/CausticExample/CausticExample.h GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp GraphicsPlayground-Mac/CausticExample/CausticPanel.h)
 
 add_executable(GraphicsPlayground_Mac ${SOURCE_FILES})
 

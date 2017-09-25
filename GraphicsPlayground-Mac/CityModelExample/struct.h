@@ -31,7 +31,7 @@ struct Vertex3
 {
 	GLfloat x, y, z;
 };
-struct Vertex4{
+struct VertexWithUV{
     GLfloat x,y,z;
     GLfloat u,v;
 };

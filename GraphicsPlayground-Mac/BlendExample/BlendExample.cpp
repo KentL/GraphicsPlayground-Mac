@@ -6,7 +6,7 @@
 #include "W_VertexDeclaration.h"
 #include "W_ProgramManager.h"
 #include "W_MaterialManager.h"
-
+#include "W_Types.h"
 
 struct Vertex
 {
@@ -82,13 +82,14 @@ void BlendExample::Initialize() {
 	wolf::TextureManager* textureManager = wolf::TextureManager::Inst();
 	g_pVB = bufferManager->CreateVertexBuffer(cubeVertices, sizeof(cubeVertices));
 
-	tex = textureManager->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/common/alphatest.tga");
+	tex = textureManager->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/common/brick.dds");
 	tex->SetFilterMode(wolf::Texture::FM_Nearest, wolf::Texture::FM_Nearest);
 	tex->SetWrapMode(wolf::Texture::WM_Clamp, wolf::Texture::WM_Clamp);
 	mat = g_Mat_Manager->CreateMaterial("texture_cube_material");
 	mat->SetProgram("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/Blend.vsh", "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/Blend.fsh");
-	mat->SetDepthTest(true);
-	mat->SetBlend(false);
+	mat->SetDepthTest(false);
+	mat->SetBlend(true);
+	mat->SetBlendMode(wolf::BM_SrcAlpha,wolf::BM_DstAlpha);
 	mat->SetTexture("tex", tex);
 
 	g_pDecl = new wolf::VertexDeclaration();
