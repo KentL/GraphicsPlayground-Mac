@@ -20,13 +20,19 @@ struct Vertex1
 
 
 
-struct Vertex2
+struct VertexWithUVNormal
 {
 	GLfloat x, y, z;
 	GLfloat u, v;
 	GLfloat normalx, normaly, normalz;
 };
-
+struct VertexWithUVNormalTangent
+{
+	GLfloat x, y, z;
+	GLfloat u, v;
+	GLfloat normalx, normaly, normalz;
+	GLfloat tangentx, tangenty, tangentz;
+};
 struct Vertex3
 {
 	GLfloat x, y, z;
@@ -52,7 +58,7 @@ struct singlegrid
 	GLint row, column;
 };
 
-static  const Vertex2 plane[] = {
+static  const VertexWithUVNormal plane[] = {
 
 		{ -5200.0f , -3.0f, 17000.0f , 0.5, 0.02, 0, 1, 0 },
 		{ 17000.0f , -3.0f, 17000.0f , 0.6, 0.02, 0, 1, 0 },

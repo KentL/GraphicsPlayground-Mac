@@ -22,8 +22,8 @@ extern float xi,yi,zi;
 extern float lookatx, lookaty, lookatz;
 extern float markx, marky, markz;
 extern float total_increasment, xincreasment, yincreasment, zincreasment;
-extern  std::vector<Vertex2> buildings;
-extern  std::vector<Vertex2> roads;
+extern  std::vector<VertexWithUVNormal> buildings;
+extern  std::vector<VertexWithUVNormal> roads;
 extern  std::vector<building> buildingStore;
 
 float productnew=0, productold=0;

@@ -5,9 +5,11 @@
 #include "CausticExample.h"
 
 void CausticExample::Initialize() {
-    const string vsh = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/texturedPanel/TexturedPanel.vsh";
-    const string psh = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/texturedPanel/TexturedPanel.fsh";
-    const string tex = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/common/brick.dds";
+    const string groundVSH = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/texturedPanel/TexturedPanel.vsh";
+    const string groundPSH = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/texturedPanel/TexturedPanel.fsh";
+    const string causticVSH = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/causticPanel/CausticPanel.vsh";
+    const string causticPSH = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/causticPanel/CausticPanel.fsh";
+    const string groundtex = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/common/brick.dds";
 
     //******************set up camera *********************//
     mainCamera = new Camera();
@@ -19,14 +21,28 @@ void CausticExample::Initialize() {
     mainCamera->setWindow(window);
 
     ground = new TexturedPanel;
-    ground->Initialize(vsh,psh,tex);
+    ground->Initialize(groundVSH,groundPSH,groundtex);
     ground->scale(vec3(100,100,100));
     ground->SetCamera(mainCamera);
+
+    causticPanel = new CausticPanel;
+    causticPanel->Initialize(causticVSH,causticPSH);
+    causticPanel->setPos(vec3(30,30,30));
+    causticPanel->scale(vec3(100,100,100));
+    causticPanel->SetCamera(mainCamera);
+    causticPanel->SetNormalTextures(
+            "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap.png",
+    "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
+    glDisable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA,GL_DST_ALPHA);
 }
 
 void CausticExample::Render() {
     mainCamera->cameraMove();
+
     ground->Render();
+    causticPanel->Render();
 }
 
 void CausticExample::HandleCursorPositionChange(GLFWwindow *window, double newXPos, double newYPos) {

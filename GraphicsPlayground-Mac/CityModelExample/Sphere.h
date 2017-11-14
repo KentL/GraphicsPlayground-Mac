@@ -11,7 +11,7 @@ namespace Geometry
 		float radius;
 		float accurity = 1;
 		bool first_time_render = true;
-		vector<Vertex2>* vertex;
+		vector<VertexWithUVNormal>* vertex;
 		wolf::VertexBuffer* vertex_buffer = 0;
 		wolf::VertexDeclaration* declaration = 0;
 		wolf::Material* mat;

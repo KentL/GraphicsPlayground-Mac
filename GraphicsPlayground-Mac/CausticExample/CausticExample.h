@@ -8,11 +8,13 @@
 
 #include <ExampleBase.hpp>
 #include <common/TexturedPanel.h>
+#include "CausticPanel.h"
 
 class CausticExample: public ExampleBase {
 private:
     CausticExample() {};
     TexturedPanel* ground = 0;
+    CausticPanel* causticPanel = 0;
     Camera* mainCamera;
 public:
     static CausticExample* getInstance()

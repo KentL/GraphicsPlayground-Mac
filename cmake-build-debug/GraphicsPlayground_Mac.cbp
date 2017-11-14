@@ -122,6 +122,18 @@
 		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/BlendExample.h">
 			<Option target="GraphicsPlayground_Mac"/>
 		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
 		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/AABBCollider.cpp">
 			<Option target="GraphicsPlayground_Mac"/>
 		</Unit>
@@ -357,6 +369,12 @@
 			<Option target="GraphicsPlayground_Mac"/>
 		</Unit>
 		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/RenderTarget.h">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.cpp">
+			<Option target="GraphicsPlayground_Mac"/>
+		</Unit>
+		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.h">
 			<Option target="GraphicsPlayground_Mac"/>
 		</Unit>
 		<Unit filename="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/main.cpp">

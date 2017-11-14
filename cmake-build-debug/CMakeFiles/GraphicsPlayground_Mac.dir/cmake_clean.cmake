@@ -56,6 +56,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexBuffer.cpp.o"
   "CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexDeclaration.cpp.o"
   "CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o"
+  "CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o"
+  "CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o"
+  "CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o"
   "GraphicsPlayground_Mac.pdb"
   "GraphicsPlayground_Mac"
 )

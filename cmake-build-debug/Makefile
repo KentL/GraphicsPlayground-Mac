@@ -177,6 +177,60 @@ GraphicsPlayground-Mac/BlendExample/BlendExample.cpp.s:
 	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/BlendExample/BlendExample.cpp.s
 .PHONY : GraphicsPlayground-Mac/BlendExample/BlendExample.cpp.s
 
+GraphicsPlayground-Mac/CausticExample/CausticExample.o: GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o
+
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticExample.o
+
+# target to build an object file
+GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o
+
+GraphicsPlayground-Mac/CausticExample/CausticExample.i: GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.i
+
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticExample.i
+
+# target to preprocess a source file
+GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.i
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.i
+
+GraphicsPlayground-Mac/CausticExample/CausticExample.s: GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.s
+
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticExample.s
+
+# target to generate assembly for a file
+GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.s
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.s
+
+GraphicsPlayground-Mac/CausticExample/CausticPanel.o: GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o
+
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticPanel.o
+
+# target to build an object file
+GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o
+
+GraphicsPlayground-Mac/CausticExample/CausticPanel.i: GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.i
+
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticPanel.i
+
+# target to preprocess a source file
+GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.i
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.i
+
+GraphicsPlayground-Mac/CausticExample/CausticPanel.s: GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.s
+
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticPanel.s
+
+# target to generate assembly for a file
+GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.s
+.PHONY : GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.s
+
 GraphicsPlayground-Mac/CityModelExample/AABBCollider.o: GraphicsPlayground-Mac/CityModelExample/AABBCollider.cpp.o
 
 .PHONY : GraphicsPlayground-Mac/CityModelExample/AABBCollider.o
@@ -1068,6 +1122,33 @@ GraphicsPlayground-Mac/common/RenderTarget.cpp.s:
 	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/RenderTarget.cpp.s
 .PHONY : GraphicsPlayground-Mac/common/RenderTarget.cpp.s
 
+GraphicsPlayground-Mac/common/TexturedPanel.o: GraphicsPlayground-Mac/common/TexturedPanel.cpp.o
+
+.PHONY : GraphicsPlayground-Mac/common/TexturedPanel.o
+
+# target to build an object file
+GraphicsPlayground-Mac/common/TexturedPanel.cpp.o:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o
+.PHONY : GraphicsPlayground-Mac/common/TexturedPanel.cpp.o
+
+GraphicsPlayground-Mac/common/TexturedPanel.i: GraphicsPlayground-Mac/common/TexturedPanel.cpp.i
+
+.PHONY : GraphicsPlayground-Mac/common/TexturedPanel.i
+
+# target to preprocess a source file
+GraphicsPlayground-Mac/common/TexturedPanel.cpp.i:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.i
+.PHONY : GraphicsPlayground-Mac/common/TexturedPanel.cpp.i
+
+GraphicsPlayground-Mac/common/TexturedPanel.s: GraphicsPlayground-Mac/common/TexturedPanel.cpp.s
+
+.PHONY : GraphicsPlayground-Mac/common/TexturedPanel.s
+
+# target to generate assembly for a file
+GraphicsPlayground-Mac/common/TexturedPanel.cpp.s:
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.s
+.PHONY : GraphicsPlayground-Mac/common/TexturedPanel.cpp.s
+
 GraphicsPlayground-Mac/main.o: GraphicsPlayground-Mac/main.cpp.o
 
 .PHONY : GraphicsPlayground-Mac/main.o
@@ -1677,6 +1758,12 @@ help:
 	@echo "... GraphicsPlayground-Mac/BlendExample/BlendExample.o"
 	@echo "... GraphicsPlayground-Mac/BlendExample/BlendExample.i"
 	@echo "... GraphicsPlayground-Mac/BlendExample/BlendExample.s"
+	@echo "... GraphicsPlayground-Mac/CausticExample/CausticExample.o"
+	@echo "... GraphicsPlayground-Mac/CausticExample/CausticExample.i"
+	@echo "... GraphicsPlayground-Mac/CausticExample/CausticExample.s"
+	@echo "... GraphicsPlayground-Mac/CausticExample/CausticPanel.o"
+	@echo "... GraphicsPlayground-Mac/CausticExample/CausticPanel.i"
+	@echo "... GraphicsPlayground-Mac/CausticExample/CausticPanel.s"
 	@echo "... GraphicsPlayground-Mac/CityModelExample/AABBCollider.o"
 	@echo "... GraphicsPlayground-Mac/CityModelExample/AABBCollider.i"
 	@echo "... GraphicsPlayground-Mac/CityModelExample/AABBCollider.s"
@@ -1776,6 +1863,9 @@ help:
 	@echo "... GraphicsPlayground-Mac/common/RenderTarget.o"
 	@echo "... GraphicsPlayground-Mac/common/RenderTarget.i"
 	@echo "... GraphicsPlayground-Mac/common/RenderTarget.s"
+	@echo "... GraphicsPlayground-Mac/common/TexturedPanel.o"
+	@echo "... GraphicsPlayground-Mac/common/TexturedPanel.i"
+	@echo "... GraphicsPlayground-Mac/common/TexturedPanel.s"
 	@echo "... GraphicsPlayground-Mac/main.o"
 	@echo "... GraphicsPlayground-Mac/main.i"
 	@echo "... GraphicsPlayground-Mac/main.s"

@@ -38,6 +38,24 @@ ParticleSystemExample.h
 ExampleBase.hpp
 ../GraphicsPlayground-Mac/BlendExample/ExampleBase.hpp
 
+../GraphicsPlayground-Mac/CausticExample/CausticExample.h
+ExampleBase.hpp
+-
+common/TexturedPanel.h
+-
+CausticPanel.h
+../GraphicsPlayground-Mac/CausticExample/CausticPanel.h
+
+../GraphicsPlayground-Mac/CausticExample/CausticPanel.h
+Renderable.hpp
+-
+CityModelExample/Camera.h
+-
+CityModelExample/struct.h
+-
+W_MaterialManager.h
+-
+
 ../GraphicsPlayground-Mac/CityModelExample/AABBCollider.h
 Collider.h
 ../GraphicsPlayground-Mac/CityModelExample/Collider.h
@@ -299,6 +317,8 @@ stdafx.h
 ../GraphicsPlayground-Mac/stdafx.h
 RenderTarget.h
 ../GraphicsPlayground-Mac/RenderTarget.h
+Camera.h
+../GraphicsPlayground-Mac/Camera.h
 
 ../GraphicsPlayground-Mac/RotateCube/RotateCubeExample.h
 ExampleBase.hpp
@@ -349,6 +369,16 @@ W_VertexBuffer.h
 ../GraphicsPlayground-Mac/common/W_VertexBuffer.h
 W_VertexDeclaration.h
 ../GraphicsPlayground-Mac/common/W_VertexDeclaration.h
+
+../GraphicsPlayground-Mac/common/TexturedPanel.h
+Renderable.hpp
+-
+CityModelExample/Camera.h
+-
+CityModelExample/struct.h
+-
+W_MaterialManager.h
+-
 
 ../GraphicsPlayground-Mac/stdafx.h
 stdio.h
@@ -509,6 +539,8 @@ W_Types.h
 ../wolf/W_Types.h
 
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Game.cpp
+CausticExample/CausticExample.h
+-
 Game.hpp
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/Game.hpp
 
@@ -555,10 +587,38 @@ W_ProgramManager.h
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/W_ProgramManager.h
 W_MaterialManager.h
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/W_MaterialManager.h
+W_Types.h
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/W_Types.h
 
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/BlendExample.h
 ExampleBase.hpp
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/BlendExample/ExampleBase.hpp
+
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp
+CausticExample.h
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.h
+
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.h
+ExampleBase.hpp
+-
+common/TexturedPanel.h
+-
+CausticPanel.h
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.h
+
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp
+CausticPanel.h
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.h
+
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.h
+Renderable.hpp
+-
+CityModelExample/Camera.h
+-
+CityModelExample/struct.h
+-
+W_MaterialManager.h
+-
 
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CityModelExample/AABBCollider.cpp
 stdafx.h
@@ -1167,6 +1227,8 @@ stdafx.h
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/stdafx.h
 RenderTarget.h
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RenderTarget.h
+Camera.h
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/Camera.h
 
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/RotateCube/RotateCubeExample.cpp
 stdafx.h
@@ -1261,6 +1323,20 @@ W_VertexBuffer.h
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/W_VertexBuffer.h
 W_VertexDeclaration.h
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/W_VertexDeclaration.h
+
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.cpp
+TexturedPanel.h
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.h
+
+/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.h
+Renderable.hpp
+-
+CityModelExample/Camera.h
+-
+CityModelExample/struct.h
+-
+W_MaterialManager.h
+-
 
 /Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/main.cpp
 stdafx.h

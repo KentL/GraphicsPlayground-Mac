@@ -32,7 +32,7 @@ CityModeller::CityModeller()
 	//Create storage vector
 	buildingStore = new vector < building* >();
 	roadStore = new vector<road*>();
-	city_vertices_data = new vector<Vertex2>();
+	city_vertices_data = new vector<VertexWithUVNormal>();
 	cross = new vector<singlegrid*>();
 	buildingBase = new vector<singlegrid*>();
 	space = new vector<singlegrid*>();
@@ -496,7 +496,7 @@ void CityModeller::loadBuffer()
 #pragma endregion
 
 #pragma region Load Attributes
-		g_pVB1 = wolf::BufferManager::Inst()->CreateVertexBuffer(&city_vertices_data->at(0), sizeof(Vertex2) *(city_vertices_data->size()));
+		g_pVB1 = wolf::BufferManager::Inst()->CreateVertexBuffer(&city_vertices_data->at(0), sizeof(VertexWithUVNormal) *(city_vertices_data->size()));
 		g_pDecl = new wolf::VertexDeclaration();
 		g_pDecl->Begin();
 		g_pDecl->AppendAttribute(wolf::AT_Position, 3, wolf::CT_Float);
@@ -595,7 +595,7 @@ void CityModeller::clearBuffer()
 	city_vertices_data->clear();
 }
 
-std::vector<Vertex2>* CityModeller::getBuffer()
+std::vector<VertexWithUVNormal>* CityModeller::getBuffer()
 {
 	return city_vertices_data;
 }

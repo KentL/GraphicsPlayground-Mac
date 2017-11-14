@@ -26,7 +26,7 @@ class CityModeller:public KeyboardInputHandler, public Renderable
 private:
 	vector<building*>* buildingStore;
 	vector<road*>*     roadStore;
-	vector<Vertex2>*  city_vertices_data;
+	vector<VertexWithUVNormal>*  city_vertices_data;
 	vector<singlegrid*>* cross;
 	vector<singlegrid*>* buildingBase;
 	vector<singlegrid*>* space;
@@ -55,7 +55,7 @@ public:
 	CityModeller();
 	~CityModeller();
 	void generateCityLayoutData();
-	std::vector<Vertex2>* getBuffer();
+	std::vector<VertexWithUVNormal>* getBuffer();
 	std::vector<Colliders::AABBCollider*>* GetAABBColliders();
 	void clearBuffer();
 	void SetTexture(const string& tex);

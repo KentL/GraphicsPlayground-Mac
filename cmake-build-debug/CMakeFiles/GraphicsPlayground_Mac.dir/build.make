@@ -1425,6 +1425,78 @@ CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o.provides: CMakeFiles/GraphicsPl
 CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o.provides.build: CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o
 
 
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o: CMakeFiles/GraphicsPlayground_Mac.dir/flags.make
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o: ../GraphicsPlayground-Mac/common/TexturedPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o -c "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.cpp"
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.cpp" > CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.i
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/common/TexturedPanel.cpp" -o CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.s
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.requires
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.provides: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.provides
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.provides.build: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o
+
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o: CMakeFiles/GraphicsPlayground_Mac.dir/flags.make
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o: ../GraphicsPlayground-Mac/CausticExample/CausticExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o -c "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp"
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp" > CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.i
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp" -o CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.s
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.requires
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.provides: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.provides
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.provides.build: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o
+
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o: CMakeFiles/GraphicsPlayground_Mac.dir/flags.make
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o: ../GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o -c "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp"
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp" > CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.i
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp" -o CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.s
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.requires:
+
+.PHONY : CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.requires
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.provides: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GraphicsPlayground_Mac.dir/build.make CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.provides.build
+.PHONY : CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.provides
+
+CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.provides.build: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o
+
+
 # Object files for target GraphicsPlayground_Mac
 GraphicsPlayground_Mac_OBJECTS = \
 "CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/BlendExample/BlendExample.cpp.o" \
@@ -1483,7 +1555,10 @@ GraphicsPlayground_Mac_OBJECTS = \
 "CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_TextureManager.cpp.o" \
 "CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexBuffer.cpp.o" \
 "CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexDeclaration.cpp.o" \
-"CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o"
+"CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o" \
+"CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o" \
+"CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o" \
+"CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o"
 
 # External object files for target GraphicsPlayground_Mac
 GraphicsPlayground_Mac_EXTERNAL_OBJECTS =
@@ -1545,10 +1620,13 @@ GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_TextureMana
 GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexBuffer.cpp.o
 GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexDeclaration.cpp.o
 GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o
+GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o
+GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o
+GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o
 GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/build.make
 GraphicsPlayground_Mac: /usr/local/lib/libGLEW.dylib
 GraphicsPlayground_Mac: CMakeFiles/GraphicsPlayground_Mac.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_58) "Linking CXX executable GraphicsPlayground_Mac"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_61) "Linking CXX executable GraphicsPlayground_Mac"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphicsPlayground_Mac.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1613,6 +1691,9 @@ CMakeFiles/GraphicsPlayground_Mac.dir/requires: CMakeFiles/GraphicsPlayground_Ma
 CMakeFiles/GraphicsPlayground_Mac.dir/requires: CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexBuffer.cpp.o.requires
 CMakeFiles/GraphicsPlayground_Mac.dir/requires: CMakeFiles/GraphicsPlayground_Mac.dir/wolf/W_VertexDeclaration.cpp.o.requires
 CMakeFiles/GraphicsPlayground_Mac.dir/requires: CMakeFiles/GraphicsPlayground_Mac.dir/Game.cpp.o.requires
+CMakeFiles/GraphicsPlayground_Mac.dir/requires: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/common/TexturedPanel.cpp.o.requires
+CMakeFiles/GraphicsPlayground_Mac.dir/requires: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticExample.cpp.o.requires
+CMakeFiles/GraphicsPlayground_Mac.dir/requires: CMakeFiles/GraphicsPlayground_Mac.dir/GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp.o.requires
 
 .PHONY : CMakeFiles/GraphicsPlayground_Mac.dir/requires
 

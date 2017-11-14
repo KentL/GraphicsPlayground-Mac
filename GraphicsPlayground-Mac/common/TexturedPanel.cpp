@@ -23,8 +23,6 @@ void TexturedPanel::Initialize(string vsh, string psh, string textureFile) {
     tex->SetWrapMode(wolf::Texture::WM_Clamp, wolf::Texture::WM_Clamp);
     mat = g_Mat_Manager->CreateMaterial("texture_panel_material");
     mat->SetProgram(vsh, psh);
-    mat->SetDepthTest(true);
-    mat->SetBlend(false);
     mat->SetTexture("tex", tex);
 
     g_pDecl = new wolf::VertexDeclaration();
