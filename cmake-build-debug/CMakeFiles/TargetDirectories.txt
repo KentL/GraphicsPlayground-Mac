@@ -1,3 +1,0 @@
-/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/cmake-build-debug/CMakeFiles/GraphicsPlayground_Mac.dir
