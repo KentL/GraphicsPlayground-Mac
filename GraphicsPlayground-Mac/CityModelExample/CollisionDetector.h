@@ -3,7 +3,7 @@
 
 #include "AABBCollider.h"
 #include "SphereCollider.h"
-#include "Ray.h"
+#include "Geometry/Ray.h"
 using namespace Geometry;
 using namespace Colliders;
 

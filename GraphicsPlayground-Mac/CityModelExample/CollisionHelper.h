@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "CollisionPackage.h"
 #include "Plane.h"
-#include "Triangle.h"
+#include "Geometry/Triangle.h"
 #include "struct.h"
 #include "Helper.h"
 
@@ -47,7 +47,7 @@ void CheckTriangle(CollisionPackage* colPackage, const vec3& p1, const vec3& p2,
 		// Calculate the signed distance from sphere
 		// position to triangle plane
 		double signedDistToTrianglePlane = trianglePlane.signedDistanceTo(colPackage->basePoint);
-		// cache this as we¡¯re going to use it a few times below:
+		// cache this as weï¿½ï¿½re going to use it a few times below:
 		float normalDotVelocity = glm::dot(trianglePlane.normal, colPackage->velocity);
 		// if sphere is travelling parrallel to the plane:
 		if (normalDotVelocity == 0.0f) 
@@ -112,7 +112,7 @@ void CheckTriangle(CollisionPackage* colPackage, const vec3& p1, const vec3& p2,
 				collisionPoint = planeIntersectionPoint;
 			}
 		}
-		// if we haven¡¯t found a collision already we¡¯ll have to
+		// if we havenï¿½ï¿½t found a collision already weï¿½ï¿½ll have to
 		// sweep sphere against points and edges of the triangle.
 		// Note: A collision inside the triangle (the check above)
 		// will always happen before a vertex or edge collision!
@@ -227,10 +227,10 @@ void CheckTriangle(CollisionPackage* colPackage, const vec3& p1, const vec3& p2,
 		// Set result:
 		if (foundCollison == true) 
 		{
-			// distance to collision: ¡¯t¡¯ is time of collision
+			// distance to collision: ï¿½ï¿½tï¿½ï¿½ is time of collision
 			double distToCollision = t*GetLength(colPackage->velocity);
 			// Does this triangle qualify for the closest hit?
-			// it does if it¡¯s the first hit or the closest
+			// it does if itï¿½ï¿½s the first hit or the closest
 			if (colPackage->foundCollision == false ||distToCollision < colPackage->nearestDistance) 
 			{
 				// Collision information nessesary for sliding

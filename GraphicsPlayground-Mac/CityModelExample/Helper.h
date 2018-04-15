@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "CollisionPackage.h"
 #include "Plane.h"
-#include "Triangle.h"
+#include "Geometry/Triangle.h"
 #include "struct.h"
 
 bool getLowestRoot(float a, float b, float c, float maxR, float* root) {
@@ -12,7 +12,7 @@ bool getLowestRoot(float a, float b, float c, float maxR, float* root) {
 	// If determinant is negative it means no solutions.
 	if (determinant < 0.0f) return false;
 	// calculate the two roots: (if determinant == 0 then
-	// x1==x2 but let¡¯s disregard that slight optimization)
+	// x1==x2 but letï¿½ï¿½s disregard that slight optimization)
 	float sqrtD = sqrt(determinant);
 	float r1 = (-b - sqrtD) / (2 * a);
 	float r2 = (-b + sqrtD) / (2 * a);

@@ -5,7 +5,7 @@
 #include "SphereCollider.h"
 #include "CollisionDetector.h"
 #include "CollisionHelper.h"
-#include "Triangle.h"
+#include "Geometry/Triangle.h"
 #define SPEED 2
 #define COLLIDER_RADIUS 1
 

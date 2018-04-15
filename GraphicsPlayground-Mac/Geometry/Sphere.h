@@ -5,7 +5,7 @@
 #include "W_Material.h"
 namespace Geometry
 {
-	class Sphere :public Node
+	class Sphere
 	{
 	private:
 		float radius;
