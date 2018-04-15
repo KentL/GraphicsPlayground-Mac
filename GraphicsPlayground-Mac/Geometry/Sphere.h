@@ -10,7 +10,6 @@ namespace Geometry
 	private:
 		float radius;
 		float accurity = 1;
-		bool first_time_render = true;
 		vector<VertexWithUVNormal>* vertex;
 		wolf::VertexBuffer* vertex_buffer = 0;
 		wolf::VertexDeclaration* declaration = 0;
