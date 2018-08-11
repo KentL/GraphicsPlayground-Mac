@@ -193,7 +193,7 @@ spawn_property_name helper::turnStringToSpwnPrptyName(const string& name)
 		}
 		if (name == "size")
 		{
-			return size;
+			return spawn_property_name::size;
 		}
 		if (name == "fade")
 		{

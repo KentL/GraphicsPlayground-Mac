@@ -12,7 +12,7 @@
 ExampleBase *Game::example;
 
 void Game::Init(int argc, char **argv) {
-    int exampleIndex = argc > 1 ? std::stoi(argv[1]) : 0;
+    int exampleIndex = argc > 1 ? std::stoi(argv[1]) : 5;
 
     if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");

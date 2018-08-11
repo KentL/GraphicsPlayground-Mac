@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -22,34 +22,34 @@
     <ProjectGuid>{EC8525AD-982A-4259-8D42-BCE21970948B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GraphicsPlayground</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>GraphicsPlayground</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -73,6 +73,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\common;$(SolutionDir)..\glm;$(SolutionDir)..\SimpleOpenGLImageLibrary\src;$(SolutionDir)..\;$(SolutionDir)\BlendExample;$(SolutionDir)..\wolf;$(SolutionDir);$(SolutionDir)\CausticExample;$(SolutionDir)\CityModelExample;$(SolutionDir)\Geometry;$(SolutionDir)\Interpolation;$(SolutionDir)\WaterRendering;$(SolutionDir)\RotateTextureCube;$(SolutionDir)\RotateCube;$(SolutionDir)..\Tiny;$(SolutionDir)\ParticleSystem;$(SolutionDir)..\glew-2.1.0-win32\glew-2.1.0\include;$(SolutionDir)..\GLFW\glfw-3.2.1.bin.WIN32\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -86,17 +87,19 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)glfw\include\;$(SolutionDir)glew\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)glfw\lib-mingw-w64;$(SolutionDir)glew\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;$(SolutionDir)..\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <PerUserRedirection>true</PerUserRedirection>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -153,6 +156,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\SimpleOpenGLImageLibrary\src\image_DXT.h" />
+    <ClInclude Include="..\SimpleOpenGLImageLibrary\src\image_helper.h" />
+    <ClInclude Include="..\SimpleOpenGLImageLibrary\src\SOIL.h" />
+    <ClInclude Include="..\SimpleOpenGLImageLibrary\src\stbi_DDS_aug.h" />
+    <ClInclude Include="..\SimpleOpenGLImageLibrary\src\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\SimpleOpenGLImageLibrary\src\stb_image_aug.h" />
+    <ClInclude Include="..\Tiny\tinystr.h" />
+    <ClInclude Include="..\Tiny\tinyxml.h" />
     <ClInclude Include="..\wolf\W_Buffer.h" />
     <ClInclude Include="..\wolf\W_BufferManager.h" />
     <ClInclude Include="..\wolf\W_Common.h" />
@@ -166,14 +177,63 @@
     <ClInclude Include="..\wolf\W_Types.h" />
     <ClInclude Include="..\wolf\W_VertexBuffer.h" />
     <ClInclude Include="..\wolf\W_VertexDeclaration.h" />
-    <ClInclude Include="BlendExample.h" />
-    <ClInclude Include="CityModelExample.h" />
-    <ClInclude Include="InterpolationExample.h" />
-    <ClInclude Include="RotateCubeExample.h" />
-    <ClInclude Include="RotateTextureCubeExample.h" />
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="BlendExample\BlendExample.h" />
+    <ClInclude Include="CausticExample\CausticExample.h" />
+    <ClInclude Include="CausticExample\CausticPanel.h" />
+    <ClInclude Include="CityModelExample\AABBCollider.h" />
+    <ClInclude Include="CityModelExample\Camera.h" />
+    <ClInclude Include="CityModelExample\CityModelExample.h" />
+    <ClInclude Include="CityModelExample\CityModeller.h" />
+    <ClInclude Include="CityModelExample\Collider.h" />
+    <ClInclude Include="CityModelExample\CollisionDetector.h" />
+    <ClInclude Include="CityModelExample\CollisionHelper.h" />
+    <ClInclude Include="CityModelExample\CollisionPackage.h" />
+    <ClInclude Include="CityModelExample\CubemapTexture.h" />
+    <ClInclude Include="CityModelExample\DirectionalLight.h" />
+    <ClInclude Include="CityModelExample\FormatTranslator.h" />
+    <ClInclude Include="CityModelExample\Frustum.h" />
+    <ClInclude Include="CityModelExample\Helper.h" />
+    <ClInclude Include="CityModelExample\Light.h" />
+    <ClInclude Include="CityModelExample\Node.h" />
+    <ClInclude Include="CityModelExample\Plane.h" />
+    <ClInclude Include="CityModelExample\SkyBox.h" />
+    <ClInclude Include="CityModelExample\SphereCollider.h" />
+    <ClInclude Include="CityModelExample\struct.h" />
+    <ClInclude Include="CityModelExample\SurfaceMaterial.h" />
+    <ClInclude Include="common\RenderTarget.h" />
+    <ClInclude Include="common\TexturedPanel.h" />
+    <ClInclude Include="ExampleBase.hpp" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="Interpolation\InterpolationExample.h" />
+    <ClInclude Include="KeyboardInputHandler.hpp" />
+    <ClInclude Include="MouseInputHandler.hpp" />
+    <ClInclude Include="ParticleSystem\AddVelAffector.h" />
+    <ClInclude Include="ParticleSystem\Affector.h" />
+    <ClInclude Include="ParticleSystem\ColorAffector.h" />
+    <ClInclude Include="ParticleSystem\ColorBlendingAffector.h" />
+    <ClInclude Include="ParticleSystem\Effect.h" />
+    <ClInclude Include="ParticleSystem\Emitter.h" />
+    <ClInclude Include="ParticleSystem\FadeAffector.h" />
+    <ClInclude Include="ParticleSystem\HelperFunction.h" />
+    <ClInclude Include="ParticleSystem\ParticleStruct.h" />
+    <ClInclude Include="ParticleSystem\ParticleSystemExample.h" />
+    <ClInclude Include="ParticleSystem\ScaleAffector.h" />
+    <ClInclude Include="Quad.hpp" />
+    <ClInclude Include="Renderable.hpp" />
+    <ClInclude Include="RotateCube\RotateCubeExample.h" />
+    <ClInclude Include="RotateTextureCube\RotateTextureCubeExample.h" />
+    <ClInclude Include="WaterRendering\WaterQuad.hpp" />
+    <ClInclude Include="WaterRendering\WaterRenderingExample.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\SimpleOpenGLImageLibrary\src\image_DXT.c" />
+    <ClCompile Include="..\SimpleOpenGLImageLibrary\src\image_helper.c" />
+    <ClCompile Include="..\SimpleOpenGLImageLibrary\src\SOIL.c" />
+    <ClCompile Include="..\SimpleOpenGLImageLibrary\src\stb_image_aug.c" />
+    <ClCompile Include="..\Tiny\tinystr.cpp" />
+    <ClCompile Include="..\Tiny\tinyxml.cpp" />
+    <ClCompile Include="..\Tiny\tinyxmlerror.cpp" />
+    <ClCompile Include="..\Tiny\tinyxmlparser.cpp" />
     <ClCompile Include="..\wolf\W_Buffer.cpp" />
     <ClCompile Include="..\wolf\W_BufferManager.cpp" />
     <ClCompile Include="..\wolf\W_Common.cpp" />
@@ -186,45 +246,89 @@
     <ClCompile Include="..\wolf\W_TextureManager.cpp" />
     <ClCompile Include="..\wolf\W_VertexBuffer.cpp" />
     <ClCompile Include="..\wolf\W_VertexDeclaration.cpp" />
-    <ClCompile Include="BlendExample.cpp" />
-    <ClCompile Include="CityModelExample.cpp" />
-    <ClCompile Include="InterpolationExample.cpp" />
+    <ClCompile Include="BlendExample\BlendExample.cpp" />
+    <ClCompile Include="CausticExample\CausticExample.cpp" />
+    <ClCompile Include="CausticExample\CausticPanel.cpp" />
+    <ClCompile Include="CityModelExample\AABBCollider.cpp" />
+    <ClCompile Include="CityModelExample\Camera.cpp" />
+    <ClCompile Include="CityModelExample\CityModelExample.cpp" />
+    <ClCompile Include="CityModelExample\CityModeller.cpp" />
+    <ClCompile Include="CityModelExample\Collider.cpp" />
+    <ClCompile Include="CityModelExample\collidetest.cpp" />
+    <ClCompile Include="CityModelExample\CollisionDetector.cpp" />
+    <ClCompile Include="CityModelExample\CubemapTexture.cpp" />
+    <ClCompile Include="CityModelExample\DirectionalLightcpp.cpp" />
+    <ClCompile Include="CityModelExample\FormatTranslator.cpp" />
+    <ClCompile Include="CityModelExample\Frustum.cpp" />
+    <ClCompile Include="CityModelExample\Node.cpp" />
+    <ClCompile Include="CityModelExample\SkyBox.cpp" />
+    <ClCompile Include="CityModelExample\SphereCollider.cpp" />
+    <ClCompile Include="common\RenderTarget.cpp" />
+    <ClCompile Include="common\TexturedPanel.cpp" />
+    <ClCompile Include="ExampleBase.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Interpolation\InterpolationExample.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="RotateCubeExample.cpp" />
-    <ClCompile Include="RotateTextureCubeExample.cpp" />
+    <ClCompile Include="ParticleSystem\AddVelAffector.cpp" />
+    <ClCompile Include="ParticleSystem\ColorAffector.cpp" />
+    <ClCompile Include="ParticleSystem\ColorBlendingAffector.cpp" />
+    <ClCompile Include="ParticleSystem\Effect.cpp" />
+    <ClCompile Include="ParticleSystem\Emitter.cpp" />
+    <ClCompile Include="ParticleSystem\FadeAffector.cpp" />
+    <ClCompile Include="ParticleSystem\HelperFunction.cpp" />
+    <ClCompile Include="ParticleSystem\ParticleSystemExample.cpp" />
+    <ClCompile Include="ParticleSystem\ScaleAffector.cpp" />
+    <ClCompile Include="Quad.cpp" />
+    <ClCompile Include="RotateCube\RotateCubeExample.cpp" />
+    <ClCompile Include="RotateTextureCube\RotateTextureCubeExample.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="WaterRendering\WaterQuad.cpp" />
+    <ClCompile Include="WaterRendering\WaterRenderingExample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shaders\Blend.fsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\shaders\city_model.fsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
     <None Include="..\shaders\interpolation.fsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
     <None Include="..\shaders\RotateCube.fsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
     <None Include="..\shaders\RotateTextureCube.fsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
+    <None Include="..\shaders\skybox.fsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\SimpleOpenGLImageLibrary\soil.html" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\shaders\Blend.vsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\shaders\city_model.vsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="..\shaders\interpolation.vsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="..\shaders\RotateCube.vsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="..\shaders\RotateTextureCube.vsh">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\shaders\skybox.vsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

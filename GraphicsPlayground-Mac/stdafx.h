@@ -17,6 +17,7 @@
 #include <vector>
 #include <iostream>
 #include "SOIL.h"
+#include <algorithm>
 
 #endif
 

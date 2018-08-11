@@ -311,7 +311,7 @@ void CityModeller::loadBuffer()
 			//data for top
 			//*************************************************************************************************************************************************
 			//vertex0
- 			city_vertices_data->push_back({ buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*rooftopcoordinatex), 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
+ 			city_vertices_data->push_back({buildingStore->at(i)->gridCoordinate.y*UNITLENGHT + SPACE, buildingStore->at(i)->height*UNITLENGHT, buildingStore->at(i)->gridCoordinate.x*UNITLENGHT + SPACE, 1.0 / TEXGRIDSPERROW*rooftopcoordinatex, static_cast<GLfloat>(1.0 / TEXGRIDSPERCOLUMN), 0, 1, 0 });
 			//vertex1
 			city_vertices_data->push_back({ city_vertices_data->at(5 * 6 * i).x + (buildingStore->at(i)->length*UNITLENGHT) - 2 * SPACE, city_vertices_data->at(5 * 6 * i).y, city_vertices_data->at(5 * 6 * i).z, static_cast<GLfloat>(1.0 / TEXGRIDSPERROW*(rooftopcoordinatex + 1)), 1.0 / TEXGRIDSPERCOLUMN, 0, 1, 0 });
 			//vertex2
@@ -506,13 +506,13 @@ void CityModeller::loadBuffer()
 		g_pDecl->End();
 #pragma endregion 
 
-		printf("city_vertices_data: %d\n", city_vertices_data->size());
-		printf("buildingstore: %d\n", buildingStore->size());
+		std::printf("city_vertices_data: %d\n", city_vertices_data->size());
+		std::printf("buildingstore: %d\n", buildingStore->size());
 }
 
 void CityModeller::clearBuffer()
 {
-	printf("clear buffer\n");
+	std::printf("clear buffer\n");
 
     if (buildingStore->size()>0) {
         vector<building*>::iterator buildingIt = buildingStore->begin();

@@ -22,9 +22,9 @@ struct Vertex1
 
 struct VertexWithUVNormal
 {
-	GLfloat x, y, z;
-	GLfloat u, v;
-	GLfloat normalx, normaly, normalz;
+	GLdouble x, y, z;
+	GLdouble u, v;
+	GLdouble normalx, normaly, normalz;
 };
 struct VertexWithUVNormalTangent
 {

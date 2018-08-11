@@ -153,7 +153,7 @@ void Emitter::spawnParticle()
 			}
 			}
 			break;
-		case size:
+		case spawn_property_name::size:
 			switch (prpty.type)
 			{
 			case randomType:
