@@ -489,6 +489,9 @@
     <None Include="..\SimpleOpenGLImageLibrary\soil.html">
       <Filter>SOIL</Filter>
     </None>
+    <None Include="..\shaders\water\water.fsh">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\shaders\Blend.vsh">
@@ -507,6 +510,9 @@
       <Filter>Shaders</Filter>
     </FxCompile>
     <FxCompile Include="..\shaders\skybox.vsh">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\water\water.vsh">
       <Filter>Shaders</Filter>
     </FxCompile>
   </ItemGroup>

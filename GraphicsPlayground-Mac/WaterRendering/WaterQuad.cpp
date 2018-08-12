@@ -26,9 +26,9 @@ void WaterQuad::Init(){
     };
     program=wolf::ProgramManager::Inst()->CreateProgram(vShader, fShader);
     
-    normalMap1=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap.png");
-    normalMap3=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap3.png");
-    normalMap2=wolf::TextureManager::Inst()->CreateTexture("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
+    normalMap1=wolf::TextureManager::Inst()->CreateTexture("D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/water/normalmap.png");
+    normalMap3=wolf::TextureManager::Inst()->CreateTexture("D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/water/normalmap3.png");
+    normalMap2=wolf::TextureManager::Inst()->CreateTexture("D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
 
 
     
@@ -45,7 +45,7 @@ void WaterQuad::Init(){
     reflectionCamera = new Camera();
     reflectionCamera->setFOV(45.0f);
     reflectionCamera->setNear(0.1f);
-    reflectionCamera->setFar(10000.0f);
+    reflectionCamera->setFar(1000.0f);
     reflectionCamera->setAspect(m_width / m_height);
     reflectionCamera->setWindow(window);
     

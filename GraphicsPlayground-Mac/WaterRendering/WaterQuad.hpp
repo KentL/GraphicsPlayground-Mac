@@ -24,8 +24,8 @@
 
 class WaterQuad:public Geometry::Quad{
 private:
-    const string vShader = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/water/water.vsh";
-    const string fShader = "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/water/water.fsh";
+    const string vShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/water/water.vsh";
+    const string fShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/water/water.fsh";
     wolf::VertexBuffer* g_pVB = 0;
     wolf::VertexDeclaration* g_pDecl = 0;
     wolf::Program* program = 0;
