@@ -7,7 +7,7 @@ void Geometry::SingleColorSphere::CreateHalfSphere(bool top) {
 	const float space = 90*acc;
 	const float R = this->radius;
 
-	for (float b = 0; b <= 90 - space; b += space)
+	for (float b = 0; b <= 90; b += space)
 	{
 		//Assign our a loop to go through 360 degrees in intervals of our variable space
 		for (float a = 0.0; a <= (360 - space); a += space) {
