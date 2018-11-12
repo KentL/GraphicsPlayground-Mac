@@ -20,14 +20,17 @@ void GeometryExample::Initialize() {
 	singleColorSphere->setRadius(5.0f);
 	singleColorSphere->SetCamera(mainCamera);
 
-	glDisable(GL_DEPTH_TEST);
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_DST_ALPHA);
+	texturedSphere = new TexturedSphere(0.01f, "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/Iron.png");
+	texturedSphere->setLocation(vec3(10, 0, 0));
+	texturedSphere->setRadius(5.0f);
+	texturedSphere->SetCamera(mainCamera);
+
 }
 
 void GeometryExample::Render() {
 	mainCamera->cameraMove();
 	singleColorSphere->Render();
+	texturedSphere->Render();
 }
 
 void GeometryExample::HandleCursorPositionChange(GLFWwindow *window, double newXPos, double newYPos) {

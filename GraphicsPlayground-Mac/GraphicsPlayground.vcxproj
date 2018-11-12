@@ -209,6 +209,7 @@
     <ClInclude Include="Geometry\Ray.h" />
     <ClInclude Include="Geometry\SingleColorSphere.h" />
     <ClInclude Include="Geometry\RenderableSphere.h" />
+    <ClInclude Include="Geometry\TexturedSphere.hpp" />
     <ClInclude Include="Geometry\Triangle.h" />
     <ClInclude Include="Interpolation\InterpolationExample.h" />
     <ClInclude Include="KeyboardInputHandler.hpp" />
@@ -277,6 +278,7 @@
     <ClCompile Include="Geometry\Ray.cpp" />
     <ClCompile Include="Geometry\SingleColorSphere.cpp" />
     <ClCompile Include="Geometry\RenderableSphere.cpp" />
+    <ClCompile Include="Geometry\TexturedSphere.cpp" />
     <ClCompile Include="Interpolation\InterpolationExample.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ParticleSystem\AddVelAffector.cpp" />
@@ -304,10 +306,16 @@
     <None Include="..\shaders\Blend.fsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
+    <None Include="..\shaders\causticPanel\CausticPanel.fsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
     <None Include="..\shaders\city_model.fsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
     <None Include="..\shaders\Geometry\SingleColorSphere.fsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\shaders\Geometry\TexturedSphere.fsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
     <None Include="..\shaders\interpolation.fsh">
@@ -331,10 +339,16 @@
     <FxCompile Include="..\shaders\Blend.vsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
+    <FxCompile Include="..\shaders\causticPanel\CausticPanel.vsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
     <FxCompile Include="..\shaders\city_model.vsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="..\shaders\Geometry\SingleColorSphere.vsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\shaders\Geometry\TexturedSphere.vsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="..\shaders\interpolation.vsh">

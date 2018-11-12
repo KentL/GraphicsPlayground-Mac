@@ -9,12 +9,14 @@
 #include <ExampleBase.hpp>
 #include <Camera.h>
 #include <SingleColorSphere.h>
+#include <TexturedSphere.hpp>
 
 class GeometryExample : public ExampleBase {
 private:
 	GeometryExample() {};
 	Camera* mainCamera;
 	SingleColorSphere* singleColorSphere;
+	TexturedSphere* texturedSphere;
 
 public:
 	static GeometryExample* getInstance()

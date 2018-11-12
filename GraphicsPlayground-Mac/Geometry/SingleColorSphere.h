@@ -8,6 +8,10 @@ namespace Geometry
 {
 	class SingleColorSphere :public RenderableSphere
 	{
+	private:
+		void Initialize();
+		void CreateHalfSphere(bool top);
+
 	protected:
 		Camera * mainCamera;
 		vec4 color;
@@ -15,9 +19,7 @@ namespace Geometry
 		{
 			GLfloat x, y, z;
 		};
-		void CreateSphere();
-		void CreateHalfSphere(bool top);
-		void Initialize();
+		virtual void CreateSphere();
 		vector<SphereVertex>*  sphereVertices;
 
 		//Wolf variables:

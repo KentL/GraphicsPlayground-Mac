@@ -320,6 +320,9 @@
     <ClInclude Include="Geometry\GeometryExample.hpp">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="Geometry\TexturedSphere.hpp">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\wolf\W_Buffer.cpp">
@@ -508,6 +511,9 @@
     <ClCompile Include="Geometry\GeometryExample.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="Geometry\TexturedSphere.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shaders\Blend.fsh">
@@ -537,6 +543,12 @@
     <None Include="..\shaders\Geometry\SingleColorSphere.fsh">
       <Filter>Shaders\Geometry</Filter>
     </None>
+    <None Include="..\shaders\Geometry\TexturedSphere.fsh">
+      <Filter>Shaders\Geometry</Filter>
+    </None>
+    <None Include="..\shaders\causticPanel\CausticPanel.fsh">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\shaders\Blend.vsh">
@@ -562,6 +574,12 @@
     </FxCompile>
     <FxCompile Include="..\shaders\Geometry\SingleColorSphere.vsh">
       <Filter>Shaders\Geometry</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\Geometry\TexturedSphere.vsh">
+      <Filter>Shaders\Geometry</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\causticPanel\CausticPanel.vsh">
+      <Filter>Shaders</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>
