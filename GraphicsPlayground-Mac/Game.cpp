@@ -6,13 +6,12 @@
 //  Copyright © 2017 Kent Li. All rights reserved.
 //
 
-#include <CausticExample/CausticExample.h>
 #include "Game.hpp"
 
 ExampleBase *Game::example;
 
 void Game::Init(int argc, char **argv) {
-    int exampleIndex = argc > 1 ? std::stoi(argv[1]) : 5;
+    int exampleIndex = argc > 1 ? std::stoi(argv[1]) : 8;
 
     if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");
@@ -90,6 +89,12 @@ void Game::Init(int argc, char **argv) {
             example = causticExample;
             break;
         }
+		case 8: {
+			GeometryExample* geometryExample = GeometryExample::getInstance();
+			geometryExample->window = window;
+			example = geometryExample;
+			break;
+		}
         default:
             break;
     }

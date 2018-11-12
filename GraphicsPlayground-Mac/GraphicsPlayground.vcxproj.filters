@@ -81,6 +81,18 @@
     <Filter Include="Source Files\common">
       <UniqueIdentifier>{5ecd1ecc-480c-40bd-be23-aee182108b40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\RayTracing">
+      <UniqueIdentifier>{72031085-7f62-4ec3-8238-f452980a7eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Geometry">
+      <UniqueIdentifier>{25c7551a-72b5-4d09-b83d-b4a54a3d72f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{d554ebbb-5729-4e27-9176-f403b1ec7f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Geometry">
+      <UniqueIdentifier>{00a953b9-6930-4d8a-9d56-7c720769be36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -290,6 +302,24 @@
     <ClInclude Include="common\TexturedPanel.h">
       <Filter>Header Files\common</Filter>
     </ClInclude>
+    <ClInclude Include="Geometry\Cube.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Ray.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Triangle.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\SingleColorSphere.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\RenderableSphere.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\GeometryExample.hpp">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\wolf\W_Buffer.cpp">
@@ -466,6 +496,18 @@
     <ClCompile Include="common\TexturedPanel.cpp">
       <Filter>Source Files\common</Filter>
     </ClCompile>
+    <ClCompile Include="Geometry\Ray.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\SingleColorSphere.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\RenderableSphere.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\GeometryExample.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shaders\Blend.fsh">
@@ -492,6 +534,9 @@
     <None Include="..\shaders\water\water.fsh">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="..\shaders\Geometry\SingleColorSphere.fsh">
+      <Filter>Shaders\Geometry</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\shaders\Blend.vsh">
@@ -514,6 +559,9 @@
     </FxCompile>
     <FxCompile Include="..\shaders\water\water.vsh">
       <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\Geometry\SingleColorSphere.vsh">
+      <Filter>Shaders\Geometry</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>
