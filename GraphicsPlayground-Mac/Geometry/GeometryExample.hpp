@@ -10,6 +10,7 @@
 #include <Camera.h>
 #include <SingleColorSphere.h>
 #include <TexturedSphere.hpp>
+#include <SkyBox.h>
 
 class GeometryExample : public ExampleBase {
 private:
@@ -17,6 +18,7 @@ private:
 	Camera* mainCamera;
 	SingleColorSphere* singleColorSphere;
 	TexturedSphere* texturedSphere;
+	SkyBox* skybox;
 
 public:
 	static GeometryExample* getInstance()
