@@ -27,7 +27,7 @@ void GeometryExample::Initialize() {
 
 	//Initialize SkyBox properties
 	string pictureDir = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/citymodel/";
-	string textureNames[] = { pictureDir + "skybox-png/skybox_texture_posX.png", pictureDir + "skybox-png/skybox_texture_negX.png",
+	string skyBoxTextures[] = { pictureDir + "skybox-png/skybox_texture_posX.png", pictureDir + "skybox-png/skybox_texture_negX.png",
 		pictureDir + "skybox-png/skybox_texture_posY.png", pictureDir + "skybox-png/skybox_texture_negY.png",
 		pictureDir + "skybox-png/skybox_texture_posZ.png", pictureDir + "skybox-png/skybox_texture_negZ.png" };
 	string shaderDir = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/";
@@ -37,16 +37,24 @@ void GeometryExample::Initialize() {
 	skybox->SetPositon(vec3(0, 5, 0));
 	skybox->SetProgram(shaderDir + "skybox.vsh", shaderDir + "skybox.fsh");
 	skybox->SetScale(vec3(20, 20, 20));
-	skybox->SetTexture(textureNames);
+	skybox->SetTexture(skyBoxTextures);
 	skybox->Init();
+
+	envMappedSphere = new EnvMappedSphere(0.01f, skyBoxTextures);
+	envMappedSphere->setLocation(vec3(20, 0, 0));
+	envMappedSphere->setRadius(5.0f);
+	envMappedSphere->SetCamera(mainCamera);
+
 
 }
 
 void GeometryExample::Render() {
 	skybox->Render();
+	glEnable(GL_DEPTH_TEST);
 	mainCamera->cameraMove();
 	singleColorSphere->Render();
 	texturedSphere->Render();
+	envMappedSphere->Render();
 }
 
 void GeometryExample::HandleCursorPositionChange(GLFWwindow *window, double newXPos, double newYPos) {
