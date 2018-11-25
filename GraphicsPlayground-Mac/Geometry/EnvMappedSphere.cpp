@@ -1,5 +1,7 @@
 #include <EnvMappedSphere.hpp>
 
+string Geometry::EnvMappedSphere::getVertexShader() { return vertexShader; }
+string Geometry::EnvMappedSphere::getFragmentShader() { return fragmentShader; }
 
 void Geometry::EnvMappedSphere::Initialize()
 {
@@ -10,8 +12,8 @@ void Geometry::EnvMappedSphere::Initialize()
 	wolf::BufferManager* bufferManager = wolf::BufferManager::Inst();
 	vertexBuffer = bufferManager->CreateVertexBuffer(&sphereVertices->at(0), sizeof(SphereVertex)*sphereVertices->size());
 
-	mat = matManager->CreateMaterial("EnvMappedSphere_Sphere_Material");
-	mat->SetProgram(vertexShader, fragmentShader);
+	mat = matManager->CreateMaterial(this->name);
+	mat->SetProgram(getVertexShader(), getFragmentShader());
 
 	vertexDec = new wolf::VertexDeclaration();
 	vertexDec->Begin();
@@ -27,11 +29,11 @@ Geometry::EnvMappedSphere::~EnvMappedSphere() {
 	this->sphereVertices->clear();
 	delete this->sphereVertices;
 }
-Geometry::EnvMappedSphere::EnvMappedSphere(float accurity, const string* textures)
+Geometry::EnvMappedSphere::EnvMappedSphere(string name,float accurity, const string* textures)
 {
 	this->accurity = accurity;
+	this->name = name;
 	envMap = new CubemapTexture(textures[0], textures[1], textures[2], textures[3], textures[4], textures[5]);
-	Initialize();
 }
 
 void Geometry::EnvMappedSphere::Render(RenderTarget *target) {

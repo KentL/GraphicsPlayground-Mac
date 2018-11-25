@@ -40,10 +40,17 @@ void GeometryExample::Initialize() {
 	skybox->SetTexture(skyBoxTextures);
 	skybox->Init();
 
-	envMappedSphere = new EnvMappedSphere(0.01f, skyBoxTextures);
+	envMappedSphere = new EnvMappedSphere("reflectionSphere",0.01f, skyBoxTextures);
+	envMappedSphere->Initialize();
 	envMappedSphere->setLocation(vec3(20, 0, 0));
 	envMappedSphere->setRadius(5.0f);
 	envMappedSphere->SetCamera(mainCamera);
+
+	transparentSphere = new EnvMappedTransparentSphere("transparentSphere",0.01f, skyBoxTextures);
+	transparentSphere->Initialize();
+	transparentSphere->setLocation(vec3(30, 0, 0));
+	transparentSphere->setRadius(5.0f);
+	transparentSphere->SetCamera(mainCamera);
 
 
 }
@@ -55,6 +62,7 @@ void GeometryExample::Render() {
 	singleColorSphere->Render();
 	texturedSphere->Render();
 	envMappedSphere->Render();
+	transparentSphere->Render();
 }
 
 void GeometryExample::HandleCursorPositionChange(GLFWwindow *window, double newXPos, double newYPos) {

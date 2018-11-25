@@ -11,6 +11,7 @@
 #include <SingleColorSphere.h>
 #include <TexturedSphere.hpp>
 #include <EnvMappedSphere.hpp>
+#include <EnvMappedTransparentSphere.hpp>
 #include <SkyBox.h>
 
 class GeometryExample : public ExampleBase {
@@ -20,6 +21,7 @@ private:
 	SingleColorSphere* singleColorSphere;
 	TexturedSphere* texturedSphere;
 	EnvMappedSphere* envMappedSphere;
+	EnvMappedTransparentSphere* transparentSphere;
 	SkyBox* skybox;
 
 public:

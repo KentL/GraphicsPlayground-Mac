@@ -206,6 +206,7 @@
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="Geometry\Cube.h" />
     <ClInclude Include="Geometry\EnvMappedSphere.hpp" />
+    <ClInclude Include="Geometry\EnvMappedTransparentSphere.hpp" />
     <ClInclude Include="Geometry\GeometryExample.hpp" />
     <ClInclude Include="Geometry\Ray.h" />
     <ClInclude Include="Geometry\SingleColorSphere.h" />
@@ -276,6 +277,7 @@
     <ClCompile Include="ExampleBase.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Geometry\EnvMappedSphere.cpp" />
+    <ClCompile Include="Geometry\EnvMappedTransparentSphere.cpp" />
     <ClCompile Include="Geometry\GeometryExample.cpp" />
     <ClCompile Include="Geometry\Ray.cpp" />
     <ClCompile Include="Geometry\SingleColorSphere.cpp" />
@@ -317,6 +319,9 @@
     <None Include="..\shaders\Geometry\EnvMappedSphere.fsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
+    <None Include="..\shaders\Geometry\EnvMappedTransparentSphere.fsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
     <None Include="..\shaders\Geometry\SingleColorSphere.fsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </None>
@@ -351,6 +356,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="..\shaders\Geometry\EnvMappedSphere.vsh">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="..\shaders\Geometry\EnvMappedTransparentSphere.vsh">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </FxCompile>
     <FxCompile Include="..\shaders\Geometry\SingleColorSphere.vsh">

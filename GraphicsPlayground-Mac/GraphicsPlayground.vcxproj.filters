@@ -326,6 +326,9 @@
     <ClInclude Include="Geometry\EnvMappedSphere.hpp">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="Geometry\EnvMappedTransparentSphere.hpp">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\wolf\W_Buffer.cpp">
@@ -520,6 +523,9 @@
     <ClCompile Include="Geometry\EnvMappedSphere.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="Geometry\EnvMappedTransparentSphere.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shaders\Blend.fsh">
@@ -558,6 +564,9 @@
     <None Include="..\shaders\Geometry\EnvMappedSphere.fsh">
       <Filter>Shaders\Geometry</Filter>
     </None>
+    <None Include="..\shaders\Geometry\EnvMappedTransparentSphere.fsh">
+      <Filter>Shaders\Geometry</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\shaders\Blend.vsh">
@@ -591,6 +600,9 @@
       <Filter>Shaders</Filter>
     </FxCompile>
     <FxCompile Include="..\shaders\Geometry\EnvMappedSphere.vsh">
+      <Filter>Shaders\Geometry</Filter>
+    </FxCompile>
+    <FxCompile Include="..\shaders\Geometry\EnvMappedTransparentSphere.vsh">
       <Filter>Shaders\Geometry</Filter>
     </FxCompile>
   </ItemGroup>

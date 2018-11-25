@@ -11,19 +11,20 @@ namespace Geometry
 	class EnvMappedSphere :public SingleColorSphere
 	{
 	private:
+		string name;
 		string textureFile;
 		CubemapTexture* envMap;
-
-	protected:
-		void Initialize();
-
-	public:
-		// D:\workspace\kentli\graphics\GraphicsPlayground-Mac\*/
 		string vertexShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedSphere.vsh";
 		string fragmentShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedSphere.fsh";
+	protected:
+		virtual string getVertexShader();
+		virtual string getFragmentShader();
+	public:
+		
+		void Initialize();
 
 		~EnvMappedSphere();
-		EnvMappedSphere(float accurity, const string* textures);
+		EnvMappedSphere(string name, float accurity, const string* textures);
 
 		// Inherited via Renderable
 		virtual void Render(RenderTarget * target) override;
