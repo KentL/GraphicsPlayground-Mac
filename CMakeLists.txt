@@ -12,6 +12,7 @@ include_directories(
         GraphicsPlayground-Mac/WaterRendering
         GraphicsPlayground-Mac/ParticleSystem
         GraphicsPlayground-Mac/common
+        glm
         SimpleOpenGLImageLibrary/src
         Tiny
         wolf
@@ -26,6 +27,7 @@ pkg_search_module(GLFW REQUIRED glfw3)
 include_directories(${GLFW_INCLUDE_DIRS})
 link_libraries( ${GLFW_LIBRARIES})
 
+CMAKE_POLICY(SET CMP0072 NEW)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
@@ -115,8 +117,8 @@ set(SOURCE_FILES
         GraphicsPlayground-Mac/Renderable.hpp
         GraphicsPlayground-Mac/stdafx.cpp
         GraphicsPlayground-Mac/stdafx.h
-        GraphicsPlayground-Mac/WaterQuad.cpp
-        GraphicsPlayground-Mac/WaterQuad.hpp
+        GraphicsPlayground-Mac/WaterRendering/WaterQuad.cpp
+        GraphicsPlayground-Mac/WaterRendering/WaterQuad.hpp
         "SimpleOpenGLImageLibrary/src/image_DXT.c"
         "SimpleOpenGLImageLibrary/src/image_DXT.h"
         "SimpleOpenGLImageLibrary/src/image_helper.c"
@@ -158,8 +160,8 @@ set(SOURCE_FILES
         wolf/W_VertexBuffer.h
         wolf/W_VertexDeclaration.cpp
         wolf/W_VertexDeclaration.h
-        Game.cpp
-        Game.hpp GraphicsPlayground-Mac/common/TexturedPanel.cpp GraphicsPlayground-Mac/common/TexturedPanel.h GraphicsPlayground-Mac/CausticExample/CausticExample.cpp GraphicsPlayground-Mac/CausticExample/CausticExample.h GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp GraphicsPlayground-Mac/CausticExample/CausticPanel.h)
+        GraphicsPlayground-Mac/Game.cpp
+        GraphicsPlayground-Mac/Game.hpp GraphicsPlayground-Mac/common/TexturedPanel.cpp GraphicsPlayground-Mac/common/TexturedPanel.h GraphicsPlayground-Mac/CausticExample/CausticExample.cpp GraphicsPlayground-Mac/CausticExample/CausticExample.h GraphicsPlayground-Mac/CausticExample/CausticPanel.cpp GraphicsPlayground-Mac/CausticExample/CausticPanel.h)
 
 add_executable(GraphicsPlayground_Mac ${SOURCE_FILES})
 

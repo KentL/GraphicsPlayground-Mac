@@ -17,9 +17,7 @@ namespace wolf
 //----------------------------------------------------------
 void* LoadWholeFile(const std::string& p_strFile)
 {
-	FILE* fp;
-
-	errno_t err = fopen_s(&fp,p_strFile.c_str(), "rb");
+	FILE* fp = fopen(p_strFile.c_str(), "rb");
 	if(fp == NULL)
 		return 0;
 

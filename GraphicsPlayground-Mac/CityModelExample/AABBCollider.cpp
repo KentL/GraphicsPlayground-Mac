@@ -105,7 +105,6 @@ namespace Colliders
 		}
 		return bottom;
 	}
-	ColliderType AABBCollider::ColliderType(){ return collider_type; }
 	#pragma endregion
 	
 #pragma region "Private Methods"

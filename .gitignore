@@ -2,3 +2,4 @@ cmake-build-debug/
 .vs/
 GraphicsPlayground-Mac.xcodeproj/
 Debug/
+glm

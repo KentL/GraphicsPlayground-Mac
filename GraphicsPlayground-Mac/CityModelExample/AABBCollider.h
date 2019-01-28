@@ -11,13 +11,13 @@ namespace Colliders
 	{
 
 		/*
-		AABB MODEL:		  				 ¡üy+
+		AABB MODEL:		  				 ï¿½ï¿½y+
 		___________ _____				 |
-		|\         \   ¡ü                 |
-		| \         \ Width      ¨Iz+    |
-		|  \_________\_¡ý___        ¨I    |
-		|  | <length>|----           ¨I  |
-		|  |         |hei-             ¨I|---------------->x+
+		|\         \   ï¿½ï¿½                 |
+		| \         \ Width      ï¿½Iz+    |
+		|  \_________\_ï¿½ï¿½___        ï¿½I    |
+		|  | <length>|----           ï¿½I  |
+		|  |         |hei-             ï¿½I|---------------->x+
 		 \ |         |ght
 		  \|_________|----
 		*/
@@ -77,7 +77,6 @@ namespace Colliders
 		Plane* GetTopPlane();
 		Plane* GetBottomPlane();
 
-		ColliderType ColliderType();
 	private:
 		void CalculatePlanes();
 	};
