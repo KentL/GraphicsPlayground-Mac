@@ -14,8 +14,8 @@ namespace Geometry
 		string name;
 		string textureFile;
 		CubemapTexture* envMap;
-		string vertexShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedSphere.vsh";
-		string fragmentShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedSphere.fsh";
+		string vertexShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedSphere.vsh";
+		string fragmentShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedSphere.fsh";
 	protected:
 		virtual string getVertexShader();
 		virtual string getFragmentShader();

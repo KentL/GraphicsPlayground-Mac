@@ -17,8 +17,8 @@ namespace Geometry
 
 	public:
 		// D:\workspace\kentli\graphics\GraphicsPlayground-Mac\*/
-		string vertexShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/TexturedSphere.vsh" ;
-		string fragmentShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/TexturedSphere.fsh" ;
+		string vertexShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/TexturedSphere.vsh" ;
+		string fragmentShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/TexturedSphere.fsh" ;
 
 		~TexturedSphere();
 		TexturedSphere(float accurity,string texture);

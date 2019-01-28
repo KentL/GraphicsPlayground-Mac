@@ -13,8 +13,8 @@ namespace Geometry
 		 string getFragmentShader() override { return fragmentShader; }
 	public:
 		// D:\workspace\kentli\graphics\GraphicsPlayground-Mac\*/
-		string vertexShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedTransparentSphere.vsh" ;
-		string fragmentShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedTransparentSphere.fsh" ;
+		string vertexShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedTransparentSphere.vsh" ;
+		string fragmentShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/EnvMappedTransparentSphere.fsh" ;
 
 		~EnvMappedTransparentSphere();
 		EnvMappedTransparentSphere(string name, float accurity, const string* textures);

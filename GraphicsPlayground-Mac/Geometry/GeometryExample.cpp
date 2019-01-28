@@ -20,17 +20,17 @@ void GeometryExample::Initialize() {
 	singleColorSphere->setRadius(5.0f);
 	singleColorSphere->SetCamera(mainCamera);
 
-	texturedSphere = new TexturedSphere(0.01f, "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/Iron.png");
+	texturedSphere = new TexturedSphere(0.01f, "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/resource/picture/Iron.png");
 	texturedSphere->setLocation(vec3(10, 0, 0));
 	texturedSphere->setRadius(5.0f);
 	texturedSphere->SetCamera(mainCamera);
 
 	//Initialize SkyBox properties
-	string pictureDir = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/citymodel/";
+	string pictureDir = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/resource/picture/citymodel/";
 	string skyBoxTextures[] = { pictureDir + "skybox-png/skybox_texture_posX.png", pictureDir + "skybox-png/skybox_texture_negX.png",
 		pictureDir + "skybox-png/skybox_texture_posY.png", pictureDir + "skybox-png/skybox_texture_negY.png",
 		pictureDir + "skybox-png/skybox_texture_posZ.png", pictureDir + "skybox-png/skybox_texture_negZ.png" };
-	string shaderDir = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/";
+	string shaderDir = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/";
 	skybox = new SkyBox();
 	skybox->SetCamera(mainCamera);
 	skybox->SetWindow(window);

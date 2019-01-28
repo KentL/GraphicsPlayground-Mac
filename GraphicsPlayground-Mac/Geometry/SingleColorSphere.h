@@ -31,8 +31,8 @@ namespace Geometry
 
 	public:
 		// D:\workspace\kentli\graphics\GraphicsPlayground-Mac\*/
-		string vertexShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/SingleColorSphere.vsh";
-		string fragmentShader = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/Geometry/SingleColorSphere.fsh";
+		string vertexShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/SingleColorSphere.vsh";
+		string fragmentShader = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/Geometry/SingleColorSphere.fsh";
 
 		~SingleColorSphere();
 		SingleColorSphere(float accurity, vec4 color);
