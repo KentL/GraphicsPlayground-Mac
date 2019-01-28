@@ -12,6 +12,7 @@ include_directories(
         GraphicsPlayground-Mac/WaterRendering
         GraphicsPlayground-Mac/ParticleSystem
         GraphicsPlayground-Mac/common
+        GraphicsPlayground-Mac/Geometry
         glm
         SimpleOpenGLImageLibrary/src
         Tiny
@@ -68,10 +69,20 @@ set(SOURCE_FILES
         GraphicsPlayground-Mac/CityModelExample/Plane.h
         GraphicsPlayground-Mac/Geometry/Ray.cpp
         GraphicsPlayground-Mac/Geometry/Ray.h
+        GraphicsPlayground-Mac/Geometry/SingleColorSphere.cpp
+        GraphicsPlayground-Mac/Geometry/SingleColorSphere.h
+        GraphicsPlayground-Mac/Geometry/EnvMappedSphere.hpp
+        GraphicsPlayground-Mac/Geometry/EnvMappedSphere.cpp
+        GraphicsPlayground-Mac/Geometry/TexturedSphere.cpp
+        GraphicsPlayground-Mac/Geometry/TexturedSphere.hpp
+        GraphicsPlayground-Mac/Geometry/EnvMappedTransparentSphere.cpp
+        GraphicsPlayground-Mac/Geometry/EnvMappedTransparentSphere.hpp
+        GraphicsPlayground-Mac/Geometry/GeometryExample.cpp
+        GraphicsPlayground-Mac/Geometry/GeometryExample.hpp
+        GraphicsPlayground-Mac/Geometry/RenderableSphere.cpp
+        GraphicsPlayground-Mac/Geometry/RenderableSphere.h
         GraphicsPlayground-Mac/CityModelExample/SkyBox.cpp
         GraphicsPlayground-Mac/CityModelExample/SkyBox.h
-        GraphicsPlayground-Mac/Geometry/Sphere.cpp
-        GraphicsPlayground-Mac/Geometry/Sphere.h
         GraphicsPlayground-Mac/CityModelExample/SphereCollider.cpp
         GraphicsPlayground-Mac/CityModelExample/SphereCollider.h
         GraphicsPlayground-Mac/CityModelExample/struct.h

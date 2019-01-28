@@ -6,13 +6,12 @@
 //  Copyright © 2017 Kent Li. All rights reserved.
 //
 
-#include <CausticExample/CausticExample.h>
 #include "Game.hpp"
 
 ExampleBase *Game::example;
 
 void Game::Init(int argc, char **argv) {
-    int exampleIndex = argc > 1 ? std::stoi(argv[1]) : 5;
+    int exampleIndex = argc > 1 ? std::stoi(argv[1]) : 8;
 
     if (!glfwInit()) {
         fprintf(stderr, "Failed to initialize GLFW\n");
@@ -90,6 +89,12 @@ void Game::Init(int argc, char **argv) {
             example = causticExample;
             break;
         }
+		case 8: {
+			GeometryExample* geometryExample = GeometryExample::getInstance();
+			geometryExample->window = window;
+			example = geometryExample;
+			break;
+		}
         default:
             break;
     }
@@ -113,7 +118,7 @@ void Game::Run() {
         }
 
         // Clear color buffer to black
-        glClearColor(0.4f, 0.4f, 0.4f, 0.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 

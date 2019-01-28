@@ -22,6 +22,8 @@
 #include "CityModelExample.h"
 #include "WaterRenderingExample.hpp"
 #include "ParticleSystemExample.h"
+#include <CausticExample/CausticExample.h>
+#include <GeometryExample.hpp>
 
 class Game
 {
