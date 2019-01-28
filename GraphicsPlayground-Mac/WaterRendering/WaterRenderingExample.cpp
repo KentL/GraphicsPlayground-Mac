@@ -18,8 +18,8 @@ void WaterRenderingExample::HandleKeyInput(GLFWwindow *window, int key, int scan
 
 void WaterRenderingExample::Initialize() {
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
-    string pictureDir = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/citymodel/";
-    string shaderDir = "D:/workspace/kentli/graphics/GraphicsPlayground-Mac/shaders/";
+    string pictureDir = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/resource/picture/citymodel/";
+    string shaderDir = "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/";
     //Setup Camera
     int width,height;
     glfwGetFramebufferSize(window, &width, &height);

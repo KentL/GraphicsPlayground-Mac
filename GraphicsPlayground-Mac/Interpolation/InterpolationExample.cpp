@@ -31,7 +31,7 @@ void InterpolationExample::HandleCursorPositionChange(GLFWwindow* window, double
 void InterpolationExample::Initialize() {
 	wolf::ProgramManager* programManager = wolf::ProgramManager::Inst();
 	wolf::BufferManager* bufferManager = wolf::BufferManager::Inst();
-	g_pProgram = programManager->CreateProgram("/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/interpolation.vsh", "/Users/kli/Documents/Graphics Programming/GraphicsPlayground-Mac/shaders/interpolation.fsh");
+	g_pProgram = programManager->CreateProgram("/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/interpolation.vsh", "/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/shaders/interpolation.fsh");
 	g_pVB = bufferManager->CreateVertexBuffer(squareVertices, sizeof(squareVertices) );
 
 	g_pDecl = new wolf::VertexDeclaration();

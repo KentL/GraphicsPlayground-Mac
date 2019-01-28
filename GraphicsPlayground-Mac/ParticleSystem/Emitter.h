@@ -63,8 +63,8 @@ private:
 	string name;
 	spawning_state spawn_state;
 	particle* pool;
-	emitter_type emitter_type;
-	spawn_type spawn_type;
+	emitter_type m_emitter_type;
+	spawn_type m_spawn_type;
 	vec3 position;
 	vec3 m_emitterBoxMin, m_emitterBoxMax;
 	

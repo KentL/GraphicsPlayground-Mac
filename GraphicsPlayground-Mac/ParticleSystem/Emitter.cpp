@@ -222,11 +222,11 @@ void Emitter::spawnParticle()
 		}
 	}
 
-	if (emitter_type == point_emitter)
+	if (m_emitter_type == point_emitter)
 	{
 		p->position = this->position;
 	}
-	else if (emitter_type == box_emitter)
+	else if (m_emitter_type == box_emitter)
 	{
 		p->position = this->position+getRandomVector_3D(m_emitterBoxMin, m_emitterBoxMax);
 	}
@@ -247,7 +247,7 @@ void Emitter::update(float delta)
 
 	if (spawn_state == spawning&&m_emitter_age > start_time)
 	{
-		if (spawn_type == continuous)
+		if (m_spawn_type == continuous)
 		{
 			for (int i = 0; i < (int)(birthrate*delta*BIRTH_MULTI_FACTOR); i++)
 			{
@@ -422,8 +422,8 @@ void Emitter::loadFile(const string& filename)
 	this->name = root->Attribute("name");
 	this->particleAmount = (int)turnStrToNum(root->Attribute("num_particles"));
 	this->duration = turnStrToNum(root->Attribute("duration"));
-	this->spawn_type = turnStringToSpawnType(root->Attribute("spawn_type"));
-	this->emitter_type = turnStringToEmitterType(root->Attribute("emitter_type"));
+	this->m_spawn_type = turnStringToSpawnType(root->Attribute("spawn_type"));
+	this->m_emitter_type = turnStringToEmitterType(root->Attribute("emitter_type"));
 	this->birthrate = (int)turnStrToNum(root->Attribute("birthrate"));
 	this->start_time = turnStrToNum(root->Attribute("start_time"));
 

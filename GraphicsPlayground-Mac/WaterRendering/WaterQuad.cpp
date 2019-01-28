@@ -26,9 +26,9 @@ void WaterQuad::Init(){
     };
     program=wolf::ProgramManager::Inst()->CreateProgram(vShader, fShader);
     
-    normalMap1=wolf::TextureManager::Inst()->CreateTexture("D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/water/normalmap.png");
-    normalMap3=wolf::TextureManager::Inst()->CreateTexture("D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/water/normalmap3.png");
-    normalMap2=wolf::TextureManager::Inst()->CreateTexture("D:/workspace/kentli/graphics/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
+    normalMap1=wolf::TextureManager::Inst()->CreateTexture("/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/resource/picture/water/normalmap.png");
+    normalMap3=wolf::TextureManager::Inst()->CreateTexture("/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/resource/picture/water/normalmap3.png");
+    normalMap2=wolf::TextureManager::Inst()->CreateTexture("/home/kentli/Documents/workspace/kentli/GraphicsPlayground-Mac/resource/picture/water/normalmap2.png");
 
 
     

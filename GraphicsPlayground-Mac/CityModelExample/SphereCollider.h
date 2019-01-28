@@ -25,7 +25,6 @@ namespace Colliders
 
 		void setRadius(double r){ radius = r; }
 		double getRadius()const{ return radius; }
-		ColliderType ColliderType(){ return collider_type; }
 	};
 }
 
